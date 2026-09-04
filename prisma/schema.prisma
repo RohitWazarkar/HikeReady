@@ -1,0 +1,32 @@
+// Prisma schema for HikeReady
+// Docs: https://pris.ly/d/prisma-schema
+//
+// NOTE: The Prisma npm packages are NOT installed yet (we skipped that on Day 1).
+// When you're ready, install them (Prisma v6 is recommended for a lighter, stable setup):
+//   npm install --save-dev prisma@6
+//   npm install @prisma/client@6
+// Then generate the client and create your first migration:
+//   npx prisma generate
+//   npx prisma migrate dev --name init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  // DATABASE_URL is read from your .env file (see .env.example).
+  // With Supabase, use the pooled connection string here.
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Example model to confirm the connection works. Feel free to change/remove.
+// ---------------------------------------------------------------------------
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
