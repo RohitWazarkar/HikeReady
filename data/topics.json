@@ -47,5 +47,82 @@
     "slug": "dbms-interview-qa",
     "id": "top_6f447e14",
     "createdAt": "2026-09-05T10:20:02.084Z"
+  },
+  {
+    "categoryId": "cat_266e3527",
+    "name": ".NET BASICS",
+    "slug": "dotnet-net-basics",
+    "id": "top_fe1d2bfb",
+    "createdAt": "2026-09-05T11:35:11.715Z"
+  },
+  {
+    "categoryId": "cat_266e3527",
+    "name": "C# FUNDAMENTALS",
+    "slug": "dotnet-c-fundamentals",
+    "id": "top_48f8ade6",
+    "createdAt": "2026-09-05T11:35:11.887Z"
+  },
+  {
+    "categoryId": "cat_266e3527",
+    "name": "OOP — Classes, Interfaces & Everything",
+    "slug": "dotnet-oop-classes-interfaces-everything",
+    "id": "top_7888da8e",
+    "createdAt": "2026-09-05T11:35:12.026Z"
+  },
+  {
+    "categoryId": "cat_266e3527",
+    "name": "ASP.NET MVC",
+    "slug": "dotnet-asp-net-mvc",
+    "id": "top_9179b9ac",
+    "createdAt": "2026-09-05T11:35:12.202Z"
+  },
+  {
+    "categoryId": "cat_266e3527",
+    "name": "MIDDLEWARE",
+    "slug": "dotnet-middleware",
+    "id": "top_20a00d04",
+    "createdAt": "2026-09-05T11:35:12.314Z"
+  },
+  {
+    "categoryId": "cat_266e3527",
+    "name": "CONTROLLERS (deeper)",
+    "slug": "dotnet-controllers-deeper",
+    "id": "top_fd3123ed",
+    "createdAt": "2026-09-05T11:35:12.389Z"
+  },
+  {
+    "categoryId": "cat_266e3527",
+    "name": "ADO.NET & CONNECTION STRINGS",
+    "slug": "dotnet-ado-net-connection-strings",
+    "id": "top_0e18b5b8",
+    "createdAt": "2026-09-05T11:35:12.431Z"
+  },
+  {
+    "categoryId": "cat_266e3527",
+    "name": "ENTITY FRAMEWORK & DbContext",
+    "slug": "dotnet-entity-framework-dbcontext",
+    "id": "top_5bb1ad99",
+    "createdAt": "2026-09-05T11:35:12.528Z"
+  },
+  {
+    "categoryId": "cat_266e3527",
+    "name": "REPOSITORY PATTERN (with methods)",
+    "slug": "dotnet-repository-pattern-with-methods",
+    "id": "top_207c54ff",
+    "createdAt": "2026-09-05T11:35:12.668Z"
+  },
+  {
+    "categoryId": "cat_266e3527",
+    "name": "SERIALIZATION",
+    "slug": "dotnet-serialization",
+    "id": "top_891833a5",
+    "createdAt": "2026-09-05T11:35:12.726Z"
+  },
+  {
+    "categoryId": "cat_266e3527",
+    "name": "API TYPES — REST & OTHERS",
+    "slug": "dotnet-api-types-rest-others",
+    "id": "top_812cda78",
+    "createdAt": "2026-09-05T11:35:12.802Z"
   }
 ]

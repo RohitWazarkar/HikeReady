@@ -214,3 +214,148 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* --- Page loading overlay + book-flip loader -------------------------------- */
+
+/* Blurred, dimmed backdrop that covers the viewport while a page loads. */
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(4px) saturate(1.05);
+  -webkit-backdrop-filter: blur(4px) saturate(1.05);
+  animation: hr-fade-in 0.2s ease forwards;
+}
+@media (prefers-color-scheme: dark) {
+  .loading-overlay {
+    background: rgba(0, 0, 0, 0.55);
+  }
+}
+
+/* Pulsing caption under the loader. */
+.loading-caption {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #059669;
+  animation: hr-caption-pulse 1.4s ease-in-out infinite;
+}
+@media (prefers-color-scheme: dark) {
+  .loading-caption {
+    color: #34d399;
+  }
+}
+@keyframes hr-caption-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-overlay {
+    animation: none;
+  }
+  .loading-caption {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* --- Chatbot widget --------------------------------------------------------- */
+
+/* Floating bubble: gentle attention pulse ring. */
+@keyframes hr-chat-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+.chat-bubble {
+  animation: hr-chat-pulse 2.4s ease-out infinite;
+}
+.chat-bubble:hover {
+  animation-play-state: paused;
+}
+
+/* Panel entrance: slide up + fade + slight scale from the bottom-right. */
+@keyframes hr-chat-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.chat-panel {
+  transform-origin: bottom right;
+  animation: hr-chat-panel-in 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Each message bubble slides in. */
+@keyframes hr-msg-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.chat-msg {
+  animation: hr-msg-in 0.25s ease forwards;
+}
+
+/* Typing indicator: three bouncing dots. */
+.typing-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: currentColor;
+  animation: hr-typing 1.2s infinite ease-in-out;
+}
+.typing-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.typing-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+@keyframes hr-typing {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chat-bubble,
+  .chat-panel,
+  .chat-msg,
+  .typing-dot {
+    animation: none;
+  }
+}

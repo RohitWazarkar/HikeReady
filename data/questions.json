@@ -886,5 +886,1933 @@
     "id": "q_44089d1a",
     "createdAt": "2026-09-05T10:20:02.193Z",
     "updatedAt": "2026-09-05T10:20:02.193Z"
+  },
+  {
+    "topicId": "top_fe1d2bfb",
+    "title": "What is .NET?",
+    "slug": "dotnet-what-is-net",
+    "bodyMd": "**What is .NET?**",
+    "answerMd": "**Spoken answer:** \"The .NET is a development platform from Microsoft for building all kinds of apps — web, desktop, mobile, cloud — mainly using C#. It gives you a runtime to execute code, a huge library of ready-made classes (the BCL), and compilers. Write in C#, it compiles to an intermediate language, and the runtime runs it.\"\n\n**Why it matters:** the one-liner is \"platform + runtime + libraries + languages.\"\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_f65f1fb6",
+    "createdAt": "2026-09-05T11:35:11.721Z",
+    "updatedAt": "2026-09-05T11:35:11.721Z"
+  },
+  {
+    "topicId": "top_fe1d2bfb",
+    "title": "Difference between .NET Framework, .NET Core, and .NET (5/6/7/8)?",
+    "slug": "dotnet-difference-between-net-framework-net-core-and-net-5-6-7-8",
+    "bodyMd": "**Difference between .NET Framework, .NET Core, and .NET (5/6/7/8)?**",
+    "answerMd": "**Spoken answer:** \"**.NET Framework** is the old Windows-only version. **.NET Core** was the rewrite — cross-platform, open-source, faster. From **.NET 5** onward Microsoft merged them into one unified 'just .NET' that's cross-platform. So today you say '.NET 8', which is the modern successor to Core.\"\n\n| | .NET Framework | .NET Core / .NET 5+ |\n|---|---|---|\n| Platform | Windows only | Cross-platform |\n| Open source | No | Yes |\n| Status | Legacy/maintenance | Active, current |\n\n**Why it matters:** interviewers check you know Framework is legacy and modern .NET is cross-platform.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_8bb4098d",
+    "createdAt": "2026-09-05T11:35:11.799Z",
+    "updatedAt": "2026-09-05T11:35:11.799Z"
+  },
+  {
+    "topicId": "top_fe1d2bfb",
+    "title": "What is the CLR?",
+    "slug": "dotnet-what-is-the-clr",
+    "bodyMd": "**What is the CLR?**",
+    "answerMd": "**Spoken answer:** \"The CLR — Common Language Runtime — is the engine that runs .NET code. It does JIT compilation (turning intermediate language into machine code), garbage collection, memory management, type safety, and exception handling. It's the .NET equivalent of the JVM.\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "clr",
+      "jit",
+      "garbage-collection"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_3a254aaa",
+    "createdAt": "2026-09-05T11:35:11.813Z",
+    "updatedAt": "2026-09-05T11:35:11.813Z"
+  },
+  {
+    "topicId": "top_fe1d2bfb",
+    "title": "What is IL / MSIL and JIT?",
+    "slug": "dotnet-what-is-il-msil-and-jit",
+    "bodyMd": "**What is IL / MSIL and JIT?**",
+    "answerMd": "**Spoken answer:** \"When you compile C#, it doesn't go straight to machine code — it becomes **IL** (Intermediate Language), a CPU-independent format. At runtime the **JIT** (Just-In-Time) compiler turns that IL into native machine code for the specific machine. That's how .NET is portable.\"\n\n**Why it matters:** shows you understand the compile → IL → JIT → native pipeline.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "jit"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_ccd73e57",
+    "createdAt": "2026-09-05T11:35:11.839Z",
+    "updatedAt": "2026-09-05T11:35:11.839Z"
+  },
+  {
+    "topicId": "top_fe1d2bfb",
+    "title": "What is the BCL / FCL?",
+    "slug": "dotnet-what-is-the-bcl-fcl",
+    "bodyMd": "**What is the BCL / FCL?**",
+    "answerMd": "**Spoken answer:** \"The Base Class Library is the big built-in set of reusable classes — collections, file I/O, LINQ, strings, networking, threading. You get all of it out of the box so you don't reinvent the wheel.\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "linq"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_caa7102b",
+    "createdAt": "2026-09-05T11:35:11.850Z",
+    "updatedAt": "2026-09-05T11:35:11.850Z"
+  },
+  {
+    "topicId": "top_fe1d2bfb",
+    "title": "What is garbage collection in .NET?",
+    "slug": "dotnet-what-is-garbage-collection-in-net",
+    "bodyMd": "**What is garbage collection in .NET?**",
+    "answerMd": "**Spoken answer:** \"The GC automatically frees memory for objects you're no longer using, so you don't manually delete them. It works in generations (0, 1, 2) — new objects start in gen 0, and survivors get promoted. Short-lived objects are collected fast, long-lived ones less often. It prevents most memory leaks.\"\n\n**Why it matters:** naming the generational model is the medium-level detail.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "garbage-collection"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_352f2f2f",
+    "createdAt": "2026-09-05T11:35:11.860Z",
+    "updatedAt": "2026-09-05T11:35:11.860Z"
+  },
+  {
+    "topicId": "top_fe1d2bfb",
+    "title": "What is an assembly?",
+    "slug": "dotnet-what-is-an-assembly",
+    "bodyMd": "**What is an assembly?**",
+    "answerMd": "**Spoken answer:** \"An assembly is the compiled unit of a .NET app — a `.dll` or `.exe`. It contains the IL code plus metadata (a manifest) describing types, versions, and dependencies. It's the deployment and versioning boundary.\"\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "assembly"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_8293550e",
+    "createdAt": "2026-09-05T11:35:11.871Z",
+    "updatedAt": "2026-09-05T11:35:11.871Z"
+  },
+  {
+    "topicId": "top_fe1d2bfb",
+    "title": "Managed vs unmanaged code?",
+    "slug": "dotnet-managed-vs-unmanaged-code",
+    "bodyMd": "**Managed vs unmanaged code?**",
+    "answerMd": "**Spoken answer:** \"**Managed code** runs under the CLR — it gets garbage collection, type safety, all the .NET services. **Unmanaged code** runs directly on the OS (like C/C++), and you manage memory yourself. C# is managed; you only touch unmanaged code via interop when you must.\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "clr",
+      "garbage-collection"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_871e9ccf",
+    "createdAt": "2026-09-05T11:35:11.876Z",
+    "updatedAt": "2026-09-05T11:35:11.876Z"
+  },
+  {
+    "topicId": "top_48f8ade6",
+    "title": "Value types vs reference types?",
+    "slug": "dotnet-value-types-vs-reference-types",
+    "bodyMd": "**Value types vs reference types?**",
+    "answerMd": "**Spoken answer:** \"**Value types** (int, bool, struct, enum) hold the data directly and live on the stack; assigning copies the value. **Reference types** (class, string, array, object) hold a reference to data on the heap; assigning copies the reference, so both point to the same object.\"\n\n```csharp\nint a = 5; int b = a; b = 10;   // a is still 5 (copied)\nint[] x = {1}; int[] y = x; y[0] = 9; // x[0] is now 9 (shared ref)\n```\n\n**Why it matters:** this explains \"why did my object change when I changed the other variable?\" — same as JS primitives vs objects.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "value-type",
+      "reference-type"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_b50e5aa1",
+    "createdAt": "2026-09-05T11:35:11.903Z",
+    "updatedAt": "2026-09-05T11:35:11.903Z"
+  },
+  {
+    "topicId": "top_48f8ade6",
+    "title": "Difference between `string` and `StringBuilder`?",
+    "slug": "dotnet-difference-between-string-and-stringbuilder",
+    "bodyMd": "**Difference between `string` and `StringBuilder`?**",
+    "answerMd": "**Spoken answer:** \"`string` is **immutable** — every change creates a new string in memory, which is wasteful in loops. `StringBuilder` is **mutable** — it edits the same buffer, so it's much faster when you're concatenating many times.\"\n\n```csharp\nvar sb = new StringBuilder();\nfor (int i = 0; i < 1000; i++) sb.Append(i);  // efficient\nstring result = sb.ToString();\n```\n\n**Why it matters:** the \"use StringBuilder in loops\" tip is a classic.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_1e54b1db",
+    "createdAt": "2026-09-05T11:35:11.919Z",
+    "updatedAt": "2026-09-05T11:35:11.919Z"
+  },
+  {
+    "topicId": "top_48f8ade6",
+    "title": "What is `var`? Is it dynamic typing?",
+    "slug": "dotnet-what-is-var-is-it-dynamic-typing",
+    "bodyMd": "**What is `var`? Is it dynamic typing?**",
+    "answerMd": "**Spoken answer:** \"`var` is *implicit typing*, not dynamic. The compiler infers the exact type at compile time, and it's fixed after that. It's still strongly typed — `var x = 5;` means `x` is an `int` forever. `dynamic` is the one that skips compile-time checking.\"\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_050c19c5",
+    "createdAt": "2026-09-05T11:35:11.937Z",
+    "updatedAt": "2026-09-05T11:35:11.937Z"
+  },
+  {
+    "topicId": "top_48f8ade6",
+    "title": "`const` vs `readonly`?",
+    "slug": "dotnet-const-vs-readonly",
+    "bodyMd": "**`const` vs `readonly`?**",
+    "answerMd": "**Spoken answer:** \"`const` is a compile-time constant — set once at declaration, baked into the code, must be a literal. `readonly` is set at runtime — you can assign it in the constructor, so it can differ per instance but can't change afterward.\"\n\n```csharp\nconst int Max = 100;                 // fixed at compile time\nreadonly DateTime Created;           // set in constructor\n```\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_7df35f79",
+    "createdAt": "2026-09-05T11:35:11.948Z",
+    "updatedAt": "2026-09-05T11:35:11.948Z"
+  },
+  {
+    "topicId": "top_48f8ade6",
+    "title": "`ref` vs `out` parameters?",
+    "slug": "dotnet-ref-vs-out-parameters",
+    "bodyMd": "**`ref` vs `out` parameters?**",
+    "answerMd": "**Spoken answer:** \"Both pass by reference. `ref` requires the variable to be initialized before passing. `out` doesn't — but the method *must* assign it before returning. Use `out` when the method's job is to produce a value (like `int.TryParse`).\"\n\n```csharp\nint.TryParse(\"42\", out int result); // out — method fills it\n```\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_a1d61161",
+    "createdAt": "2026-09-05T11:35:11.957Z",
+    "updatedAt": "2026-09-05T11:35:11.957Z"
+  },
+  {
+    "topicId": "top_48f8ade6",
+    "title": "What is boxing and unboxing?",
+    "slug": "dotnet-what-is-boxing-and-unboxing",
+    "bodyMd": "**What is boxing and unboxing?**",
+    "answerMd": "**Spoken answer:** \"**Boxing** is wrapping a value type into an object (heap allocation) — like `object o = 5;`. **Unboxing** is extracting it back — `int i = (int)o;`. It's costly because of the allocation and cast, so you avoid it in hot paths — generics solve most of it.\"\n\n**Why it matters:** the performance angle (avoid boxing in loops, use generics) is the smart follow-up.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "boxing",
+      "generics",
+      "value-type"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_9fc360f0",
+    "createdAt": "2026-09-05T11:35:11.967Z",
+    "updatedAt": "2026-09-05T11:35:11.967Z"
+  },
+  {
+    "topicId": "top_48f8ade6",
+    "title": "What is a nullable type?",
+    "slug": "dotnet-what-is-a-nullable-type",
+    "bodyMd": "**What is a nullable type?**",
+    "answerMd": "**Spoken answer:** \"A nullable value type like `int?` can hold a normal value *or* null. It's for cases like a database column that might be empty. You check `HasValue` or use `??` for a default.\"\n\n```csharp\nint? age = null;\nint result = age ?? 0;   // 0 if null\n```\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "value-type"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_a515f6aa",
+    "createdAt": "2026-09-05T11:35:11.973Z",
+    "updatedAt": "2026-09-05T11:35:11.973Z"
+  },
+  {
+    "topicId": "top_48f8ade6",
+    "title": "Difference between `==` and `.Equals()`?",
+    "slug": "dotnet-difference-between-and-equals",
+    "bodyMd": "**Difference between `==` and `.Equals()`?**",
+    "answerMd": "**Spoken answer:** \"`==` compares references by default for objects (or values for value types). `.Equals()` can be overridden to compare *content*. For strings both compare value because string overrides them. For custom classes, you decide by overriding `Equals`.\"\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "value-type"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_94eeaa78",
+    "createdAt": "2026-09-05T11:35:11.984Z",
+    "updatedAt": "2026-09-05T11:35:11.984Z"
+  },
+  {
+    "topicId": "top_48f8ade6",
+    "title": "What is LINQ?",
+    "slug": "dotnet-what-is-linq",
+    "bodyMd": "**What is LINQ?**",
+    "answerMd": "**Spoken answer:** \"LINQ — Language Integrated Query — lets you query collections, databases, XML with a uniform C# syntax. Instead of loops, you write declarative queries with `Where`, `Select`, `OrderBy`, etc. With Entity Framework, LINQ queries get translated into SQL.\"\n\n```csharp\nvar adults = people.Where(p => p.Age >= 18)\n                   .OrderBy(p => p.Name)\n                   .Select(p => p.Name);\n```\n\n**Why it matters:** LINQ + EF (LINQ → SQL) is a very common combo question.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "linq",
+      "entity-framework"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_d9d88b4b",
+    "createdAt": "2026-09-05T11:35:11.990Z",
+    "updatedAt": "2026-09-05T11:35:11.990Z"
+  },
+  {
+    "topicId": "top_48f8ade6",
+    "title": "IEnumerable vs IQueryable?",
+    "slug": "dotnet-ienumerable-vs-iqueryable",
+    "bodyMd": "**IEnumerable vs IQueryable?**",
+    "answerMd": "**Spoken answer:** \"`IEnumerable` executes in memory — it pulls all data then filters in C#. `IQueryable` builds an expression tree and executes at the source (like a database), so filtering happens in SQL. With EF, use `IQueryable` so the DB does the work, not your app.\"\n\n**Why it matters:** using `IEnumerable` on a DB query = pulling the whole table into memory — a real performance bug.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_fba13d2e",
+    "createdAt": "2026-09-05T11:35:12.000Z",
+    "updatedAt": "2026-09-05T11:35:12.000Z"
+  },
+  {
+    "topicId": "top_48f8ade6",
+    "title": "What are async and await?",
+    "slug": "dotnet-what-are-async-and-await",
+    "bodyMd": "**What are async and await?**",
+    "answerMd": "**Spoken answer:** \"`async`/`await` let you write non-blocking code that reads synchronously. An `async` method returns a `Task`, and `await` pauses without blocking the thread until the task finishes — freeing the thread to do other work. Great for I/O like DB and API calls.\"\n\n```csharp\npublic async Task<User> GetUserAsync(int id)\n{\n    return await _db.Users.FindAsync(id);\n}\n```\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "async",
+      "await",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_d8adae1a",
+    "createdAt": "2026-09-05T11:35:12.006Z",
+    "updatedAt": "2026-09-05T11:35:12.006Z"
+  },
+  {
+    "topicId": "top_48f8ade6",
+    "title": "What are delegates and events?",
+    "slug": "dotnet-what-are-delegates-and-events",
+    "bodyMd": "**What are delegates and events?**",
+    "answerMd": "**Spoken answer:** \"A **delegate** is a type-safe function pointer — a variable that holds a method reference. An **event** is a delegate wrapped so only the owner can raise it; others can only subscribe/unsubscribe. Events are the basis of the publish-subscribe pattern in C#.\"\n\n```csharp\npublic delegate void Notify(string msg);\npublic event Notify OnComplete;\n```\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "delegate"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_4413c5c2",
+    "createdAt": "2026-09-05T11:35:12.011Z",
+    "updatedAt": "2026-09-05T11:35:12.011Z"
+  },
+  {
+    "topicId": "top_48f8ade6",
+    "title": "What is an extension method?",
+    "slug": "dotnet-what-is-an-extension-method",
+    "bodyMd": "**What is an extension method?**",
+    "answerMd": "**Spoken answer:** \"An extension method lets you add a method to an existing type without modifying it, using a static method with `this` on the first parameter. LINQ's `Where`/`Select` are extension methods on `IEnumerable`.\"\n\n```csharp\npublic static bool IsEmail(this string s) => s.Contains(\"@\");\n\"a@b.com\".IsEmail();  // true\n```\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "linq"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_36749fa5",
+    "createdAt": "2026-09-05T11:35:12.016Z",
+    "updatedAt": "2026-09-05T11:35:12.016Z"
+  },
+  {
+    "topicId": "top_48f8ade6",
+    "title": "`IDisposable` and `using` statement?",
+    "slug": "dotnet-idisposable-and-using-statement",
+    "bodyMd": "**`IDisposable` and `using` statement?**",
+    "answerMd": "**Spoken answer:** \"`IDisposable` has a `Dispose()` method to release unmanaged resources like DB connections or files. The `using` statement calls `Dispose()` automatically when the block ends, even if an exception happens. It's how you guarantee cleanup.\"\n\n```csharp\nusing (var conn = new SqlConnection(cs))\n{\n    conn.Open();\n} // Dispose() called automatically -> connection closed\n```\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_eabb61a1",
+    "createdAt": "2026-09-05T11:35:12.020Z",
+    "updatedAt": "2026-09-05T11:35:12.020Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "What are the 4 pillars of OOP?",
+    "slug": "dotnet-what-are-the-4-pillars-of-oop",
+    "bodyMd": "**What are the 4 pillars of OOP?**",
+    "answerMd": "**Spoken answer:** \"**Encapsulation** — bundle data and behavior, hide internals behind properties/methods. **Inheritance** — a class reuses another's members. **Polymorphism** — same method behaves differently per type. **Abstraction** — expose *what* something does, hide *how*.\"\n\n**Deeper (with a single mental model):** think of a **coffee machine**. *Encapsulation* = you press a button, the wiring is hidden. *Abstraction* = the button just says \"Espresso\" — you don't care how it's brewed. *Inheritance* = a \"DeluxeMachine\" reuses the basic machine and adds a milk frother. *Polymorphism* = press \"Brew\" and every machine model does it *its own way*. Encapsulation hides **data**, abstraction hides **complexity** — that's the subtle difference interviewers poke at.\n\n```csharp\n// abstraction (what) vs encapsulation (hidden how/data)\npublic class CoffeeMachine {\n    private int _water;                    // encapsulated data\n    public void Brew() { Heat(); Pour(); } // abstraction: caller just calls Brew()\n    private void Heat() { /* hidden */ }\n    private void Pour() { /* hidden */ }\n}\n```\n\n**Why it matters:** they'll ask you to give a one-line example of each — the coffee-machine analogy lets you rattle off all four fast.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface",
+      "inheritance",
+      "polymorphism"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_c090ed1e",
+    "createdAt": "2026-09-05T11:35:12.032Z",
+    "updatedAt": "2026-09-05T11:35:12.032Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "What is a class vs an object?",
+    "slug": "dotnet-what-is-a-class-vs-an-object",
+    "bodyMd": "**What is a class vs an object?**",
+    "answerMd": "**Spoken answer:** \"A **class** is the blueprint — it defines fields, properties, and methods. An **object** is a concrete instance created from that blueprint with `new`. Class = design, object = the actual thing in memory.\"\n\n**Deeper:** the class is like an *architect's house plan* — it exists once and doesn't take up living space. Each object is an *actual house built* from that plan — you can build many, and each has its own values (its own address, its own paint colour). One class → many independent objects, each with its own copy of the instance data.\n\n```csharp\nclass Car { public string Model; }\nCar a = new Car { Model = \"Swift\" };  // object 1\nCar b = new Car { Model = \"Tesla\" };  // object 2 — separate data\n// same blueprint, two independent objects\n```\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_6186ccac",
+    "createdAt": "2026-09-05T11:35:12.039Z",
+    "updatedAt": "2026-09-05T11:35:12.039Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "What is a property? Difference from a field?",
+    "slug": "dotnet-what-is-a-property-difference-from-a-field",
+    "bodyMd": "**What is a property? Difference from a field?**",
+    "answerMd": "**Spoken answer:** \"A **field** is a raw variable inside a class. A **property** wraps a field with get/set logic, giving controlled access — validation, read-only, computed values. Auto-properties (`{ get; set; }`) generate the backing field for you. Best practice: expose properties, keep fields private.\"\n\n**Deeper (why not just use public fields?):** a property is a *gatekeeper* — it looks like a variable but is really a pair of methods (`get`/`set`). That lets you add validation or logging later **without changing how callers use it**. If you exposed a public field and later needed validation, you'd have to change it to a property and potentially break other code. So properties give you future flexibility for free.\n\n```csharp\nprivate int _age;\npublic int Age {\n    get => _age;\n    set {\n        if (value < 0) throw new ArgumentException(\"Age can't be negative\");\n        _age = value;                 // validation lives here, caller never knows\n    }\n}\n```\n\n**Why it matters:** \"properties let me add rules later without breaking callers\" is the reasoning behind the best practice.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_34e36fa5",
+    "createdAt": "2026-09-05T11:35:12.047Z",
+    "updatedAt": "2026-09-05T11:35:12.047Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "What is a constructor?",
+    "slug": "dotnet-what-is-a-constructor",
+    "bodyMd": "**What is a constructor?**",
+    "answerMd": "**Spoken answer:** \"A constructor is a special method that runs when you create an object, used to initialize it. It has the class name and no return type. You can overload it and chain with `: this(...)` or call the base with `: base(...)`.\"\n\n**Deeper:** a constructor's real job is to guarantee an object is **born in a valid state**. If a `User` must always have a name, force it through the constructor — then no one can create a nameless user. Constructor chaining (`: this(...)`) avoids repeating setup code: one \"main\" constructor does the real work, the others just forward to it with defaults.\n\n```csharp\nclass User {\n    public User(string name) {                 // main constructor\n        if (string.IsNullOrEmpty(name)) throw new ArgumentException(\"name required\");\n        Name = name;\n    }\n    public User() : this(\"Guest\") { }           // chains -> reuses validation\n    public string Name { get; }\n}\n```\n\n**Why it matters:** \"constructors enforce a valid starting state\" is the point — not just \"they set values.\"\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_a5cbe407",
+    "createdAt": "2026-09-05T11:35:12.061Z",
+    "updatedAt": "2026-09-05T11:35:12.061Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "Class vs Interface — the big one.",
+    "slug": "dotnet-class-vs-interface-the-big-one",
+    "bodyMd": "**Class vs Interface — the big one.**",
+    "answerMd": "**Spoken answer:** \"A **class** can have implementation (fields, method bodies) and you inherit only one. An **interface** is a pure contract — it lists methods/properties a class *must* implement, no state, and a class can implement *many*. Use an interface to define a capability; use a class for actual behavior and data.\"\n\n```csharp\ninterface IPayable { decimal CalculatePay(); }  // contract\nclass Employee : IPayable {                      // must implement it\n    public decimal CalculatePay() => 5000m;\n}\n```\n\n| | Class | Interface |\n|---|---|---|\n| Implementation | Yes | No (traditionally) |\n| Multiple inheritance | No (one base class) | Yes (many interfaces) |\n| Fields/state | Yes | No |\n| Purpose | \"is-a\" + behavior | \"can-do\" capability |\n\n**Deeper (the real power — programming to an interface):** the magic isn't \"a class must implement methods.\" It's that you can hold *any* implementation behind the interface type and swap it freely. Your code depends on the *contract*, not the concrete class — so you can change the implementation (or inject a fake one in tests) without touching the caller.\n\n```csharp\ninterface INotifier { void Send(string msg); }\nclass EmailNotifier : INotifier { public void Send(string m) => /* email */; }\nclass SmsNotifier   : INotifier { public void Send(string m) => /* sms */; }\n\n// caller depends only on the contract:\nvoid Alert(INotifier notifier) => notifier.Send(\"Server down!\");\nAlert(new EmailNotifier());   // today email\nAlert(new SmsNotifier());     // tomorrow SMS — caller unchanged\n```\n\n**Why it matters:** \"one class, many interfaces\", \"interface = contract\", and \"program to the interface so implementations are swappable\" are the phrases that score.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface",
+      "inheritance"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_5e2cec85",
+    "createdAt": "2026-09-05T11:35:12.070Z",
+    "updatedAt": "2026-09-05T11:35:12.070Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "Abstract class vs Interface — when to use which?",
+    "slug": "dotnet-abstract-class-vs-interface-when-to-use-which",
+    "bodyMd": "**Abstract class vs Interface — when to use which?**",
+    "answerMd": "**Spoken answer:** \"An **abstract class** can have both implemented and abstract members and shared state — use it when classes share a common base and some default behavior ('is-a' relationship). An **interface** is a pure contract with no state, and you can implement many — use it for a capability multiple unrelated classes can have ('can-do'). Rule of thumb: common base → abstract class; shared capability → interface.\"\n\n```csharp\nabstract class Animal {\n    public string Name;                       // shared state\n    public void Sleep() => Console.WriteLine(\"Zzz\"); // default behavior\n    public abstract void Sound();             // must override\n}\nclass Dog : Animal { public override void Sound() => Console.WriteLine(\"Woof\"); }\n```\n\n**Deeper (a decision example):** imagine a payroll system. A `PermanentEmployee` and `Contractor` are both *employees* — they share fields (Name, Id) and a `Sleep`-like default → that shared base is an **abstract class** `Employee`. But \"can be paid\", \"can be serialized to JSON\", \"can be logged\" are *capabilities* that even unrelated classes (an `Invoice`, a `Vendor`) might also have → those are **interfaces** (`IPayable`, `ISerializable`). Ask yourself: \"is this a *family* with shared stuff (abstract class), or a *skill* anyone can have (interface)?\" A class can only pick **one** family but any number of skills.\n\n```csharp\nabstract class Employee { public string Name; }               // the family\ninterface IPayable { decimal CalculatePay(); }                 // a skill\nclass Contractor : Employee, IPayable {                        // one base + many skills\n    public decimal CalculatePay() => 800m;\n}\n```\n\n**Why it matters:** the \"is-a vs can-do\" framing and \"abstract = shared family, interface = swappable skill\" is the ideal answer.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_59715ad2",
+    "createdAt": "2026-09-05T11:35:12.076Z",
+    "updatedAt": "2026-09-05T11:35:12.076Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "What is encapsulation with an example?",
+    "slug": "dotnet-what-is-encapsulation-with-an-example",
+    "bodyMd": "**What is encapsulation with an example?**",
+    "answerMd": "**Spoken answer:** \"Encapsulation is hiding internal data and exposing controlled access. You make fields private and expose them through properties/methods with validation.\"\n\n```csharp\nclass BankAccount {\n    private decimal _balance;                 // hidden\n    public void Deposit(decimal amt) {        // controlled access\n        if (amt > 0) _balance += amt;\n    }\n    public decimal Balance => _balance;       // read-only\n}\n```\n\n**Deeper (why this protects you):** because `_balance` is private, nobody can write `account._balance = -5000;` from outside. Every change *must* go through `Deposit`/`Withdraw`, so your rules (no negative deposits, no overdraft) are guaranteed everywhere. That's the whole point — encapsulation means an object can't be pushed into an invalid state from the outside. Without it, any bug anywhere in the app could corrupt the balance.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_93e3f10c",
+    "createdAt": "2026-09-05T11:35:12.086Z",
+    "updatedAt": "2026-09-05T11:35:12.086Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "What is inheritance? What does `base` do?",
+    "slug": "dotnet-what-is-inheritance-what-does-base-do",
+    "bodyMd": "**What is inheritance? What does `base` do?**",
+    "answerMd": "**Spoken answer:** \"Inheritance lets a class reuse and extend another. The child gets the parent's public/protected members. `base` calls the parent's constructor or method from the child.\"\n\n```csharp\nclass Vehicle {\n    public Vehicle(string n) { Name = n; }\n    public string Name { get; }\n    public void Start() => Console.WriteLine(\"Starting...\");\n}\nclass Car : Vehicle {\n    public Car(string n) : base(n) {}         // parent ctor runs first\n    public void OpenSunroof() => Console.WriteLine(\"Sunroof open\");\n}\n\nvar car = new Car(\"Swift\");\ncar.Start();        // inherited from Vehicle\ncar.OpenSunroof();  // Car's own\n```\n\n**Deeper (order + the caution):** when you `new` a child, the **base constructor runs first**, then the child's — parent is fully built before the child adds to it. Inheritance is powerful for genuine \"is-a\" reuse, but overusing it creates rigid, deep hierarchies (\"fragile base class\"). Modern advice: **favour composition over inheritance** — instead of inheriting, hold the other object as a field and delegate to it. Inherit only when it's truly \"is-a\", not just to reuse a method.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "delegate",
+      "interface",
+      "inheritance"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_2ef725db",
+    "createdAt": "2026-09-05T11:35:12.092Z",
+    "updatedAt": "2026-09-05T11:35:12.092Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "Explain polymorphism — `virtual`, `override`, `new`.",
+    "slug": "dotnet-explain-polymorphism-virtual-override-new",
+    "bodyMd": "**Explain polymorphism — `virtual`, `override`, `new`.**",
+    "answerMd": "**Spoken answer:** \"Polymorphism means the same call behaves differently depending on the actual object type. You mark a base method `virtual` and redefine it in the child with `override` — the runtime picks the right one. `new` *hides* the base method instead of overriding it, so which one runs depends on the reference type, not the object.\"\n\n```csharp\nclass Shape { public virtual double Area() => 0; }\nclass Circle : Shape { public override double Area() => 3.14 * 5 * 5; }\nclass Square : Shape { public override double Area() => 4 * 4; }\n\n// The power: treat different types uniformly, each does its own thing\nList<Shape> shapes = new() { new Circle(), new Square() };\nforeach (var s in shapes) Console.WriteLine(s.Area()); // each computes correctly\n```\n\n**Deeper (`override` vs `new` — the trap):** with `override`, the runtime looks at the **actual object** and calls its version (virtual dispatch). With `new`, it just *hides* the base method, and which one runs depends on the **reference type** you're holding — a common gotcha:\n\n```csharp\nclass Base { public virtual void Hi() => Console.WriteLine(\"Base\"); }\nclass Over : Base { public override void Hi() => Console.WriteLine(\"Over\"); }\nclass Hide : Base { public new void Hi() => Console.WriteLine(\"Hide\"); }\n\nBase a = new Over(); a.Hi();  // \"Over\"  <- override follows the object\nBase b = new Hide(); b.Hi();  // \"Base\"  <- new: follows the reference type!\n```\n\n**Why it matters:** the real value of polymorphism is looping over a base-type list and letting each object behave correctly. The `override` vs `new` output difference is the classic trap question.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface",
+      "polymorphism",
+      "reference-type"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_6535a04d",
+    "createdAt": "2026-09-05T11:35:12.101Z",
+    "updatedAt": "2026-09-05T11:35:12.101Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "Method overloading vs overriding?",
+    "slug": "dotnet-method-overloading-vs-overriding",
+    "bodyMd": "**Method overloading vs overriding?**",
+    "answerMd": "**Spoken answer:** \"**Overloading** = same method name, different parameters, in the *same* class — resolved at compile time. **Overriding** = redefining a `virtual` base method in a child class with the *same* signature — resolved at runtime. Overload = compile-time polymorphism, override = runtime polymorphism.\"\n\n```csharp\n// Overloading — compiler picks by argument types (compile time)\nvoid Print(int x)    => Console.WriteLine($\"int {x}\");\nvoid Print(string x) => Console.WriteLine($\"string {x}\");\nPrint(5);       // picks int version\nPrint(\"hi\");    // picks string version\n\n// Overriding — runtime picks by actual object type\npublic override string ToString() => $\"User: {Name}\";\n```\n\n**Deeper (easy way to remember):** *overload* = same name, the compiler chooses based on **what you pass in** (different parameters), decided **before running**. *Override* = replace a parent's `virtual` behaviour, chosen **while running** based on the real object. Overload changes the *signature*; override keeps the *same signature* but changes the *behaviour*.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface",
+      "polymorphism"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_0f7be59b",
+    "createdAt": "2026-09-05T11:35:12.111Z",
+    "updatedAt": "2026-09-05T11:35:12.111Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "What is abstraction — abstract methods?",
+    "slug": "dotnet-what-is-abstraction-abstract-methods",
+    "bodyMd": "**What is abstraction — abstract methods?**",
+    "answerMd": "**Spoken answer:** \"Abstraction means exposing only essential behavior and hiding the implementation. You use abstract classes or interfaces so callers depend on *what* it does, not *how*. An abstract method has no body — the child must implement it.\"\n\n**Deeper:** an abstract method is a *promise with no body* — \"every subclass WILL have this, but I'm not saying how yet.\" It forces each child to fill in the blank, while the abstract base can still provide shared code around it (the **template method** idea).\n\n```csharp\nabstract class Report {\n    public void Generate() { Fetch(); Format(); }   // shared flow\n    protected abstract void Format();                // each report fills this in\n    private void Fetch() { /* common */ }\n}\nclass PdfReport : Report { protected override void Format() => /* PDF */; }\n```\n\n**Why it matters:** you can't instantiate an abstract class directly (`new Report()` fails) — it only exists to be inherited. That's often a follow-up.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_2ba7327e",
+    "createdAt": "2026-09-05T11:35:12.125Z",
+    "updatedAt": "2026-09-05T11:35:12.125Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "Access modifiers?",
+    "slug": "dotnet-access-modifiers",
+    "bodyMd": "**Access modifiers?**",
+    "answerMd": "**Spoken answer:** \"`public` — everywhere. `private` — only inside the class. `protected` — the class and its subclasses. `internal` — anywhere in the same assembly. `protected internal` — subclasses or same assembly. Default for class members is `private`.\"\n\n**Deeper (think in rings, most closed → most open):** `private` (just me) → `protected` (me + my children) → `internal` (my whole project/DLL) → `public` (the world). The guiding rule is **least privilege**: start everything `private` and only open it up when something genuinely needs access. `internal` is handy for library code you want to share inside your assembly but not expose to consumers of the DLL.\n\n| Modifier | Who can access |\n|---|---|\n| `private` | Same class only |\n| `protected` | Same class + subclasses |\n| `internal` | Same assembly (project) |\n| `protected internal` | Subclasses OR same assembly |\n| `public` | Everyone |\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface",
+      "assembly"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_e30fa40f",
+    "createdAt": "2026-09-05T11:35:12.137Z",
+    "updatedAt": "2026-09-05T11:35:12.137Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "`static` — what does it mean?",
+    "slug": "dotnet-static-what-does-it-mean",
+    "bodyMd": "**`static` — what does it mean?**",
+    "answerMd": "**Spoken answer:** \"`static` belongs to the *type*, not an instance — you access it via the class name, and there's one shared copy. Static classes can't be instantiated (like `Math`). Use static for utility methods and shared constants, but be careful — static mutable state is shared across the whole app.\"\n\n**Deeper (the shared-copy gotcha):** because a static field is *one copy for everyone*, it's great for constants but dangerous for mutable state — especially in a web app where many requests run at once. A static counter or list becomes shared across all users and threads, causing race conditions and data bleeding between requests. Rule: static for *stateless* helpers and *immutable* constants; never for per-user/per-request data.\n\n```csharp\nclass Counter {\n    public static int Total;                 // ONE shared value for the whole app\n    public int Instance;                     // separate per object\n}\nCounter.Total++;                             // no object needed\nnew Counter().Instance++;                    // belongs to that one object\n```\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_d002070e",
+    "createdAt": "2026-09-05T11:35:12.150Z",
+    "updatedAt": "2026-09-05T11:35:12.150Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "`sealed` keyword?",
+    "slug": "dotnet-sealed-keyword",
+    "bodyMd": "**`sealed` keyword?**",
+    "answerMd": "**Spoken answer:** \"`sealed` on a class stops anyone from inheriting it. On an overridden method, it stops further overriding down the chain. Use it when a class shouldn't be extended (design or security reasons), and it can help the JIT optimize.\"\n\n**Deeper:** `sealed` is you saying \"this design is final — don't extend it.\" It prevents someone from subclassing and changing behaviour in ways you didn't anticipate (a safety/maintenance guard). `string` is sealed, for example. On a method, `sealed override` means \"I'm overriding my parent, but my children can't override *me* further.\"\n\n```csharp\nsealed class TaxCalculator { }        // nobody can inherit\n// class Evil : TaxCalculator {}      // compile error\n```\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "jit",
+      "interface"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_4cee86df",
+    "createdAt": "2026-09-05T11:35:12.157Z",
+    "updatedAt": "2026-09-05T11:35:12.157Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "What is a struct and how does it differ from a class?",
+    "slug": "dotnet-what-is-a-struct-and-how-does-it-differ-from-a-class",
+    "bodyMd": "**What is a struct and how does it differ from a class?**",
+    "answerMd": "**Spoken answer:** \"A **struct** is a value type — copied by value, usually lives on the stack, no inheritance (except interfaces), and good for small, short-lived data like a Point or coordinate. A **class** is a reference type on the heap with full inheritance. Use structs for tiny immutable data; classes for everything else.\"\n\n**Deeper (the copy behaviour bites people):** because a struct copies by value, passing it around or assigning it makes a *separate copy* — editing the copy doesn't touch the original. With a class you'd share the same object. This surprises people:\n\n```csharp\nstruct PointS { public int X; }\nclass  PointC { public int X; }\n\nvar s1 = new PointS { X = 1 }; var s2 = s1; s2.X = 9;  // s1.X still 1 (copied)\nvar c1 = new PointC { X = 1 }; var c2 = c1; c2.X = 9;  // c1.X now 9 (shared ref)\n```\n**Rule of thumb:** use a struct only for small (~16 bytes), immutable, value-like data (coordinates, money, date ranges). Otherwise use a class — big structs are slow to copy.\n\n---",
+    "difficulty": "Hard",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface",
+      "inheritance",
+      "value-type",
+      "reference-type"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_1f797ef1",
+    "createdAt": "2026-09-05T11:35:12.172Z",
+    "updatedAt": "2026-09-05T11:35:12.172Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "What is dependency injection and why use it?",
+    "slug": "dotnet-what-is-dependency-injection-and-why-use-it",
+    "bodyMd": "**What is dependency injection and why use it?**",
+    "answerMd": "**Spoken answer:** \"Dependency Injection means a class receives its dependencies from outside (usually via the constructor) instead of creating them itself. It makes code loosely coupled, testable (you can inject mocks), and swappable. .NET Core has DI built in — you register services in the container and it provides them.\"\n\n**Deeper (the problem it solves):** without DI, a class `new`s its own dependencies — `new SqlRepository()` — so it's *welded* to that exact type. You can't test it without a real database, and you can't swap the implementation. DI flips it: the class just asks for `IRepository` in its constructor and receives whatever the container gives it. In tests you pass a fake; in prod you pass the real one. Same class, zero code change.\n\n```csharp\npublic class OrderService {\n    private readonly IRepository _repo;\n    public OrderService(IRepository repo) { _repo = repo; } // handed in, not created\n}\n\n// registration (Program.cs) — this decides what actually gets injected\nbuilder.Services.AddScoped<IRepository, SqlRepository>();\n// in a unit test:  new OrderService(new FakeRepository());\n```\n\n**Why it matters:** DI is *everywhere* in modern .NET; \"loose coupling + testability + swappable implementations\" is the reason. Say \"the class asks for an abstraction, the container supplies the concrete.\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface",
+      "repository",
+      "dependency-injection"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_455fa4f5",
+    "createdAt": "2026-09-05T11:35:12.186Z",
+    "updatedAt": "2026-09-05T11:35:12.186Z"
+  },
+  {
+    "topicId": "top_7888da8e",
+    "title": "DI lifetimes — Transient, Scoped, Singleton?",
+    "slug": "dotnet-di-lifetimes-transient-scoped-singleton",
+    "bodyMd": "**DI lifetimes — Transient, Scoped, Singleton?**",
+    "answerMd": "**Spoken answer:** \"**Transient** — a new instance every time it's requested. **Scoped** — one instance per HTTP request (great for DbContext). **Singleton** — one instance for the whole app lifetime. Pick based on state: stateless → transient/singleton, per-request work → scoped.\"\n\n| Lifetime | New instance | Use for |\n|---|---|---|\n| Transient | Every request | Lightweight, stateless services |\n| Scoped | Per HTTP request | DbContext, request-specific work |\n| Singleton | Once for app | Config, caching, shared state |\n\n**Deeper (the classic bug — captive dependency):** never inject a **Scoped** service into a **Singleton**. The singleton is created once and holds onto that scoped instance forever, so it \"leaks\" past its request and everyone shares it — exactly what scoped was trying to avoid. This is why injecting a `DbContext` (scoped) into a singleton throws or corrupts data. Match or shorten lifetimes: a service should not depend on something with a *shorter* lifetime than itself.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface",
+      "dbcontext"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_a687790e",
+    "createdAt": "2026-09-05T11:35:12.195Z",
+    "updatedAt": "2026-09-05T11:35:12.195Z"
+  },
+  {
+    "topicId": "top_9179b9ac",
+    "title": "What is MVC?",
+    "slug": "dotnet-what-is-mvc",
+    "bodyMd": "**What is MVC?**",
+    "answerMd": "**Spoken answer:** \"MVC is an architectural pattern that splits an app into three parts. **Model** — the data and business logic. **View** — the UI. **Controller** — the middleman that handles requests, talks to the model, and picks a view. It separates concerns so each part is independent and testable.\"\n\n**Deeper (restaurant analogy):** the **Controller** is the *waiter* — takes your order, doesn't cook. The **Model** is the *kitchen* — the actual food and recipes (data + business rules). The **View** is the *plating* — how it's presented to you. The waiter never cooks and the kitchen never plates; that separation means you can redesign the menu presentation (View) without touching the recipes (Model). Change one layer, the others don't care.\n\n**Why it matters:** the \"separation of concerns\" phrase is the whole point — each layer can change or be tested independently.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "controller",
+      "rest",
+      "mvc"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_324575b3",
+    "createdAt": "2026-09-05T11:35:12.205Z",
+    "updatedAt": "2026-09-05T11:35:12.205Z"
+  },
+  {
+    "topicId": "top_9179b9ac",
+    "title": "Explain the MVC request flow.",
+    "slug": "dotnet-explain-the-mvc-request-flow",
+    "bodyMd": "**Explain the MVC request flow.**",
+    "answerMd": "**Spoken answer:** \"A request hits **routing**, which maps the URL to a controller and action. The **controller** runs, works with the **model** (fetches/saves data), and returns a **view** or data. The view engine renders HTML and sends it back. So: Request → Routing → Controller → Model → View → Response.\"\n\n**Deeper (trace one URL):** say a browser asks for `/products/details/5`. Routing reads the pattern and decides: controller = `Products`, action = `Details`, id = `5`. It calls `ProductsController.Details(5)`. That action asks the model layer for product 5, gets a `Product` object back, and does `return View(product)`. The Razor view engine merges that object into `Details.cshtml` to produce HTML, which goes back as the response. Notice the controller never builds HTML and the view never queries the DB — each stays in its lane.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "controller",
+      "mvc"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_421f47f6",
+    "createdAt": "2026-09-05T11:35:12.215Z",
+    "updatedAt": "2026-09-05T11:35:12.215Z"
+  },
+  {
+    "topicId": "top_9179b9ac",
+    "title": "What is a Controller?",
+    "slug": "dotnet-what-is-a-controller",
+    "bodyMd": "**What is a Controller?**",
+    "answerMd": "**Spoken answer:** \"A controller is a class (ending in `Controller`) that groups related actions — methods that handle requests. Each action returns an `IActionResult` like a View, JSON, or redirect. It's the entry point for handling a request.\"\n\n```csharp\npublic class HomeController : Controller {\n    public IActionResult Index() => View();\n    public IActionResult GetUser(int id) => Json(_service.Get(id));\n}\n```\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "controller",
+      "mvc"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_efbc5013",
+    "createdAt": "2026-09-05T11:35:12.227Z",
+    "updatedAt": "2026-09-05T11:35:12.227Z"
+  },
+  {
+    "topicId": "top_9179b9ac",
+    "title": "What is an Action Result / IActionResult?",
+    "slug": "dotnet-what-is-an-action-result-iactionresult",
+    "bodyMd": "**What is an Action Result / IActionResult?**",
+    "answerMd": "**Spoken answer:** \"`IActionResult` is the return type of actions — it represents *what* to send back without hardcoding it. Common ones: `View()`, `Json()`, `RedirectToAction()`, `NotFound()`, `Ok()`, `BadRequest()`. Returning `IActionResult` lets one action return *different* result types depending on the situation — and it maps cleanly to HTTP status codes.\"\n\n**Deeper (why the interface, not a concrete type):** one action often needs to return different things — 200 with data on success, 404 if missing, 400 if the input was bad. If you returned a fixed type you couldn't do that. `IActionResult` is the common base so you can return any of them from the same method, and each result knows how to write itself to the HTTP response (status code + body).\n\n```csharp\npublic IActionResult Get(int id) {\n    var user = _service.Get(id);\n    if (user == null) return NotFound();     // 404\n    return Ok(user);                          // 200 + JSON\n}\n```\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface",
+      "mvc"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_0d4aabd5",
+    "createdAt": "2026-09-05T11:35:12.240Z",
+    "updatedAt": "2026-09-05T11:35:12.240Z"
+  },
+  {
+    "topicId": "top_9179b9ac",
+    "title": "What is routing? Convention vs attribute routing?",
+    "slug": "dotnet-what-is-routing-convention-vs-attribute-routing",
+    "bodyMd": "**What is routing? Convention vs attribute routing?**",
+    "answerMd": "**Spoken answer:** \"Routing maps a URL to a controller action. **Convention-based** uses a pattern like `{controller}/{action}/{id?}` defined centrally. **Attribute routing** puts the route right on the action with `[Route(\\\"...\\\")]` or `[HttpGet(\\\"...\\\")]` — more explicit, common in Web APIs.\"\n\n```csharp\n[Route(\"api/users/{id}\")]\n[HttpGet]\npublic IActionResult Get(int id) => Ok(_service.Get(id));\n```\n\n**Deeper (which to use):** convention routing is great when your URLs are uniform (classic MVC pages) — set it once, forget it. Attribute routing wins for APIs where each endpoint has its own shape (`api/orders/{id}/items`) and HTTP verb — the route sits right next to the method so it's self-documenting. Most Web APIs today use attribute routing.\n**Spoken answer:** \"MVC typically returns **views (HTML)** for web pages; Web API returns **data (JSON/XML)** for clients like SPAs or mobile apps. In modern .NET they're unified — a controller can do both — but the intent differs: MVC = server-rendered pages, Web API = data endpoints.\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "controller",
+      "api",
+      "mvc"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_c4b724eb",
+    "createdAt": "2026-09-05T11:35:12.253Z",
+    "updatedAt": "2026-09-05T11:35:12.253Z"
+  },
+  {
+    "topicId": "top_9179b9ac",
+    "title": "How does model binding work?",
+    "slug": "dotnet-how-does-model-binding-work",
+    "bodyMd": "**How does model binding work?**",
+    "answerMd": "**Spoken answer:** \"Model binding automatically maps incoming request data — route values, query string, form fields, JSON body — onto your action's parameters or model objects. So you get a strongly-typed object instead of parsing the request manually.\"\n\n```csharp\n[HttpPost]\npublic IActionResult Create(UserDto user) { /* user is auto-filled */ }\n```\n\n**Deeper (where it pulls from):** binding looks in several places automatically — route values, query string, form fields, and the JSON body — and matches them to your parameter by name. So a POST with `{\"name\":\"Sara\"}` fills `user.Name` with no manual parsing. You can be explicit with `[FromBody]`, `[FromQuery]`, `[FromRoute]` when there's ambiguity. This is a huge time-saver — you go straight from HTTP to a typed object.\n**Spoken answer:** \"You decorate model properties with attributes like `[Required]`, `[StringLength]`, `[Range]`, `[EmailAddress]`. On a request, `ModelState.IsValid` tells you if the incoming data passed. It centralizes validation rules on the model.\"\n\n```csharp\npublic class UserDto {\n    [Required] public string Name { get; set; }\n    [EmailAddress] public string Email { get; set; }\n}\nif (!ModelState.IsValid) return BadRequest(ModelState);\n```\n\n**Deeper:** the rules live *on the model*, not scattered through your controllers — so the same validation applies everywhere that DTO is used. With `[ApiController]`, the `ModelState.IsValid` check even happens **automatically** and returns a 400 before your action runs, so you often don't write the `if` yourself. Keep validation declarative on the model; keep controllers clean.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "controller",
+      "api",
+      "mvc"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_484f1794",
+    "createdAt": "2026-09-05T11:35:12.263Z",
+    "updatedAt": "2026-09-05T11:35:12.263Z"
+  },
+  {
+    "topicId": "top_9179b9ac",
+    "title": "ViewData vs ViewBag vs TempData vs Model?",
+    "slug": "dotnet-viewdata-vs-viewbag-vs-tempdata-vs-model",
+    "bodyMd": "**ViewData vs ViewBag vs TempData vs Model?**",
+    "answerMd": "**Spoken answer:** \"**Model** — the strongly-typed object passed to a view (best). **ViewData** — a dictionary (`ViewData[\\\"x\\\"]`), needs casting. **ViewBag** — dynamic wrapper over ViewData, no casting. **TempData** — survives *one* redirect (backed by session), good for post-redirect messages.\"\n\n| | Type | Lifespan |\n|---|---|---|\n| Model | Strongly typed | Current request |\n| ViewData | Dictionary | Current request |\n| ViewBag | Dynamic | Current request |\n| TempData | Dictionary | Until next request (survives redirect) |\n\n**Deeper (the one that trips people):** ViewData and ViewBag are literally the *same* dictionary — ViewBag is just a `dynamic` face over ViewData, so no casting but no compile-time checking either. The special one is **TempData**: it's the *only* one that survives a **redirect** (it's stored in session/cookie and cleared after being read once). So the \"Saved successfully!\" message you show after a Post-Redirect-Get uses TempData — the others would be gone after the redirect. For anything real, prefer a strongly-typed **Model** so the compiler catches typos.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "mvc"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_fe637ff0",
+    "createdAt": "2026-09-05T11:35:12.277Z",
+    "updatedAt": "2026-09-05T11:35:12.277Z"
+  },
+  {
+    "topicId": "top_9179b9ac",
+    "title": "What are filters in MVC?",
+    "slug": "dotnet-what-are-filters-in-mvc",
+    "bodyMd": "**What are filters in MVC?**",
+    "answerMd": "**Spoken answer:** \"Filters run code at specific points in the request pipeline around actions. Types: **Authorization** (is the user allowed?), **Action** (before/after the action), **Result** (before/after the result), and **Exception** (handle errors). They're for cross-cutting concerns like logging, auth, and error handling.\"\n\n```csharp\n[Authorize]           // authorization filter\npublic IActionResult Secure() => View();\n```\n\n**Deeper (filters = cross-cutting concerns in one place):** things like \"log every action\", \"check the user is an admin\", \"wrap errors in a standard response\" apply to *many* actions. Instead of copy-pasting that into every method, you write it once as a filter and attach it with an attribute. They run in a defined order around the action: Authorization → Action (before) → the action → Action (after) → Result. Think of them as the MVC-aware version of middleware.\n\n```csharp\npublic class LogActionFilter : IActionFilter {\n    public void OnActionExecuting(ActionExecutingContext c) => Log(\"before \" + c.ActionDescriptor.DisplayName);\n    public void OnActionExecuted(ActionExecutedContext c)  => Log(\"after\");\n}\n```\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "middleware",
+      "mvc"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_5ffc9283",
+    "createdAt": "2026-09-05T11:35:12.293Z",
+    "updatedAt": "2026-09-05T11:35:12.293Z"
+  },
+  {
+    "topicId": "top_9179b9ac",
+    "title": "What is Razor?",
+    "slug": "dotnet-what-is-razor",
+    "bodyMd": "**What is Razor?**",
+    "answerMd": "**Spoken answer:** \"Razor is the view engine syntax that mixes C# with HTML using `@`. It lets you write server-side logic inside markup cleanly — `@Model.Name`, `@if`, `@foreach`. `.cshtml` files use Razor.\"\n\n```html\n<h1>@Model.Title</h1>\n@foreach (var item in Model.Items) { <li>@item</li> }\n```\n\n**Deeper:** the `@` is Razor's way of saying \"switch from HTML to C# here.\" It's smart about where C# ends and HTML resumes, so you rarely mark the end. `@Model` is the strongly-typed object the controller passed in, so you get IntelliSense and compile-time checking in your view — a big win over stringly-typed templates. Keep views for *display logic only*; no DB calls or business rules in Razor.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "controller",
+      "mvc"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_89b27610",
+    "createdAt": "2026-09-05T11:35:12.305Z",
+    "updatedAt": "2026-09-05T11:35:12.305Z"
+  },
+  {
+    "topicId": "top_20a00d04",
+    "title": "What is middleware in ASP.NET Core?",
+    "slug": "dotnet-what-is-middleware-in-asp-net-core",
+    "bodyMd": "**What is middleware in ASP.NET Core?**",
+    "answerMd": "**Spoken answer:** \"Middleware is a component that sits in the request pipeline — each request passes through a chain of middleware in order, and the response passes back through in reverse. Each one can do work, then call `next()` to pass control on, or short-circuit and respond directly. Examples: authentication, logging, CORS, exception handling, static files.\"\n\n```csharp\napp.Use(async (context, next) => {\n    // do something before\n    await next();       // pass to next middleware\n    // do something after\n});\n```\n\n**Deeper (the onion model):** picture middleware as layers of an onion. A request travels *inward* through each layer to reach your controller, then the response travels *outward* through the same layers in reverse. That's why code *before* `await next()` runs on the way in, and code *after* it runs on the way out. This is how one middleware can, say, start a stopwatch on the way in and log the elapsed time on the way out.\n\n```csharp\napp.Use(async (context, next) => {\n    var sw = Stopwatch.StartNew();     // on the way IN\n    await next();                       // go deeper (controller runs somewhere in here)\n    sw.Stop();                          // on the way OUT\n    Console.WriteLine($\"Took {sw.ElapsedMilliseconds}ms\");\n});\n```\n\n**Why it matters:** \"onion layers — in through each, out through each in reverse\" is exactly the mental model they want. (It's basically Express middleware for .NET.)\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "async",
+      "await",
+      "middleware",
+      "controller"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_b6d95442",
+    "createdAt": "2026-09-05T11:35:12.323Z",
+    "updatedAt": "2026-09-05T11:35:12.323Z"
+  },
+  {
+    "topicId": "top_20a00d04",
+    "title": "What is the middleware pipeline order?",
+    "slug": "dotnet-what-is-the-middleware-pipeline-order",
+    "bodyMd": "**What is the middleware pipeline order?**",
+    "answerMd": "**Spoken answer:** \"Order matters a lot. Typical order: Exception handling first (so it wraps everything), then HTTPS redirection, static files, routing, CORS, authentication, authorization, and finally endpoint execution. If you put auth after the endpoint, it won't protect anything.\"\n\n```csharp\napp.UseExceptionHandler(\"/error\");\napp.UseHttpsRedirection();\napp.UseStaticFiles();\napp.UseRouting();\napp.UseAuthentication();   // WHO are you?  (must come before authorization)\napp.UseAuthorization();    // are you ALLOWED?\napp.MapControllers();\n```\n\n**Deeper (why the order is logical, not arbitrary):** each layer depends on the previous one. Exception handling goes first so it can catch errors from *everything* after it. Authentication must run before authorization — you can't check \"are you allowed?\" before knowing \"who are you?\" Routing must run before auth so the framework knows *which* endpoint (and its `[Authorize]` rules) applies. Put auth *after* `MapControllers` and it never protects anything — the controller already ran. If you ever see \"auth isn't working,\" the order is the first suspect.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "middleware",
+      "controller"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_e267feb7",
+    "createdAt": "2026-09-05T11:35:12.339Z",
+    "updatedAt": "2026-09-05T11:35:12.339Z"
+  },
+  {
+    "topicId": "top_20a00d04",
+    "title": "`Use` vs `Run` vs `Map`?",
+    "slug": "dotnet-use-vs-run-vs-map",
+    "bodyMd": "**`Use` vs `Run` vs `Map`?**",
+    "answerMd": "**Spoken answer:** \"`Use` adds middleware that can call `next` and continue the chain. `Run` is terminal — it ends the pipeline and doesn't call next. `Map` branches the pipeline based on the request path.\"\n\n```csharp\napp.Use(async (ctx, next) => { ...; await next(); }); // continues the chain\napp.Run(async ctx => await ctx.Response.WriteAsync(\"End\")); // terminal — stops here\napp.Map(\"/admin\", adminApp => { ... }); // branch: only requests to /admin go in here\n```\n\n**Deeper (the gotcha):** the difference between `Use` and `Run` is simply *whether you call `next`*. `Run` is a dead end — anything registered after it never executes. A common bug is forgetting `await next()` in a `Use` middleware: the pipeline silently stops and the request hangs or returns nothing. So: `Use` = \"do my bit and pass it on\", `Run` = \"I'm the last stop\", `Map` = \"split off a sub-pipeline for a path.\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "async",
+      "await",
+      "middleware"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_7914457a",
+    "createdAt": "2026-09-05T11:35:12.353Z",
+    "updatedAt": "2026-09-05T11:35:12.353Z"
+  },
+  {
+    "topicId": "top_20a00d04",
+    "title": "How do you write custom middleware?",
+    "slug": "dotnet-how-do-you-write-custom-middleware",
+    "bodyMd": "**How do you write custom middleware?**",
+    "answerMd": "**Spoken answer:** \"Two ways: an inline `app.Use(...)` lambda, or a dedicated class with an `InvokeAsync(HttpContext, RequestDelegate)` method. The class approach is cleaner for reusable logic — you inject the `next` delegate and call it after your work.\"\n\n```csharp\npublic class RequestLoggingMiddleware {\n    private readonly RequestDelegate _next;\n    public RequestLoggingMiddleware(RequestDelegate next) => _next = next;\n\n    public async Task InvokeAsync(HttpContext context) {\n        Console.WriteLine($\"{context.Request.Method} {context.Request.Path}\");\n        await _next(context);   // pass control on\n    }\n}\n// register: app.UseMiddleware<RequestLoggingMiddleware>();\n```\n\n**Deeper:** the framework finds `InvokeAsync` by convention and hands you `next` (the rest of the pipeline) in the constructor. Your only job: do your work, then `await _next(context)` to continue — or *don't* call it to short-circuit (e.g. return 401 immediately for a bad API key). The class form is preferred over inline lambdas because it's testable and can take injected dependencies via the constructor.\n\n---",
+    "difficulty": "Hard",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "async",
+      "await",
+      "delegate",
+      "middleware"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_ce682e4f",
+    "createdAt": "2026-09-05T11:35:12.371Z",
+    "updatedAt": "2026-09-05T11:35:12.371Z"
+  },
+  {
+    "topicId": "top_20a00d04",
+    "title": "Middleware vs Filters — what's the difference?",
+    "slug": "dotnet-middleware-vs-filters-what-s-the-difference",
+    "bodyMd": "**Middleware vs Filters — what's the difference?**",
+    "answerMd": "**Spoken answer:** \"Middleware runs for *every* request at the pipeline level, before MVC even kicks in — good for cross-app concerns like logging and auth. Filters run *inside* MVC, around controller actions, and know about MVC context like model binding and action results. Use middleware for app-wide, filters for MVC-specific.\"\n\n**Deeper (how to choose):** ask \"does this need to know about MVC?\" Logging a raw request, compressing responses, handling CORS — no MVC knowledge needed → **middleware**. \"Only admins can hit this action\", \"validate the model\", \"wrap the action's result in a standard envelope\" — needs the action, model, and result → **filter**. Middleware sits *outside* MVC and wraps the whole app; filters sit *inside* MVC and wrap individual actions.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "middleware",
+      "controller",
+      "mvc"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_d2a60359",
+    "createdAt": "2026-09-05T11:35:12.376Z",
+    "updatedAt": "2026-09-05T11:35:12.376Z"
+  },
+  {
+    "topicId": "top_fd3123ed",
+    "title": "What makes a class a controller?",
+    "slug": "dotnet-what-makes-a-class-a-controller",
+    "bodyMd": "**What makes a class a controller?**",
+    "answerMd": "**Spoken answer:** \"By convention it ends with `Controller` and usually inherits `Controller` (MVC) or `ControllerBase` (API, no view support). For APIs you add `[ApiController]` which gives automatic model validation and cleaner parameter binding.\"\n\n```csharp\n[ApiController]\n[Route(\"api/[controller]\")]\npublic class UsersController : ControllerBase {\n    [HttpGet(\"{id}\")]\n    public IActionResult Get(int id) => Ok(_service.Get(id));\n}\n```\n\n**Deeper (`Controller` vs `ControllerBase`):** `ControllerBase` has everything for APIs — `Ok()`, `NotFound()`, model binding — but *no* view support. `Controller` inherits from it and *adds* `View()`, `ViewBag`, etc. for server-rendered pages. So for a JSON API, inherit `ControllerBase` (leaner); for MVC pages, inherit `Controller`. The `[controller]` token in the route auto-uses the class name minus \"Controller\" (so `UsersController` → `api/users`).\n**Spoken answer:** \"Through constructor injection. You register a service in DI, and the framework passes it into the controller's constructor automatically. The controller stays thin — it just delegates to services/repositories.\"\n\n```csharp\npublic class UsersController : ControllerBase {\n    private readonly IUserService _service;\n    public UsersController(IUserService service) => _service = service;\n}\n```\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "delegate",
+      "controller",
+      "api",
+      "mvc"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_d9a734a0",
+    "createdAt": "2026-09-05T11:35:12.396Z",
+    "updatedAt": "2026-09-05T11:35:12.396Z"
+  },
+  {
+    "topicId": "top_fd3123ed",
+    "title": "Where should business logic go — in the controller?",
+    "slug": "dotnet-where-should-business-logic-go-in-the-controller",
+    "bodyMd": "**Where should business logic go — in the controller?**",
+    "answerMd": "**Spoken answer:** \"No. Controllers should be **thin** — just handle the HTTP concern: read input, call a service, return a result. Business logic goes in a service layer, and data access in a repository. This keeps controllers testable and logic reusable.\"\n\n**Deeper (why fat controllers hurt):** if the discount calculation lives inside the controller action, you can only reach it through an HTTP request — you can't reuse it from a background job, and you can't unit-test it without spinning up the web stack. Move it to a service and it's reusable *and* testable in isolation. The controller's only job is translation: HTTP in → call service → result out.\n\n```csharp\n// thin controller — no logic, just wiring\n[HttpPost]\npublic IActionResult Checkout(CartDto cart) {\n    var invoice = _checkoutService.Process(cart);   // all logic lives here\n    return Ok(invoice);\n}\n```\n\n**Why it matters:** the \"fat controllers are bad, keep them thin\" principle is a maturity signal — mention reuse *and* testability.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "controller",
+      "repository"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_f15d2cac",
+    "createdAt": "2026-09-05T11:35:12.407Z",
+    "updatedAt": "2026-09-05T11:35:12.407Z"
+  },
+  {
+    "topicId": "top_fd3123ed",
+    "title": "Common attributes on actions?",
+    "slug": "dotnet-common-attributes-on-actions",
+    "bodyMd": "**Common attributes on actions?**",
+    "answerMd": "**Spoken answer:** \"`[HttpGet]`, `[HttpPost]`, `[HttpPut]`, `[HttpDelete]` map HTTP verbs. `[Route]` sets the path. `[Authorize]` requires authentication. `[FromBody]`, `[FromQuery]`, `[FromRoute]` control where a parameter is bound from. `[AllowAnonymous]` opens up a secured controller.\"\n\n**Deeper (a nice combo):** put `[Authorize]` on the *whole controller* to lock everything down, then `[AllowAnonymous]` on the one action that must stay open (like login). The `[From...]` attributes matter when binding is ambiguous — e.g. force a value to come from the body vs the query string. Choosing the right verb attribute also gives you correct REST semantics for free (GET = read/safe, POST = create, PUT = replace, DELETE = remove).\n\n```csharp\n[Authorize]                         // whole controller requires login\npublic class AccountController : ControllerBase {\n    [AllowAnonymous] [HttpPost(\"login\")]      // except this one\n    public IActionResult Login([FromBody] LoginDto dto) { ... }\n}\n```\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "controller",
+      "rest"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_1aeb2d49",
+    "createdAt": "2026-09-05T11:35:12.421Z",
+    "updatedAt": "2026-09-05T11:35:12.421Z"
+  },
+  {
+    "topicId": "top_0e18b5b8",
+    "title": "What is ADO.NET?",
+    "slug": "dotnet-what-is-ado-net",
+    "bodyMd": "**What is ADO.NET?**",
+    "answerMd": "**Spoken answer:** \"ADO.NET is the low-level data access technology in .NET for talking to databases directly with SQL. You manage connections, commands, and read results yourself — full control, no abstraction. It's what EF sits on top of.\"\n\n**Deeper (the trade-off):** ADO.NET is like driving a manual car — more work (open connection, build command, read rows, close everything) but total control and top speed. EF is the automatic — less code, but a layer of abstraction between you and the SQL. You reach for raw ADO.NET when you need a very specific/complex query, bulk operations, or maximum performance, and EF for everyday CRUD. Because it's manual, the discipline is: always wrap connections in `using` and always parameterize input.\n\n**Why it matters:** \"low-level, full control, EF is built on it — manual vs automatic\" is the framing.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_2326e8e7",
+    "createdAt": "2026-09-05T11:35:12.438Z",
+    "updatedAt": "2026-09-05T11:35:12.438Z"
+  },
+  {
+    "topicId": "top_0e18b5b8",
+    "title": "What are the core ADO.NET objects?",
+    "slug": "dotnet-what-are-the-core-ado-net-objects",
+    "bodyMd": "**What are the core ADO.NET objects?**",
+    "answerMd": "**Spoken answer:** \"The main ones: **SqlConnection** (opens the DB connection), **SqlCommand** (holds the SQL/stored procedure and parameters), **SqlDataReader** (fast, forward-only reading of results), **SqlDataAdapter** + **DataSet/DataTable** (fill an in-memory table), and **SqlParameter** (safe parameterized values).\"\n\n| Object | Job |\n|---|---|\n| `SqlConnection` | Connect to the database |\n| `SqlCommand` | Run SQL / stored procedure |\n| `SqlDataReader` | Read rows forward-only (fast) |\n| `SqlDataAdapter` | Fill a DataSet/DataTable |\n| `SqlParameter` | Pass values safely |\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_b3b5eba6",
+    "createdAt": "2026-09-05T11:35:12.451Z",
+    "updatedAt": "2026-09-05T11:35:12.451Z"
+  },
+  {
+    "topicId": "top_0e18b5b8",
+    "title": "Show a basic ADO.NET query with a reader.",
+    "slug": "dotnet-show-a-basic-ado-net-query-with-a-reader",
+    "bodyMd": "**Show a basic ADO.NET query with a reader.**",
+    "answerMd": "```csharp\nstring cs = \"Server=.;Database=Shop;Trusted_Connection=True;\";\nusing (var conn = new SqlConnection(cs))\n{\n    conn.Open();\n    using (var cmd = new SqlCommand(\"SELECT Id, Name FROM Users WHERE City = @city\", conn))\n    {\n        cmd.Parameters.AddWithValue(\"@city\", \"London\"); // parameterized = safe\n        using (var reader = cmd.ExecuteReader())\n        {\n            while (reader.Read())\n            {\n                int id = reader.GetInt32(0);\n                string name = reader.GetString(1);\n            }\n        }\n    }\n} // using auto-closes everything\n```\n**Why it matters:** always show **parameters** (not string concatenation) — that's the SQL injection defense they want to hear.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_25e59e40",
+    "createdAt": "2026-09-05T11:35:12.465Z",
+    "updatedAt": "2026-09-05T11:35:12.465Z"
+  },
+  {
+    "topicId": "top_0e18b5b8",
+    "title": "`ExecuteReader` vs `ExecuteScalar` vs `ExecuteNonQuery`?",
+    "slug": "dotnet-executereader-vs-executescalar-vs-executenonquery",
+    "bodyMd": "**`ExecuteReader` vs `ExecuteScalar` vs `ExecuteNonQuery`?**",
+    "answerMd": "**Spoken answer:** \"**ExecuteReader** — for SELECTs that return many rows. **ExecuteScalar** — returns a single value, like a COUNT or a single field. **ExecuteNonQuery** — for INSERT/UPDATE/DELETE; returns the number of rows affected.\"\n\n```csharp\n// SELECT many rows\nusing var reader = cmd.ExecuteReader();\n\n// SELECT one value (COUNT, MAX, a single field)\nint count = (int)new SqlCommand(\"SELECT COUNT(*) FROM Users\", conn).ExecuteScalar();\n\n// INSERT / UPDATE / DELETE -> returns rows affected\nint rows = new SqlCommand(\"DELETE FROM Users WHERE Id=5\", conn).ExecuteNonQuery();\n```\n\n**Deeper (pick by shape of result):** the three map to \"how much comes back.\" Many rows → **Reader**. Exactly one scalar → **Scalar** (saves you opening a reader just to grab one number). Nothing to read, just a command → **NonQuery**, and its return value (rows affected) is handy to confirm an update actually hit something (`if (rows == 0) // nothing matched`).\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_770ad52d",
+    "createdAt": "2026-09-05T11:35:12.478Z",
+    "updatedAt": "2026-09-05T11:35:12.478Z"
+  },
+  {
+    "topicId": "top_0e18b5b8",
+    "title": "DataReader vs DataSet?",
+    "slug": "dotnet-datareader-vs-dataset",
+    "bodyMd": "**DataReader vs DataSet?**",
+    "answerMd": "**Spoken answer:** \"**DataReader** is connected, forward-only, read-only — fast and memory-light, but you must keep the connection open while reading. **DataSet/DataTable** is disconnected — it loads everything into memory so you can close the connection and work offline, but uses more memory. Reader for speed, DataSet for offline manipulation.\"\n\n**Deeper (streaming vs snapshot):** a DataReader is like reading a book line by line with the book still open — you see one row at a time and can't go back, but it barely uses memory (great for millions of rows). A DataSet is like photocopying the whole book — you can flip around, sort, filter, edit offline, and the DB connection is already closed, but you paid the memory cost to copy everything. Big read-only stream → Reader; small result you need to hold and manipulate → DataSet.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_dbfc77c9",
+    "createdAt": "2026-09-05T11:35:12.490Z",
+    "updatedAt": "2026-09-05T11:35:12.490Z"
+  },
+  {
+    "topicId": "top_0e18b5b8",
+    "title": "What is a connection string?",
+    "slug": "dotnet-what-is-a-connection-string",
+    "bodyMd": "**What is a connection string?**",
+    "answerMd": "**Spoken answer:** \"A connection string is the config text that tells ADO.NET/EF how to reach the database — server, database name, and how to authenticate. You keep it out of code, in `appsettings.json` (or secrets), never hardcoded.\"\n\n```\nServer=myServer;Database=ShopDb;User Id=sa;Password=****;\nServer=.;Database=ShopDb;Trusted_Connection=True;   (Windows auth)\n```\n\n**In appsettings.json:**\n```json\n{\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Server=.;Database=ShopDb;Trusted_Connection=True;\"\n  }\n}\n```\nRead it: `builder.Configuration.GetConnectionString(\"DefaultConnection\")`.\n\n**Deeper (read the parts + keep it safe):** a connection string is just `key=value;` pairs — `Server` (where), `Database` (which DB), and auth (`Trusted_Connection=True` for Windows auth, or `User Id`/`Password` for SQL auth). The golden rule: **never hardcode it or commit passwords**. Put it in `appsettings.json` for local, and for real environments use environment variables, User Secrets (dev), or a secret store like Azure Key Vault. If a password leaks into source control, treat it as compromised.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_d1210d01",
+    "createdAt": "2026-09-05T11:35:12.500Z",
+    "updatedAt": "2026-09-05T11:35:12.500Z"
+  },
+  {
+    "topicId": "top_0e18b5b8",
+    "title": "What is connection pooling?",
+    "slug": "dotnet-what-is-connection-pooling",
+    "bodyMd": "**What is connection pooling?**",
+    "answerMd": "**Spoken answer:** \"Opening a DB connection is expensive, so ADO.NET keeps a **pool** of open connections and reuses them. When you 'close' a connection, it actually goes back to the pool instead of really closing. That's why you should open connections late and dispose them fast — with `using` — so they return to the pool quickly.\"\n\n**Deeper (why `using` matters so much):** opening a real DB connection involves a network handshake and auth — slow. The pool keeps a set of live connections ready; `Open()` grabs a free one, `Dispose()`/`Close()` returns it (it doesn't truly close). The danger: if you *forget* to dispose, that connection is never returned, the pool drains, and eventually you get \"connection pool exhausted / timeout\" errors under load. So `using` isn't just tidy — it's what keeps the pool healthy.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_5520dbf4",
+    "createdAt": "2026-09-05T11:35:12.507Z",
+    "updatedAt": "2026-09-05T11:35:12.507Z"
+  },
+  {
+    "topicId": "top_0e18b5b8",
+    "title": "How do you prevent SQL injection?",
+    "slug": "dotnet-how-do-you-prevent-sql-injection",
+    "bodyMd": "**How do you prevent SQL injection?**",
+    "answerMd": "**Spoken answer:** \"Never build SQL by concatenating user input. Always use **parameterized queries** (`SqlParameter`) or stored procedures, so input is treated as data, not code. That's the number one rule.\"\n\n```csharp\n// BAD — string concatenation\n// If name = \"'; DROP TABLE Users;--\"  the whole table is gone.\nvar sql = \"SELECT * FROM Users WHERE Name = '\" + name + \"'\";\n\n// GOOD — parameterized: the input is treated as a value, never as SQL\ncmd.CommandText = \"SELECT * FROM Users WHERE Name = @name\";\ncmd.Parameters.AddWithValue(\"@name\", name);\n```\n\n**Deeper (why parameters actually stop it):** with concatenation, user input becomes *part of the SQL text*, so a crafted string can add its own commands. With parameters, the SQL structure is fixed and sent separately from the values — the database treats `@name` purely as data, so `'; DROP TABLE Users;--` is just searched for as a literal name, not executed. Same reasoning applies to stored procedures with parameters. Rule: **user input never becomes SQL text.**\n\n---",
+    "difficulty": "Hard",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_ee898ebb",
+    "createdAt": "2026-09-05T11:35:12.513Z",
+    "updatedAt": "2026-09-05T11:35:12.513Z"
+  },
+  {
+    "topicId": "top_0e18b5b8",
+    "title": "How do you call a stored procedure with ADO.NET?",
+    "slug": "dotnet-how-do-you-call-a-stored-procedure-with-ado-net",
+    "bodyMd": "**How do you call a stored procedure with ADO.NET?**",
+    "answerMd": "```csharp\nusing (var cmd = new SqlCommand(\"sp_GetUsersByCity\", conn))\n{\n    cmd.CommandType = CommandType.StoredProcedure;   // <-- the key line\n    cmd.Parameters.AddWithValue(\"@City\", \"London\");\n    using (var reader = cmd.ExecuteReader()) { ... }\n}\n```\n\n**Deeper:** the command text becomes just the **procedure name** (not SQL), and you set `CommandType = StoredProcedure` so ADO.NET knows to call it rather than run it as a query. Parameters map to the proc's declared parameters by name. For an OUTPUT parameter, set `Direction = ParameterDirection.Output` and read it back after `ExecuteNonQuery`. Stored procs are common in enterprise/legacy .NET (like VB6-migrated code) because the SQL lives in the DB and is reusable + parameterized by design.\n\n**Why it matters:** forgetting `CommandType = StoredProcedure` makes ADO.NET treat the proc name as a raw query and it fails — the classic slip.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_160b7a7c",
+    "createdAt": "2026-09-05T11:35:12.520Z",
+    "updatedAt": "2026-09-05T11:35:12.520Z"
+  },
+  {
+    "topicId": "top_5bb1ad99",
+    "title": "What is Entity Framework (Core)?",
+    "slug": "dotnet-what-is-entity-framework-core",
+    "bodyMd": "**What is Entity Framework (Core)?**",
+    "answerMd": "**Spoken answer:** \"EF Core is Microsoft's ORM — Object Relational Mapper. It maps C# classes to database tables so you work with objects and LINQ instead of raw SQL. It generates the SQL, tracks changes, and handles CRUD. It's higher-level than ADO.NET.\"\n\n**Deeper (what \"ORM\" actually saves you):** without an ORM you'd manually write SQL, run a reader, and copy each column into object properties by hand — tedious and error-prone. EF is a *translator*: a class `User` ↔ table `Users`, a property ↔ a column, a LINQ query ↔ a SQL statement. You write `_db.Users.Where(u => u.Age > 18)` and EF emits the `SELECT ... WHERE Age > 18`. You think in objects; it handles the SQL and the mapping both ways.\n\n**Why it matters:** \"ORM — maps classes↔tables, translates LINQ→SQL, and maps rows back to objects\" is the full definition.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "linq",
+      "entity-framework",
+      "dbcontext"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_7adf5bf0",
+    "createdAt": "2026-09-05T11:35:12.533Z",
+    "updatedAt": "2026-09-05T11:35:12.533Z"
+  },
+  {
+    "topicId": "top_5bb1ad99",
+    "title": "What is DbContext?",
+    "slug": "dotnet-what-is-dbcontext",
+    "bodyMd": "**What is DbContext?**",
+    "answerMd": "**Spoken answer:** \"`DbContext` is the heart of EF — it represents a session with the database. It holds `DbSet` properties (one per table/entity), tracks changes to your objects, and saves them with `SaveChanges()`. You query through it with LINQ. It's usually registered as **Scoped** (one per request).\"\n\n```csharp\npublic class ShopContext : DbContext\n{\n    public ShopContext(DbContextOptions<ShopContext> options) : base(options) {}\n    public DbSet<User> Users { get; set; }     // maps to Users table\n    public DbSet<Order> Orders { get; set; }   // maps to Orders table\n}\n```\n\n**Deeper (why it's Scoped + not thread-safe):** the DbContext is a short-lived *workspace* for one unit of work — it opens a connection, tracks the objects you load/change, and flushes them on `SaveChanges()`. It's deliberately **not thread-safe**, so you never share one across requests or threads. That's exactly why it's registered as **Scoped** — each HTTP request gets its own fresh context and it's disposed at the end of the request. Keeping one alive too long also bloats the change-tracker with stale entities.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "linq",
+      "entity-framework",
+      "dbcontext"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_55ff2016",
+    "createdAt": "2026-09-05T11:35:12.542Z",
+    "updatedAt": "2026-09-05T11:35:12.542Z"
+  },
+  {
+    "topicId": "top_5bb1ad99",
+    "title": "What is a DbSet?",
+    "slug": "dotnet-what-is-a-dbset",
+    "bodyMd": "**What is a DbSet?**",
+    "answerMd": "**Spoken answer:** \"A `DbSet<T>` represents a table (or collection of entities) you can query and modify. `context.Users` maps to the Users table — you `Add`, `Remove`, `Find`, or LINQ-query it.\"\n\n```csharp\nvar user = context.Users.Find(1);              // SELECT by PK\ncontext.Users.Add(new User { Name = \"A\" });    // staged, not saved yet\ncontext.SaveChanges();                          // now the INSERT actually runs\n```\n\n**Deeper:** think of a `DbSet<T>` as a *live queryable collection* standing in for the table. LINQ against it (`Where`, `OrderBy`) becomes SQL and runs at the DB. `Add`/`Remove`/`Update` don't touch the database immediately — they just mark intentions in the change-tracker; nothing hits the DB until `SaveChanges()`, which wraps them all in one transaction.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "linq",
+      "entity-framework",
+      "dbcontext"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_d835c04f",
+    "createdAt": "2026-09-05T11:35:12.557Z",
+    "updatedAt": "2026-09-05T11:35:12.557Z"
+  },
+  {
+    "topicId": "top_5bb1ad99",
+    "title": "How do you register DbContext with a connection string?",
+    "slug": "dotnet-how-do-you-register-dbcontext-with-a-connection-string",
+    "bodyMd": "**How do you register DbContext with a connection string?**",
+    "answerMd": "```csharp\n// Program.cs\nbuilder.Services.AddDbContext<ShopContext>(options =>\n    options.UseSqlServer(builder.Configuration.GetConnectionString(\"DefaultConnection\")));\n```\n**Why it matters:** shows DI + config + provider (`UseSqlServer`) coming together — a very common setup question.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "entity-framework",
+      "dbcontext"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_ecf27f0a",
+    "createdAt": "2026-09-05T11:35:12.570Z",
+    "updatedAt": "2026-09-05T11:35:12.570Z"
+  },
+  {
+    "topicId": "top_5bb1ad99",
+    "title": "Code First vs Database First?",
+    "slug": "dotnet-code-first-vs-database-first",
+    "bodyMd": "**Code First vs Database First?**",
+    "answerMd": "**Spoken answer:** \"**Code First** — you write the C# entity classes and EF generates the database (via migrations). **Database First** — you start from an existing database and EF generates the classes. Code First is the modern default because it keeps the schema in source control via migrations.\"\n\n**Deeper (which fits your situation):** Code First shines on new projects — your classes are the single source of truth, and every schema change is a versioned migration that travels with the code. Database First fits when the DB already exists (legacy systems, or a DBA-owned schema you don't control) — you scaffold classes from it. Same EF either way; the difference is just *which side you start from*.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "entity-framework",
+      "dbcontext"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_ede69e54",
+    "createdAt": "2026-09-05T11:35:12.581Z",
+    "updatedAt": "2026-09-05T11:35:12.581Z"
+  },
+  {
+    "topicId": "top_5bb1ad99",
+    "title": "What are migrations?",
+    "slug": "dotnet-what-are-migrations",
+    "bodyMd": "**What are migrations?**",
+    "answerMd": "**Spoken answer:** \"Migrations are how EF Code First evolves the database schema over time. Each migration is a versioned change. `Add-Migration Name` creates one from your model changes, `Update-Database` applies it. It keeps the DB in sync with your entities and is tracked in code.\"\n\n```\nAdd-Migration AddUsersTable   # creates a versioned change from your model edits\nUpdate-Database               # applies it to the actual database\n```\n\n**Deeper (think Git for your schema):** each migration is a snapshot of schema changes with an `Up()` (apply) and `Down()` (roll back). When you add a property to an entity, `Add-Migration` diffs your model against the last migration and generates just the delta (e.g. `ALTER TABLE ADD Column`). Because migrations are code and committed, every developer and every environment ends up with the exact same schema — no manual \"run this SQL on prod\" steps.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "entity-framework",
+      "dbcontext"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_644af91d",
+    "createdAt": "2026-09-05T11:35:12.594Z",
+    "updatedAt": "2026-09-05T11:35:12.594Z"
+  },
+  {
+    "topicId": "top_5bb1ad99",
+    "title": "`Find` vs `First` vs `Single` vs `Where`?",
+    "slug": "dotnet-find-vs-first-vs-single-vs-where",
+    "bodyMd": "**`Find` vs `First` vs `Single` vs `Where`?**",
+    "answerMd": "**Spoken answer:** \"`Find(id)` — fetch by primary key, checks the cache first. `First/FirstOrDefault` — first match (throws vs null if none). `Single/SingleOrDefault` — expects exactly one, throws if more. `Where` — returns all matches (IQueryable). Use `FirstOrDefault` for 'maybe one', `SingleOrDefault` when it must be unique.\"\n\n**Deeper (the intent each one signals):** `Single` isn't just \"get one\" — it *asserts* there's exactly one and throws if there are two, which is a useful safety check for supposedly-unique data (like email). `First` just takes the top one and doesn't care if there are more (pair it with `OrderBy`). The `...OrDefault` variants return `null` instead of throwing when nothing matches — use those when \"not found\" is normal. And `Find(id)` is smart: if that entity is already tracked in the context, it returns it without hitting the DB at all.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "entity-framework",
+      "dbcontext"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_2fed2abc",
+    "createdAt": "2026-09-05T11:35:12.607Z",
+    "updatedAt": "2026-09-05T11:35:12.607Z"
+  },
+  {
+    "topicId": "top_5bb1ad99",
+    "title": "Eager vs Lazy vs Explicit loading?",
+    "slug": "dotnet-eager-vs-lazy-vs-explicit-loading",
+    "bodyMd": "**Eager vs Lazy vs Explicit loading?**",
+    "answerMd": "**Spoken answer:** \"It's about loading related data. **Eager** — load related entities up front with `.Include()`. **Lazy** — related data loads automatically when you access the navigation property (needs proxies). **Explicit** — you manually load related data later with `.Load()`. Eager with `Include` is usually safest to avoid the N+1 query problem.\"\n\n```csharp\n// Eager: ONE query with a JOIN — customers come along for the ride\nvar orders = context.Orders.Include(o => o.Customer).ToList();\n\n// Lazy (danger): looks innocent but fires a query PER order -> N+1\nforeach (var o in context.Orders.ToList())\n    Console.WriteLine(o.Customer.Name);   // each .Customer triggers its own SELECT\n```\n\n**Deeper (the N+1 problem explained):** say you load 100 orders and then touch `.Customer` on each. With lazy loading that's **1 query for the orders + 100 more** for the customers = 101 round-trips to the DB — brutally slow. Eager loading with `.Include()` folds it into a single JOINed query. Explicit loading (`context.Entry(o).Reference(x => x.Customer).Load()`) is the manual middle ground when you only *sometimes* need the related data.\n\n**Why it matters:** naming the **N+1 problem** and fixing it with `.Include()` is a strong senior point.\n\n---",
+    "difficulty": "Hard",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "entity-framework",
+      "dbcontext"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_d59c8e6e",
+    "createdAt": "2026-09-05T11:35:12.621Z",
+    "updatedAt": "2026-09-05T11:35:12.621Z"
+  },
+  {
+    "topicId": "top_5bb1ad99",
+    "title": "What is change tracking?",
+    "slug": "dotnet-what-is-change-tracking",
+    "bodyMd": "**What is change tracking?**",
+    "answerMd": "**Spoken answer:** \"EF watches the entities you loaded through the context and remembers what changed. When you call `SaveChanges()`, it figures out the INSERT/UPDATE/DELETE statements automatically from those changes. For read-only queries, `AsNoTracking()` skips this for better performance.\"\n\n```csharp\nvar users = context.Users.AsNoTracking().ToList(); // read-only -> skip tracking, faster\n```\n\n**Deeper (how it knows what to save):** when you load an entity, EF keeps a *snapshot* of its original values. On `SaveChanges()` it compares current vs snapshot to decide: unchanged → skip, modified → `UPDATE` only the changed columns, new → `INSERT`, removed → `DELETE`. That bookkeeping costs memory and CPU, so for pure read/display queries you use `AsNoTracking()` to switch it off — noticeably faster and lighter when you're not going to edit the results.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "entity-framework",
+      "dbcontext"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_72bd3dff",
+    "createdAt": "2026-09-05T11:35:12.633Z",
+    "updatedAt": "2026-09-05T11:35:12.633Z"
+  },
+  {
+    "topicId": "top_5bb1ad99",
+    "title": "`SaveChanges` vs `SaveChangesAsync`?",
+    "slug": "dotnet-savechanges-vs-savechangesasync",
+    "bodyMd": "**`SaveChanges` vs `SaveChangesAsync`?**",
+    "answerMd": "**Spoken answer:** \"Both commit tracked changes to the DB in a single transaction. `SaveChangesAsync` is the non-blocking version — use it in web apps so the thread isn't blocked during the DB round-trip.\"\n\n**Deeper:** a DB save involves waiting on the network/disk. `SaveChanges` (sync) blocks the thread the whole time — in a web app that thread can't serve other requests while it waits, which hurts throughput under load. `SaveChangesAsync` releases the thread during the wait so it can handle other work, then resumes. Both wrap all pending changes in one transaction (all succeed or all roll back). Rule: in web/API code, prefer the async DB methods end to end.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "async",
+      "entity-framework",
+      "dbcontext",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_6715ec1e",
+    "createdAt": "2026-09-05T11:35:12.645Z",
+    "updatedAt": "2026-09-05T11:35:12.645Z"
+  },
+  {
+    "topicId": "top_5bb1ad99",
+    "title": "EF Core vs ADO.NET — when to use which?",
+    "slug": "dotnet-ef-core-vs-ado-net-when-to-use-which",
+    "bodyMd": "**EF Core vs ADO.NET — when to use which?**",
+    "answerMd": "**Spoken answer:** \"EF Core is faster to develop with, less code, LINQ, change tracking — great for most CRUD apps. ADO.NET gives raw control and top performance for complex queries, bulk operations, or heavy stored-procedure work. Many projects use EF for the bulk and drop to ADO.NET (or `FromSqlRaw`) for the hot spots.\"\n\n**Deeper (it's not either/or):** the mature answer is \"both, where each fits.\" EF for 90% — the everyday CRUD where developer speed matters more than shaving milliseconds. ADO.NET (or EF's `FromSqlRaw`/`ExecuteSqlRaw`) for the 10% — a gnarly reporting query, a bulk insert of 100k rows, or an existing stored proc. You don't have to pick one for the whole app; you optimize the hot spots and keep the rest productive.\n\n```csharp\n// EF escape hatch — run raw SQL but still map to entities\nvar users = context.Users.FromSqlRaw(\"EXEC sp_GetActiveUsers\").ToList();\n```\n\n---",
+    "difficulty": "Hard",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "linq",
+      "entity-framework",
+      "dbcontext",
+      "rest"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_e0102bf3",
+    "createdAt": "2026-09-05T11:35:12.656Z",
+    "updatedAt": "2026-09-05T11:35:12.656Z"
+  },
+  {
+    "topicId": "top_207c54ff",
+    "title": "What is the Repository pattern and why use it?",
+    "slug": "dotnet-what-is-the-repository-pattern-and-why-use-it",
+    "bodyMd": "**What is the Repository pattern and why use it?**",
+    "answerMd": "**Spoken answer:** \"The repository pattern puts data-access logic behind an interface, so the rest of the app works with a clean abstraction instead of EF/ADO.NET directly. Benefits: the app doesn't depend on the data technology, it's easy to unit test (mock the repo), and data logic is centralized. Controllers/services talk to `IRepository`, not `DbContext`.\"\n\n**Deeper (what problem it removes):** without a repository, your controllers/services are peppered with `context.Users.Where(...)` — data-access code leaks everywhere, and to unit-test a service you'd need a real database. With a repository, all that data logic hides behind `IRepository`. The service just calls `_repo.GetById(5)` and doesn't know or care if it's EF, ADO.NET, or an in-memory fake. In tests you inject a fake repo; if you swap EF for Dapper later, only the repo changes. *Balanced take:* EF's `DbContext` + `DbSet` is already a repository/unit-of-work, so for simple apps a custom repo can be redundant — mention that nuance to sound senior.\n\n**Why it matters:** \"abstracts data access, centralizes it, makes services testable and the data tech swappable.\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "interface",
+      "controller",
+      "dbcontext",
+      "repository"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_1ee5e839",
+    "createdAt": "2026-09-05T11:35:12.673Z",
+    "updatedAt": "2026-09-05T11:35:12.673Z"
+  },
+  {
+    "topicId": "top_207c54ff",
+    "title": "Show a generic repository interface + implementation.",
+    "slug": "dotnet-show-a-generic-repository-interface-implementation",
+    "bodyMd": "**Show a generic repository interface + implementation.**",
+    "answerMd": "```csharp\n// The contract (interface)\npublic interface IRepository<T> where T : class\n{\n    Task<T> GetByIdAsync(int id);\n    Task<IEnumerable<T>> GetAllAsync();\n    Task AddAsync(T entity);\n    void Update(T entity);\n    void Delete(T entity);\n    Task<int> SaveAsync();\n}\n\n// EF Core implementation\npublic class Repository<T> : IRepository<T> where T : class\n{\n    private readonly ShopContext _context;\n    private readonly DbSet<T> _set;\n\n    public Repository(ShopContext context)\n    {\n        _context = context;\n        _set = context.Set<T>();\n    }\n\n    public async Task<T> GetByIdAsync(int id) => await _set.FindAsync(id);\n\n    public async Task<IEnumerable<T>> GetAllAsync() => await _set.ToListAsync();\n\n    public async Task AddAsync(T entity) => await _set.AddAsync(entity);\n\n    public void Update(T entity) => _set.Update(entity);\n\n    public void Delete(T entity) => _set.Remove(entity);\n\n    public async Task<int> SaveAsync() => await _context.SaveChangesAsync();\n}\n```\n**Register it:** `builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));`\n\n**Deeper (why generic):** the `<T>` means one implementation serves *every* entity — `IRepository<User>`, `IRepository<Order>`, all the same code. `context.Set<T>()` grabs the right DbSet for whatever type you ask for, so you write the CRUD once instead of a near-identical `UserRepository`, `OrderRepository`, etc. When an entity needs something special (a complex query), you make a dedicated repo that *extends* the generic one — best of both.\n\n**Why it matters:** a generic repo shows you can avoid repeating boilerplate CRUD for every entity (DRY).\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "async",
+      "await",
+      "interface",
+      "repository"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_0c66d13e",
+    "createdAt": "2026-09-05T11:35:12.687Z",
+    "updatedAt": "2026-09-05T11:35:12.687Z"
+  },
+  {
+    "topicId": "top_207c54ff",
+    "title": "How does a service/controller use the repository?",
+    "slug": "dotnet-how-does-a-service-controller-use-the-repository",
+    "bodyMd": "**How does a service/controller use the repository?**",
+    "answerMd": "```csharp\npublic class UserService\n{\n    private readonly IRepository<User> _repo;\n    public UserService(IRepository<User> repo) => _repo = repo; // injected\n\n    public async Task<User> GetUser(int id) => await _repo.GetByIdAsync(id);\n\n    public async Task CreateUser(User u)\n    {\n        await _repo.AddAsync(u);\n        await _repo.SaveAsync();\n    }\n}\n```\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "async",
+      "await",
+      "controller",
+      "repository"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_0cc51302",
+    "createdAt": "2026-09-05T11:35:12.701Z",
+    "updatedAt": "2026-09-05T11:35:12.701Z"
+  },
+  {
+    "topicId": "top_207c54ff",
+    "title": "A specific (non-generic) repository — the ADO.NET style you'd see in older projects.",
+    "slug": "dotnet-a-specific-non-generic-repository-the-ado-net-style-you-d-see-in-older",
+    "bodyMd": "**A specific (non-generic) repository — the ADO.NET style you'd see in older projects.**",
+    "answerMd": "**Spoken answer:** \"In classic projects the repository wraps ADO.NET calls — a method per stored procedure — and returns a `DataSet`/`DataTable` or mapped objects. Same idea: hide the data-access details behind a method.\"\n\n```csharp\npublic class UserRepository\n{\n    private readonly string _cs;\n    public UserRepository(IConfiguration config)\n        => _cs = config.GetConnectionString(\"DefaultConnection\");\n\n    public DataSet GetUsersByCity(string city)\n    {\n        using var conn = new SqlConnection(_cs);\n        using var cmd = new SqlCommand(\"sp_GetUsersByCity\", conn)\n        {\n            CommandType = CommandType.StoredProcedure\n        };\n        cmd.Parameters.AddWithValue(\"@City\", city);\n\n        var ds = new DataSet();\n        using var adapter = new SqlDataAdapter(cmd);\n        adapter.Fill(ds);\n        return ds;\n    }\n}\n```\n**Why it matters:** many enterprise .NET codebases (like the ones you migrate from VB6) use exactly this SP-per-method + DataSet pattern.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "repository"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_b3e39c6f",
+    "createdAt": "2026-09-05T11:35:12.711Z",
+    "updatedAt": "2026-09-05T11:35:12.711Z"
+  },
+  {
+    "topicId": "top_207c54ff",
+    "title": "What is the Unit of Work pattern?",
+    "slug": "dotnet-what-is-the-unit-of-work-pattern",
+    "bodyMd": "**What is the Unit of Work pattern?**",
+    "answerMd": "**Spoken answer:** \"Unit of Work groups multiple repository operations into a single transaction — so several changes either all save or all fail together. It usually wraps one `DbContext` and exposes the repositories, calling `SaveChanges()` once at the end. EF's DbContext already acts as a unit of work, which is why some people skip a separate one.\"\n\n```csharp\npublic interface IUnitOfWork\n{\n    IRepository<User> Users { get; }\n    IRepository<Order> Orders { get; }\n    Task<int> CommitAsync();   // one SaveChanges for everything\n}\n```\n\n**Deeper (the \"all-or-nothing\" point):** imagine placing an order — you insert an `Order` *and* decrement `Stock`. If the order saves but the stock update fails, your data is now wrong. Unit of Work fixes this: both repositories share the *same* DbContext, and you call `Commit()` once — EF wraps both changes in a single transaction, so either both succeed or both roll back. It's the \"these changes belong together\" guarantee. And yes — since `DbContext` already does this, a separate UoW is mainly useful when you've abstracted EF away behind repositories.\n\n---",
+    "difficulty": "Hard",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "async",
+      "interface",
+      "dbcontext",
+      "repository"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_b5295fa9",
+    "createdAt": "2026-09-05T11:35:12.719Z",
+    "updatedAt": "2026-09-05T11:35:12.719Z"
+  },
+  {
+    "topicId": "top_891833a5",
+    "title": "What is serialization (and deserialization)?",
+    "slug": "dotnet-what-is-serialization-and-deserialization",
+    "bodyMd": "**What is serialization (and deserialization)?**",
+    "answerMd": "**Spoken answer:** \"Serialization is turning an in-memory object into a format you can store or send — usually a string like JSON or XML, or raw bytes. Deserialization is the reverse: taking that text/bytes and rebuilding the object. You need it any time an object has to leave the process — sent over an API, saved to a file, or put on a queue.\"\n\n**Deeper (why it's unavoidable):** an object lives in RAM as pointers and references — meaningless to another machine or a file. To send a `User` over HTTP you flatten it into something universal like `{\"name\":\"Sara\",\"age\":30}`. The receiver deserializes that back into *their* `User` object. So serialization is the \"language\" processes use to exchange data — the object gets packed for travel and unpacked on arrival.\n\n```csharp\nvar user = new User { Name = \"Sara\", Age = 30 };\nstring json = JsonSerializer.Serialize(user);        // object -> \"{\\\"Name\\\":\\\"Sara\\\",\\\"Age\\\":30}\"\nUser back = JsonSerializer.Deserialize<User>(json);  // text -> object again\n```\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "serialization",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_50bffca0",
+    "createdAt": "2026-09-05T11:35:12.731Z",
+    "updatedAt": "2026-09-05T11:35:12.731Z"
+  },
+  {
+    "topicId": "top_891833a5",
+    "title": "What are the common serialization formats in .NET?",
+    "slug": "dotnet-what-are-the-common-serialization-formats-in-net",
+    "bodyMd": "**What are the common serialization formats in .NET?**",
+    "answerMd": "**Spoken answer:** \"The main ones are **JSON** (the default for web APIs — light, human-readable), **XML** (older, verbose, schema-friendly, used in SOAP and configs), and **binary** (compact, fast, but not human-readable and .NET-specific). Modern .NET leans heavily on JSON.\"\n\n| Format | Readable? | Size | Typical use |\n|---|---|---|---|\n| JSON | Yes | Small | Web APIs, config, JS interop |\n| XML | Yes | Large (verbose) | SOAP, legacy systems, some configs |\n| Binary | No | Smallest | High-perf internal transfer, caching |\n| Protobuf / MessagePack | No | Very small | gRPC, high-throughput microservices |\n\n**Deeper:** JSON won the web because it's tiny, readable, and maps naturally to JavaScript objects. XML is heavier (open/close tags everywhere) but supports schemas/namespaces, so it lingers in enterprise/SOAP. Binary formats trade readability for speed and size — good inside your own system where nobody needs to eyeball the data.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "serialization",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_aef84207",
+    "createdAt": "2026-09-05T11:35:12.739Z",
+    "updatedAt": "2026-09-05T11:35:12.739Z"
+  },
+  {
+    "topicId": "top_891833a5",
+    "title": "`System.Text.Json` vs `Newtonsoft.Json` (JSON.NET)?",
+    "slug": "dotnet-system-text-json-vs-newtonsoft-json-json-net",
+    "bodyMd": "**`System.Text.Json` vs `Newtonsoft.Json` (JSON.NET)?**",
+    "answerMd": "**Spoken answer:** \"`System.Text.Json` is the built-in JSON library since .NET Core 3.0 — fast, low-allocation, and the default in ASP.NET Core. `Newtonsoft.Json` is the older third-party library that's more feature-rich and flexible. New projects default to `System.Text.Json`; you switch to Newtonsoft when you need a feature it lacks.\"\n\n```csharp\n// System.Text.Json (built-in)\nusing System.Text.Json;\nstring json = JsonSerializer.Serialize(obj);\nvar obj = JsonSerializer.Deserialize<User>(json);\n\n// Newtonsoft (NuGet: Newtonsoft.Json)\nstring json = JsonConvert.SerializeObject(obj);\nvar obj = JsonConvert.DeserializeObject<User>(json);\n```\n\n**Deeper (which to pick):** `System.Text.Json` is faster and uses less memory because it works on UTF-8 bytes directly — great for high-throughput APIs. But it's stricter and historically missing niceties. `Newtonsoft` is more forgiving and has more knobs (custom converters, `[JsonProperty]`, handling weird JSON). Rule of thumb: start with the built-in one; reach for Newtonsoft only if you hit a wall (complex custom conversion, legacy compatibility).\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "serialization",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_7aeeca99",
+    "createdAt": "2026-09-05T11:35:12.753Z",
+    "updatedAt": "2026-09-05T11:35:12.753Z"
+  },
+  {
+    "topicId": "top_891833a5",
+    "title": "How do you control the JSON output — property names, ignoring fields?",
+    "slug": "dotnet-how-do-you-control-the-json-output-property-names-ignoring-fields",
+    "bodyMd": "**How do you control the JSON output — property names, ignoring fields?**",
+    "answerMd": "**Spoken answer:** \"You decorate properties with attributes. In `System.Text.Json`: `[JsonPropertyName(\\\"...\\\")]` to rename, `[JsonIgnore]` to skip a property (like a password), and options like camelCase naming. It lets your C# names differ from the wire format.\"\n\n```csharp\npublic class User {\n    [JsonPropertyName(\"full_name\")] public string Name { get; set; }\n    [JsonIgnore] public string Password { get; set; }   // never serialized\n}\n// camelCase globally:\nvar opts = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };\n```\n\n**Deeper (why this matters for APIs):** your C# uses PascalCase (`Name`), but JavaScript clients expect camelCase (`name`) — the naming policy bridges that automatically. `[JsonIgnore]` is a real security tool: it keeps sensitive fields (password hashes, internal IDs) out of the response so they never leak to the client. This attribute-based control is how you shape a clean API contract without changing your domain classes.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "serialization",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_8551d30e",
+    "createdAt": "2026-09-05T11:35:12.765Z",
+    "updatedAt": "2026-09-05T11:35:12.765Z"
+  },
+  {
+    "topicId": "top_891833a5",
+    "title": "What is a DTO and why use it for serialization?",
+    "slug": "dotnet-what-is-a-dto-and-why-use-it-for-serialization",
+    "bodyMd": "**What is a DTO and why use it for serialization?**",
+    "answerMd": "**Spoken answer:** \"A DTO — Data Transfer Object — is a plain class shaped specifically for sending/receiving data, separate from your domain/entity classes. You serialize the DTO, not the entity. It lets you expose only what the client needs and avoid leaking internal fields or causing circular-reference problems.\"\n\n```csharp\n// Entity has everything, including sensitive/nav props\npublic class User { public int Id; public string Name; public string PasswordHash; public List<Order> Orders; }\n\n// DTO exposes only what the API should return\npublic class UserDto { public string Name { get; set; } public int OrderCount { get; set; } }\n```\n\n**Deeper (three problems DTOs solve):** (1) **Security** — the entity's `PasswordHash` never even exists on the DTO, so it can't leak. (2) **Circular references** — serializing an entity with `User → Orders → User → ...` navigation loops can blow up; a flat DTO breaks the loop. (3) **Stability** — your API contract (DTO) stays stable even if you refactor the database entity. Map entity ↔ DTO manually or with a tool like AutoMapper.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "serialization",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_400af7c6",
+    "createdAt": "2026-09-05T11:35:12.776Z",
+    "updatedAt": "2026-09-05T11:35:12.776Z"
+  },
+  {
+    "topicId": "top_891833a5",
+    "title": "What was `[Serializable]` / `BinaryFormatter`, and why avoid it now?",
+    "slug": "dotnet-what-was-serializable-binaryformatter-and-why-avoid-it-now",
+    "bodyMd": "**What was `[Serializable]` / `BinaryFormatter`, and why avoid it now?**",
+    "answerMd": "**Spoken answer:** \"Old .NET used the `[Serializable]` attribute with `BinaryFormatter` to serialize objects to binary. It's now **obsolete and considered dangerous** — deserializing untrusted binary data can execute malicious code (a well-known security hole). Microsoft removed it in modern .NET. Today you use JSON (`System.Text.Json`) or, for binary needs, safe formats like protobuf/MessagePack.\"\n\n**Deeper (the lesson):** the danger is *deserializing data you don't trust*. `BinaryFormatter` could reconstruct arbitrary object graphs, which attackers exploited to run code. The safe modern rule: only deserialize into known, expected types with a format that just carries data (JSON/protobuf), never one that can rebuild arbitrary behavior. If you see `BinaryFormatter` in legacy code, treat it as a red flag to replace.\n\n---",
+    "difficulty": "Hard",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "serialization"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_5a58b9bd",
+    "createdAt": "2026-09-05T11:35:12.790Z",
+    "updatedAt": "2026-09-05T11:35:12.790Z"
+  },
+  {
+    "topicId": "top_812cda78",
+    "title": "What is an API? What is a Web API?",
+    "slug": "dotnet-what-is-an-api-what-is-a-web-api",
+    "bodyMd": "**What is an API? What is a Web API?**",
+    "answerMd": "**Spoken answer:** \"An API is a contract that lets two pieces of software talk — you call defined endpoints and get defined responses without knowing the internals. A Web API is one exposed over HTTP, usually returning JSON, so browsers, mobile apps, and other servers can consume it. In .NET you build one with a controller inheriting `ControllerBase` and `[ApiController]`.\"\n\n**Deeper:** think of an API as a *restaurant menu* — it lists what you can order (endpoints) and what you'll get back (responses), and you don't need to know how the kitchen works. A Web API just puts that menu on the internet over HTTP, so any client that speaks HTTP can order from it. That's why one backend can serve a website, a phone app, and partner systems — they all hit the same API.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "controller",
+      "rest",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_00337810",
+    "createdAt": "2026-09-05T11:35:12.806Z",
+    "updatedAt": "2026-09-05T11:35:12.806Z"
+  },
+  {
+    "topicId": "top_812cda78",
+    "title": "What is REST?",
+    "slug": "dotnet-what-is-rest",
+    "bodyMd": "**What is REST?**",
+    "answerMd": "**Spoken answer:** \"REST is an architectural style for web APIs built on HTTP. The core ideas: everything is a **resource** with a URL (`/users/5`), you act on it with standard **HTTP verbs** (GET/POST/PUT/DELETE), it's **stateless** (each request carries everything it needs), and it typically uses JSON. It's simple, uses the web the way it was designed, and is the default for most APIs today.\"\n\n**Deeper (the mental model):** REST maps CRUD onto HTTP verbs on nouns (resources). `GET /users` = list, `GET /users/5` = read one, `POST /users` = create, `PUT /users/5` = update, `DELETE /users/5` = remove. Stateless is the key discipline — the server keeps no memory of you between requests, so any server behind a load balancer can handle any request. That statelessness is what makes REST scale horizontally.\n\n```csharp\n[ApiController]\n[Route(\"api/[controller]\")]\npublic class UsersController : ControllerBase {\n    [HttpGet]            public IActionResult GetAll()          => Ok(_svc.All());     // GET  /api/users\n    [HttpGet(\"{id}\")]    public IActionResult Get(int id)       => Ok(_svc.Get(id));   // GET  /api/users/5\n    [HttpPost]           public IActionResult Create(UserDto d) => Created(\"\", _svc.Add(d)); // POST /api/users\n    [HttpPut(\"{id}\")]    public IActionResult Update(int id, UserDto d) => Ok(_svc.Update(id, d));\n    [HttpDelete(\"{id}\")] public IActionResult Delete(int id)    { _svc.Delete(id); return NoContent(); }\n}\n```\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "controller",
+      "rest",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_38ede7ab",
+    "createdAt": "2026-09-05T11:35:12.811Z",
+    "updatedAt": "2026-09-05T11:35:12.811Z"
+  },
+  {
+    "topicId": "top_812cda78",
+    "title": "What are the common HTTP verbs and status codes in REST?",
+    "slug": "dotnet-what-are-the-common-http-verbs-and-status-codes-in-rest",
+    "bodyMd": "**What are the common HTTP verbs and status codes in REST?**",
+    "answerMd": "**Spoken answer:** \"Verbs map to actions: **GET** reads, **POST** creates, **PUT** replaces, **PATCH** partially updates, **DELETE** removes. Status codes tell the client what happened: **200** OK, **201** Created, **204** No Content, **400** Bad Request, **401** Unauthorized, **403** Forbidden, **404** Not Found, **500** Server Error.\"\n\n| Verb | Action | Success code |\n|---|---|---|\n| GET | Read | 200 |\n| POST | Create | 201 Created |\n| PUT | Full update | 200 / 204 |\n| PATCH | Partial update | 200 |\n| DELETE | Remove | 204 No Content |\n\n**Deeper (idempotency — a favorite question):** GET, PUT, DELETE are **idempotent** — calling them repeatedly has the same effect as calling once (deleting user 5 twice still just means user 5 is gone). POST is **not** — call it twice and you create two records. This matters for retries: it's safe to auto-retry a failed GET/PUT/DELETE, but retrying a POST can duplicate data. Returning the right status code is part of a good REST contract — don't return 200 with an error message inside.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "rest",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_4e60b7c3",
+    "createdAt": "2026-09-05T11:35:12.821Z",
+    "updatedAt": "2026-09-05T11:35:12.821Z"
+  },
+  {
+    "topicId": "top_812cda78",
+    "title": "What is SOAP and how does it differ from REST?",
+    "slug": "dotnet-what-is-soap-and-how-does-it-differ-from-rest",
+    "bodyMd": "**What is SOAP and how does it differ from REST?**",
+    "answerMd": "**Spoken answer:** \"SOAP is an older, stricter protocol that uses XML messages with a defined envelope, and often runs over HTTP but can use other transports. It has built-in standards for security, transactions, and a contract via WSDL. REST is lighter, uses plain HTTP + JSON, and is more flexible. SOAP still shows up in banking/enterprise/legacy systems where strict contracts matter.\"\n\n| | REST | SOAP |\n|---|---|---|\n| Style | Architectural style | Strict protocol |\n| Format | Usually JSON | XML only |\n| Contract | Loose (OpenAPI optional) | Formal (WSDL) |\n| Overhead | Light | Heavy (XML envelope) |\n| Use today | Default for most APIs | Legacy/enterprise, strict needs |\n\n**Deeper:** SOAP is like a legal contract with notarized signatures — rigid, verbose, but everything is formally specified (great for banking where strictness and built-in security/transactions matter). REST is like a friendly agreement — lighter and faster to work with, which is why the modern web defaults to it. You rarely build new SOAP services, but you may still *consume* one in an enterprise.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "rest",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_1875377b",
+    "createdAt": "2026-09-05T11:35:12.827Z",
+    "updatedAt": "2026-09-05T11:35:12.827Z"
+  },
+  {
+    "topicId": "top_812cda78",
+    "title": "What is GraphQL and when would you use it over REST?",
+    "slug": "dotnet-what-is-graphql-and-when-would-you-use-it-over-rest",
+    "bodyMd": "**What is GraphQL and when would you use it over REST?**",
+    "answerMd": "**Spoken answer:** \"GraphQL is a query language for APIs where the *client* asks for exactly the fields it wants in one request, hitting a single endpoint. It solves REST's **over-fetching** (getting more data than you need) and **under-fetching** (needing several calls). It's great when clients have varied data needs, like a mobile app vs a web dashboard.\"\n\n**Deeper (the trade-off):** with REST, `/users/5` returns a fixed shape — maybe more than a mobile screen needs (over-fetch), or you need `/users/5` *and* `/users/5/orders` (under-fetch, two calls). GraphQL lets the client say \"give me the user's name and just their order totals\" in one query. The cost: more complex server setup, caching is harder (everything is one endpoint/POST), and you can write expensive queries. Use it when flexible, client-driven data shapes are worth that complexity.\n\n**Sample — the three building blocks:**\n\n**1) Schema** — defines the types and what can be queried (the contract):\n```graphql\ntype User {\n  id: Int!\n  name: String!\n  email: String!\n  orders: [Order!]!      # related data available on demand\n}\n\ntype Order {\n  id: Int!\n  amount: Float!\n}\n\ntype Query {\n  user(id: Int!): User          # entry points the client can call\n  users: [User!]!\n}\n\ntype Mutation {\n  addUser(name: String!, email: String!): User   # writes go through mutations\n}\n```\n\n**2) A client query** — asks for *exactly* the fields it wants, one round trip:\n```graphql\nquery {\n  user(id: 5) {\n    name              # only name...\n    orders {          # ...and just the order amounts\n      amount\n    }\n  }\n}\n```\nResponse mirrors the query shape exactly:\n```json\n{ \"data\": { \"user\": { \"name\": \"Sara\", \"orders\": [ { \"amount\": 100.0 }, { \"amount\": 250.0 } ] } } }\n```\n\n**3) A mutation** (write) — same idea, but for changes:\n```graphql\nmutation {\n  addUser(name: \"Ravi\", email: \"ravi@x.com\") { id name }\n}\n```\n\n**Server side in .NET (HotChocolate — the common GraphQL library):**\n```csharp\npublic class Query {\n    // resolver: the method that \"resolves\" the data for a query field\n    public User GetUser(int id, [Service] IUserService svc) => svc.Get(id);\n    public IEnumerable<User> GetUsers([Service] IUserService svc) => svc.All();\n}\n\npublic class Mutation {\n    public User AddUser(string name, string email, [Service] IUserService svc)\n        => svc.Add(new User { Name = name, Email = email });\n}\n\n// Program.cs — wire it up\nbuilder.Services\n    .AddGraphQLServer()\n    .AddQueryType<Query>()\n    .AddMutationType<Mutation>();\napp.MapGraphQL();   // single endpoint, usually /graphql\n```\n\n**Key GraphQL terms to say:** **Schema** (the typed contract), **Query** (read), **Mutation** (write), **Resolver** (server method that fetches a field's data), **single endpoint** (usually `/graphql`, everything is a POST). The client shapes the response; the resolver fills each field.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "rest",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_c4369e5d",
+    "createdAt": "2026-09-05T11:35:12.840Z",
+    "updatedAt": "2026-09-05T11:35:12.840Z"
+  },
+  {
+    "topicId": "top_812cda78",
+    "title": "What is gRPC and where does it fit?",
+    "slug": "dotnet-what-is-grpc-and-where-does-it-fit",
+    "bodyMd": "**What is gRPC and where does it fit?**",
+    "answerMd": "**Spoken answer:** \"gRPC is a high-performance framework from Google that uses HTTP/2 and Protocol Buffers (a compact binary format) instead of JSON. It's fast, strongly-typed via a contract file (`.proto`), and supports streaming. It's mainly used for **service-to-service** communication in microservices, not browser-facing APIs.\"\n\n**Deeper (why binary + HTTP/2):** JSON is readable but bulky and slow to parse. gRPC uses protobuf — a tiny binary format — over HTTP/2, which allows multiplexing and streaming. That makes internal microservice calls much faster and lighter than REST/JSON. The downside: not human-readable, limited browser support, and you must share the `.proto` contract. So: **REST/JSON for public/browser APIs, gRPC for internal high-throughput service-to-service.**\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "rest",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_f4b1aa9c",
+    "createdAt": "2026-09-05T11:35:12.851Z",
+    "updatedAt": "2026-09-05T11:35:12.851Z"
+  },
+  {
+    "topicId": "top_812cda78",
+    "title": "What are WebSockets / SignalR — how do they differ from REST?",
+    "slug": "dotnet-what-are-websockets-signalr-how-do-they-differ-from-rest",
+    "bodyMd": "**What are WebSockets / SignalR — how do they differ from REST?**",
+    "answerMd": "**Spoken answer:** \"REST is request-response — the client asks, the server answers, done. **WebSockets** keep a persistent, two-way connection open so the server can *push* data to the client in real time. In .NET, **SignalR** is the library that makes this easy. Use it for live features: chat, notifications, live dashboards, multiplayer.\"\n\n**Deeper:** REST can't push — the client would have to keep polling (\"anything new? anything new?\"), which is wasteful. WebSockets flip that: one open pipe, and either side can send anytime. SignalR sits on top and handles the messy parts (reconnection, fallback to other transports if WebSockets aren't available). Rule: request-response data → REST; live, server-initiated updates → WebSockets/SignalR.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "rest",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_4c3679cc",
+    "createdAt": "2026-09-05T11:35:12.856Z",
+    "updatedAt": "2026-09-05T11:35:12.856Z"
+  },
+  {
+    "topicId": "top_812cda78",
+    "title": "What is content negotiation / `Accept` header?",
+    "slug": "dotnet-what-is-content-negotiation-accept-header",
+    "bodyMd": "**What is content negotiation / `Accept` header?**",
+    "answerMd": "**Spoken answer:** \"Content negotiation is how the client and server agree on the response format. The client sends an `Accept` header (like `application/json` or `application/xml`), and the API returns that format if it supports it. ASP.NET Core can serve JSON by default and XML if you add the formatter.\"\n\n**Deeper:** it lets one endpoint serve multiple formats without separate URLs — the same `/api/users/5` returns JSON to a JS app and XML to a legacy client, based purely on what each asks for in `Accept`. Most modern APIs just do JSON, but the mechanism is why you don't need `/users.json` vs `/users.xml` routes.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "rest",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_f0e6c410",
+    "createdAt": "2026-09-05T11:35:12.863Z",
+    "updatedAt": "2026-09-05T11:35:12.863Z"
+  },
+  {
+    "topicId": "top_812cda78",
+    "title": "How do you secure a Web API? (auth basics)",
+    "slug": "dotnet-how-do-you-secure-a-web-api-auth-basics",
+    "bodyMd": "**How do you secure a Web API? (auth basics)**",
+    "answerMd": "**Spoken answer:** \"The common approach is **token-based auth with JWT** (JSON Web Tokens). The client logs in, gets a signed token, and sends it in the `Authorization: Bearer <token>` header on every request — which fits REST's stateless model since the token carries the identity. You protect endpoints with `[Authorize]`. Other pieces: HTTPS everywhere, API keys for service clients, and rate limiting.\"\n\n**Deeper (why JWT suits REST):** REST is stateless, so the server shouldn't keep session memory. A JWT is self-contained — it holds the user's identity and claims, signed by the server so it can't be tampered with. Any server can validate it without a shared session store, which is exactly what lets REST scale across many servers. The token expires, so you also handle refresh. `[Authorize]` + JWT middleware wires this up in ASP.NET Core.\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "middleware",
+      "rest",
+      "api"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_f0175ee6",
+    "createdAt": "2026-09-05T11:35:12.870Z",
+    "updatedAt": "2026-09-05T11:35:12.870Z"
+  },
+  {
+    "topicId": "top_812cda78",
+    "title": "Explain JWT — structure, flow, and how you implement it in .NET.",
+    "slug": "dotnet-explain-jwt-structure-flow-and-how-you-implement-it-in-net",
+    "bodyMd": "**Explain JWT — structure, flow, and how you implement it in .NET.**",
+    "answerMd": "**Spoken answer:** \"A JWT is a signed token with three parts — header, payload, signature — separated by dots. The client logs in once, the server hands back a signed token, and the client sends it on every request in the `Authorization: Bearer` header. The server validates the signature (no DB lookup needed) and reads the user's claims from it. It's stateless auth.\"\n\n**1) Token structure — three dot-separated Base64 parts (`header.payload.signature`):**\n```\neyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1IiwibmFtZSI6IlNhcmEifQ.4pcPyMD09olPSyXnrXCjTwXyr4a\n└──── HEADER ────┘ └──────── PAYLOAD ────────┘ └──────── SIGNATURE ────────┘\n```\n- **Header** — algorithm + type: `{ \"alg\": \"HS256\", \"typ\": \"JWT\" }`\n- **Payload (claims)** — who the user is + metadata: `{ \"sub\": \"5\", \"name\": \"Sara\", \"role\": \"Admin\", \"exp\": 1718000000 }`\n- **Signature** — `HMACSHA256(base64(header) + \".\" + base64(payload), secretKey)`. This is the tamper-proof seal — change one character in the payload and the signature no longer matches.\n\n> Important: the payload is **encoded, not encrypted** — anyone can read it (decode it on jwt.io). So *never* put secrets/passwords in a JWT. The signature guarantees it wasn't *altered*, not that it's hidden.\n\n**2) The full auth flow (step by step):**\n```\n1. Client  ──  POST /login { username, password }  ──▶  Server\n2. Server verifies credentials, builds claims, SIGNS a JWT with its secret key\n3. Server ──  { token: \"eyJ...\" }  ──▶  Client\n4. Client stores the token (memory / secure storage)\n5. Client ──  GET /orders   Authorization: Bearer eyJ...  ──▶  Server\n6. Server VALIDATES the signature + expiry (no DB hit), reads claims\n7. If valid ──▶ runs the action;  if not ──▶ 401 Unauthorized\n```\n\n**3) Generating the token on login (.NET):**\n```csharp\n[HttpPost(\"login\")]\npublic IActionResult Login(LoginDto dto)\n{\n    var user = _userService.Validate(dto.Username, dto.Password);\n    if (user == null) return Unauthorized();\n\n    // claims = the facts we put inside the token\n    var claims = new[]\n    {\n        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),\n        new Claim(ClaimTypes.Name, user.Name),\n        new Claim(ClaimTypes.Role, user.Role)          // used by [Authorize(Roles=\"Admin\")]\n    };\n\n    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config[\"Jwt:Key\"]));\n    var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);\n\n    var token = new JwtSecurityToken(\n        issuer: _config[\"Jwt:Issuer\"],\n        audience: _config[\"Jwt:Audience\"],\n        claims: claims,\n        expires: DateTime.UtcNow.AddMinutes(30),        // short-lived\n        signingCredentials: creds);\n\n    return Ok(new { token = new JwtSecurityTokenHandler().WriteToken(token) });\n}\n```\n\n**4) Configuring the API to validate tokens (Program.cs):**\n```csharp\nbuilder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)\n    .AddJwtBearer(options =>\n    {\n        options.TokenValidationParameters = new TokenValidationParameters\n        {\n            ValidateIssuer = true,\n            ValidateAudience = true,\n            ValidateLifetime = true,               // rejects expired tokens\n            ValidateIssuerSigningKey = true,       // rejects tampered tokens\n            ValidIssuer = builder.Configuration[\"Jwt:Issuer\"],\n            ValidAudience = builder.Configuration[\"Jwt:Audience\"],\n            IssuerSigningKey = new SymmetricSecurityKey(\n                Encoding.UTF8.GetBytes(builder.Configuration[\"Jwt:Key\"]))\n        };\n    });\n\nvar app = builder.Build();\napp.UseAuthentication();   // must be BEFORE UseAuthorization\napp.UseAuthorization();\n```\n\n**5) Protecting endpoints:**\n```csharp\n[Authorize]                          // any logged-in user\n[HttpGet]\npublic IActionResult GetOrders() => Ok(...);\n\n[Authorize(Roles = \"Admin\")]         // only Admins (reads the role claim)\n[HttpDelete(\"{id}\")]\npublic IActionResult Delete(int id) => ...;\n\n// read the current user's claims inside an action:\nvar userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;\n```\n\n**Deeper (validation without a DB + refresh tokens):** the beauty is step 6 — the server re-computes the signature using its secret key and compares. If it matches and the token hasn't expired, the request is trusted — **no database lookup**, which is what makes it scale across many servers. But because it's stateless, you *can't* easily revoke a token before it expires — so you keep the access token **short-lived** (e.g. 15–30 min) and issue a longer-lived **refresh token**. When the access token expires, the client trades the refresh token for a new one without logging in again. Refresh tokens *are* usually stored server-side so they can be revoked (logout / \"sign out everywhere\").\n\n**Common gotchas to mention:**\n- Never store secrets in the payload — it's readable.\n- Keep the signing key long and in config/secrets, never in code.\n- `UseAuthentication` must come before `UseAuthorization` in the pipeline.\n- Always send tokens over HTTPS so they can't be sniffed.\n\n---\n\n## ⭐ Rapid Revision — one-liners\n\n**Platform/CLR**\n- .NET = platform + CLR runtime + BCL + C#.\n- Framework = legacy Windows; .NET 5+ = modern cross-platform.\n- CLR runs IL via JIT + does GC. GC is generational (0,1,2).\n\n**C#**\n- Value types copy value (stack); reference types copy reference (heap).\n- `string` immutable → use `StringBuilder` in loops.\n- `const` = compile-time; `readonly` = set in constructor.\n- Boxing = value→object (costly); avoid with generics.\n- `IEnumerable` = in-memory; `IQueryable` = executes at DB (use with EF).\n- `using` auto-calls `Dispose()`.\n\n**OOP**\n- 4 pillars: Encapsulation, Inheritance, Polymorphism, Abstraction.\n- Interface = contract, many implementable; class = one base + implementation.\n- Abstract class = shared base (\"is-a\"); interface = capability (\"can-do\").\n- `virtual`+`override` = runtime polymorphism; `new` = method hiding.\n- Overload = compile-time; override = runtime.\n- DI = inject dependencies → loose coupling + testable. Lifetimes: Transient/Scoped/Singleton.\n\n**MVC / Middleware / Controllers**\n- MVC = Model (data) + View (UI) + Controller (glue) = separation of concerns.\n- Middleware = ordered request pipeline; `Use` continues, `Run` terminates, `Map` branches.\n- Order matters: exception → https → static → routing → auth → endpoints.\n- Middleware = app-wide; Filters = MVC-specific (Auth/Action/Result/Exception).\n- Keep controllers thin; logic in services, data in repositories.\n\n**ADO.NET / EF**\n- ADO.NET = low-level: SqlConnection, SqlCommand, SqlDataReader, SqlParameter.\n- ExecuteReader (rows), ExecuteScalar (one value), ExecuteNonQuery (affected rows).\n- Always parameterize → prevents SQL injection.\n- Connection string in appsettings.json, not code. Pooling reuses connections.\n- EF Core = ORM: maps classes↔tables, LINQ→SQL.\n- DbContext = DB session + change tracking + SaveChanges; register as Scoped.\n- Eager (`Include`) vs Lazy (auto, N+1 risk) vs Explicit loading.\n- `AsNoTracking()` for faster read-only queries.\n- Repository pattern = data access behind an interface (testable, swappable).\n- Unit of Work = group operations in one transaction.\n\n**Serialization**\n- Serialization = object → text/bytes (JSON/XML/binary); deserialization = reverse.\n- JSON = web default (light, readable); XML = verbose/legacy/SOAP; binary = compact/fast.\n- `System.Text.Json` = built-in, fast; `Newtonsoft.Json` = older, more features.\n- `[JsonPropertyName]` renames, `[JsonIgnore]` hides (keep passwords out).\n- Use **DTOs** to serialize — security, no circular refs, stable API contract.\n- Avoid `BinaryFormatter` — obsolete + insecure (code execution on untrusted data).\n\n**API types**\n- REST = resources + HTTP verbs + stateless + JSON. Default for web APIs.\n- Verbs: GET (read), POST (create), PUT (replace), PATCH (partial), DELETE (remove).\n- Status: 200 OK, 201 Created, 204 No Content, 400/401/403/404, 500.\n- Idempotent: GET/PUT/DELETE yes, POST no (retry-safe matters).\n- SOAP = strict XML + WSDL, legacy/enterprise. REST = light + flexible.\n- GraphQL = client asks exact fields, one endpoint; fixes over/under-fetching.\n  - Schema (contract) + Query (read) + Mutation (write) + Resolver (fills a field).\n- gRPC = HTTP/2 + protobuf (binary), fast, for internal service-to-service.\n- WebSockets/SignalR = persistent two-way; server can push (chat, live updates).\n- Secure APIs with JWT bearer tokens (stateless-friendly) + HTTPS + `[Authorize]`.\n\n**JWT**\n- 3 parts: `header.payload.signature` (dot-separated, Base64).\n- Payload = claims (id, name, role, exp) — encoded, NOT encrypted → no secrets inside.\n- Signature = HMAC of header+payload with secret key → tamper-proof seal.\n- Flow: login → server signs token → client sends `Authorization: Bearer <token>` → server validates signature+expiry (no DB) → reads claims.\n- Access token short-lived (15–30 min) + refresh token (longer, revocable, server-stored).\n- `[Authorize]` protects; `[Authorize(Roles=\"Admin\")]` uses the role claim.\n- `UseAuthentication` before `UseAuthorization`; always over HTTPS.\n\n---\n\n## 💬 Mock Interview (quick round)\n\n**Interviewer:** Interface or abstract class — how do you decide?\n**You:** \"If classes share a common base and some default behavior, I use an abstract class — it's an 'is-a' relationship with shared state. If I just need to guarantee a capability across possibly unrelated classes, I use an interface — 'can-do', and a class can implement many. So: shared base → abstract class, shared capability → interface.\"\n\n**Interviewer:** My auth isn't protecting my endpoints. What's likely wrong?\n**You:** \"Middleware order. `UseAuthentication` and `UseAuthorization` must come *after* `UseRouting` and *before* the endpoint mapping. If auth is registered after the endpoints, or missing entirely, the requests reach the controllers unprotected.\"\n\n**Interviewer:** You're seeing tons of queries when loading orders with customers. Why?\n**You:** \"That's the N+1 problem from lazy loading — EF fires one query per order to fetch its customer. I'd switch to eager loading with `.Include(o => o.Customer)` so it's a single joined query.\"\n\n**Interviewer:** How do you stop SQL injection in ADO.NET?\n**You:** \"Never concatenate user input into SQL. I use parameterized queries with `SqlParameter`, so the input is treated as a value, not executable SQL. Stored procedures with parameters work too.\"\n\n**Interviewer:** Why register DbContext as Scoped?\n**You:** \"Because a DbContext isn't thread-safe and represents a unit of work for one request. Scoped gives each HTTP request its own context, tracks that request's changes, and disposes it at the end — which also returns the connection to the pool.\"\n\n**Interviewer:** Why not just serialize your entity directly to the client?\n**You:** \"Two reasons — security and safety. The entity might have sensitive fields like a password hash that would leak, and its navigation properties can cause circular-reference loops that blow up serialization. I use a DTO shaped for the response, so I expose only what the client needs and my API contract stays stable even if the entity changes.\"\n\n**Interviewer:** REST or GraphQL for a new API?\n**You:** \"REST by default — it's simple, cache-friendly, and everyone knows it. I'd pick GraphQL when clients have very different data needs, like a mobile app wanting a tiny slice and a dashboard wanting a lot, so they can each ask for exactly the fields they need in one call instead of me building many endpoints or over-fetching.\"\n\n**Interviewer:** Which HTTP methods are safe to auto-retry, and why?\n**You:** \"GET, PUT and DELETE, because they're idempotent — running them again gives the same result. POST isn't idempotent, so retrying it can create duplicate records. That's why retry logic treats POST carefully or uses an idempotency key.\"\n\n**Interviewer:** How do you keep a Web API stateless but still authenticate users?\n**You:** \"JWT bearer tokens. The user logs in once and gets a signed token that carries their identity and claims. They send it in the Authorization header on every request, and any server can validate the signature without a shared session store — which is exactly what keeps the API stateless and scalable.\"\n\n**Interviewer:** Is it safe to put a user's role or email in a JWT?\n**You:** \"Role, yes — that's a normal claim. But remember the payload is only Base64-encoded, not encrypted, so anyone can decode and read it. I'd never put secrets or passwords in it. The signature guarantees nobody *tampered* with it, not that it's hidden. For anything sensitive, keep it server-side.\"\n\n**Interviewer:** A JWT was stolen — how do you limit the damage?\n**You:** \"Since JWTs are stateless you can't easily revoke one mid-life, so I keep the access token short-lived — say 15–30 minutes — and use a refresh token for longer sessions. The refresh token is stored server-side so it *can* be revoked, which lets me implement logout and 'sign out everywhere.' And everything goes over HTTPS so it can't be sniffed in the first place.\"\n\n**Interviewer:** How does GraphQL avoid over-fetching, concretely?\n**You:** \"The client writes the query and lists exactly the fields it wants. If a mobile screen only needs a user's name and their order amounts, it asks for just those, and the response mirrors that shape — nothing extra. On the server, each field has a resolver that fetches its data, so I'm not shipping the whole object like a fixed REST endpoint would.\"\n\n---\n\n*Notes cover: .NET platform & CLR, C# fundamentals (value/reference types, const/readonly, boxing, LINQ, async, delegates, IDisposable), full OOP (class, interface, abstract, polymorphism, encapsulation, inheritance, access modifiers, static, sealed, struct, DI + lifetimes), ASP.NET MVC (flow, controllers, routing, model binding, validation, ViewData/Bag/TempData, filters, Razor), middleware (pipeline, Use/Run/Map, custom middleware, vs filters), controllers (thin controllers, DI, attributes), ADO.NET (objects, reader vs dataset, connection strings, pooling, SQL injection, stored procedures), Entity Framework + DbContext (ORM, DbSet, registration, migrations, loading strategies, change tracking), Repository + Unit of Work patterns, Serialization (JSON/XML/binary, System.Text.Json vs Newtonsoft, DTOs, BinaryFormatter risk), and API types (REST, SOAP, GraphQL, gRPC, WebSockets/SignalR, content negotiation, JWT auth) — with full code examples. Grouped by section and difficulty with spoken answers, examples, and reasoning.*",
+    "difficulty": "Hard",
+    "tags": [
+      "dotnet",
+      "csharp",
+      "clr",
+      "jit",
+      "async",
+      "linq"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_deee016e",
+    "createdAt": "2026-09-05T11:35:12.876Z",
+    "updatedAt": "2026-09-05T11:35:12.876Z"
   }
 ]

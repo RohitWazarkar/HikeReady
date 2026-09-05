@@ -19,5 +19,12 @@
     "description": "JavaScript language & runtime",
     "id": "cat_03fa72cf",
     "createdAt": "2026-09-05T09:44:02.729Z"
+  },
+  {
+    "name": ".NET",
+    "slug": "dotnet",
+    "description": ".NET & C# interview questions",
+    "id": "cat_266e3527",
+    "createdAt": "2026-09-05T11:35:11.699Z"
   }
 ]
