@@ -1,0 +1,23 @@
+[
+  {
+    "name": "DSA",
+    "slug": "dsa",
+    "description": "Data Structures & Algorithms",
+    "id": "cat_3589b5f6",
+    "createdAt": "2026-09-05T09:44:02.640Z"
+  },
+  {
+    "name": "DBMS",
+    "slug": "dbms",
+    "description": "Database Management Systems",
+    "id": "cat_deda995b",
+    "createdAt": "2026-09-05T09:44:02.686Z"
+  },
+  {
+    "name": "JavaScript",
+    "slug": "javascript",
+    "description": "JavaScript language & runtime",
+    "id": "cat_03fa72cf",
+    "createdAt": "2026-09-05T09:44:02.729Z"
+  }
+]

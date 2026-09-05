@@ -20,7 +20,197 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, Arial, Helvetica, sans-serif;
+}
+
+/* --- Syntax highlighting (rehype-highlight adds .hljs classes) --------------
+   A compact GitHub-style theme that adapts to light/dark. */
+.hljs {
+  color: #24292e;
+  background: transparent;
+}
+.hljs-comment,
+.hljs-quote {
+  color: #6a737d;
+  font-style: italic;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-name {
+  color: #d73a49;
+}
+.hljs-string,
+.hljs-attr,
+.hljs-template-tag,
+.hljs-addition {
+  color: #032f62;
+}
+.hljs-number,
+.hljs-literal {
+  color: #005cc5;
+}
+.hljs-title,
+.hljs-title.function_,
+.hljs-section {
+  color: #6f42c1;
+}
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #e36209;
+}
+.hljs-variable,
+.hljs-params {
+  color: #24292e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hljs {
+    color: #e6edf3;
+  }
+  .hljs-comment,
+  .hljs-quote {
+    color: #8b949e;
+  }
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-built_in,
+  .hljs-name {
+    color: #ff7b72;
+  }
+  .hljs-string,
+  .hljs-attr,
+  .hljs-template-tag,
+  .hljs-addition {
+    color: #a5d6ff;
+  }
+  .hljs-number,
+  .hljs-literal {
+    color: #79c0ff;
+  }
+  .hljs-title,
+  .hljs-title.function_,
+  .hljs-section {
+    color: #d2a8ff;
+  }
+  .hljs-type,
+  .hljs-class .hljs-title {
+    color: #ffa657;
+  }
+  .hljs-variable,
+  .hljs-params {
+    color: #e6edf3;
+  }
+}
+
+/* --- Animations -------------------------------------------------------------
+   Reusable keyframes + utility classes. Pure CSS, no library. */
+
+@keyframes hr-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hr-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hr-accordion-down {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hr-pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes hr-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Entrance: fade + rise. Use with inline animation-delay for stagger. */
+.animate-in {
+  opacity: 0;
+  animation: hr-fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fade {
+  opacity: 0;
+  animation: hr-fade-in 0.6s ease forwards;
+}
+
+/* Answer panel reveal when an accordion opens. */
+.animate-accordion {
+  animation: hr-accordion-down 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Little pop for toggled reaction buttons. */
+.animate-pop {
+  animation: hr-pop 0.3s ease;
+}
+
+.animate-float {
+  animation: hr-float 6s ease-in-out infinite;
+}
+
+/* Smooth height/opacity transition wrapper for collapse (grid-rows trick). */
+.collapsible {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.collapsible.open {
+  grid-template-rows: 1fr;
+}
+.collapsible > .collapsible-inner {
+  overflow: hidden;
+}
+
+/* Respect users who prefer less motion. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-in,
+  .animate-fade,
+  .animate-accordion,
+  .animate-pop,
+  .animate-float {
+    animation: none;
+    opacity: 1;
+  }
+  .collapsible {
+    transition: none;
+  }
+  * {
+    scroll-behavior: auto !important;
+  }
 }

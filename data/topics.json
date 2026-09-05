@@ -1,0 +1,51 @@
+[
+  {
+    "categoryId": "cat_3589b5f6",
+    "name": "Arrays",
+    "slug": "dsa-arrays",
+    "id": "top_544580ea",
+    "createdAt": "2026-09-05T09:44:02.647Z"
+  },
+  {
+    "categoryId": "cat_3589b5f6",
+    "name": "Linked Lists",
+    "slug": "dsa-linked-lists",
+    "id": "top_7424f3aa",
+    "createdAt": "2026-09-05T09:44:02.670Z"
+  },
+  {
+    "categoryId": "cat_deda995b",
+    "name": "SQL Queries",
+    "slug": "dbms-sql-queries",
+    "id": "top_518ad4f1",
+    "createdAt": "2026-09-05T09:44:02.688Z"
+  },
+  {
+    "categoryId": "cat_deda995b",
+    "name": "Indexing",
+    "slug": "dbms-indexing",
+    "id": "top_b1d56f3b",
+    "createdAt": "2026-09-05T09:44:02.711Z"
+  },
+  {
+    "categoryId": "cat_03fa72cf",
+    "name": "Closures",
+    "slug": "javascript-closures",
+    "id": "top_d3a98c52",
+    "createdAt": "2026-09-05T09:44:02.733Z"
+  },
+  {
+    "categoryId": "cat_03fa72cf",
+    "name": "Async & Promises",
+    "slug": "javascript-async-promises",
+    "id": "top_d55c596d",
+    "createdAt": "2026-09-05T09:44:02.752Z"
+  },
+  {
+    "categoryId": "cat_deda995b",
+    "name": "Interview Q&A",
+    "slug": "dbms-interview-qa",
+    "id": "top_6f447e14",
+    "createdAt": "2026-09-05T10:20:02.084Z"
+  }
+]

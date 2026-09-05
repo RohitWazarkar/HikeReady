@@ -1,0 +1,890 @@
+[
+  {
+    "topicId": "top_544580ea",
+    "title": "Two Sum",
+    "slug": "two-sum",
+    "bodyMd": "Given an array of integers `nums` and an integer `target`, return the **indices** of the two numbers that add up to `target`.\n\nYou may assume each input has **exactly one** solution, and you may not use the same element twice.\n\n**Example**\n\n| Input | target | Output |\n| ----- | ------ | ------ |\n| `[2,7,11,15]` | `9` | `[0,1]` |\n| `[3,2,4]` | `6` | `[1,2]` |",
+    "answerMd": "Use a hash map from value to index. For each number, check if its complement (`target - num`) was seen.\n\n```js\nfunction twoSum(nums, target) {\n  const seen = new Map();\n  for (let i = 0; i < nums.length; i++) {\n    const need = target - nums[i];\n    if (seen.has(need)) return [seen.get(need), i];\n    seen.set(nums[i], i);\n  }\n  return [];\n}\n```\n\n**Complexity:** time `O(n)`, space `O(n)`.",
+    "difficulty": "Easy",
+    "tags": [
+      "array",
+      "hash-map"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_5946ae1a",
+    "createdAt": "2026-09-05T09:44:02.653Z",
+    "updatedAt": "2026-09-05T09:44:02.653Z"
+  },
+  {
+    "topicId": "top_544580ea",
+    "title": "Maximum Subarray (Kadane's Algorithm)",
+    "slug": "maximum-subarray-kadane-s-algorithm",
+    "bodyMd": "Find the contiguous subarray with the largest sum and return that sum.\n\n> Example: for `[-2,1,-3,4,-1,2,1,-5,4]` the answer is `6` (`[4,-1,2,1]`).",
+    "answerMd": "Track the best sum ending at the current index and the global best.\n\n```js\nfunction maxSubArray(nums) {\n  let best = nums[0];\n  let cur = nums[0];\n  for (let i = 1; i < nums.length; i++) {\n    cur = Math.max(nums[i], cur + nums[i]);\n    best = Math.max(best, cur);\n  }\n  return best;\n}\n```",
+    "difficulty": "Medium",
+    "tags": [
+      "array",
+      "dynamic-programming"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_822176b1",
+    "createdAt": "2026-09-05T09:44:02.657Z",
+    "updatedAt": "2026-09-05T09:44:02.657Z"
+  },
+  {
+    "topicId": "top_544580ea",
+    "title": "Trapping Rain Water",
+    "slug": "trapping-rain-water",
+    "bodyMd": "Given `n` non-negative integers representing an elevation map where the width of each bar is `1`, compute how much water it can trap after raining.\n\n**Example**\n\n| Heights | Trapped |\n| ------- | ------- |\n| `[0,1,0,2,1,0,1,3,2,1,2,1]` | `6` |",
+    "answerMd": "Two-pointer approach using running left/right maxima.\n\n```js\nfunction trap(height) {\n  let l = 0, r = height.length - 1;\n  let lMax = 0, rMax = 0, water = 0;\n  while (l < r) {\n    if (height[l] < height[r]) {\n      lMax = Math.max(lMax, height[l]);\n      water += lMax - height[l++];\n    } else {\n      rMax = Math.max(rMax, height[r]);\n      water += rMax - height[r--];\n    }\n  }\n  return water;\n}\n```\n\n**Complexity:** time `O(n)`, space `O(1)`.",
+    "difficulty": "Hard",
+    "tags": [
+      "array",
+      "two-pointers"
+    ],
+    "isPremium": true,
+    "status": "Published",
+    "views": 0,
+    "id": "q_0488ad80",
+    "createdAt": "2026-09-05T09:44:02.665Z",
+    "updatedAt": "2026-09-05T09:44:02.665Z"
+  },
+  {
+    "topicId": "top_7424f3aa",
+    "title": "Reverse a Linked List",
+    "slug": "reverse-a-linked-list",
+    "bodyMd": "Reverse a singly linked list and return the new head.\n\nInput: `1 -> 2 -> 3 -> null`  →  Output: `3 -> 2 -> 1 -> null`",
+    "answerMd": "Iteratively flip each `next` pointer.\n\n```js\nfunction reverseList(head) {\n  let prev = null;\n  while (head) {\n    const next = head.next;\n    head.next = prev;\n    prev = head;\n    head = next;\n  }\n  return prev;\n}\n```",
+    "difficulty": "Easy",
+    "tags": [
+      "linked-list",
+      "pointers"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_2692d19d",
+    "createdAt": "2026-09-05T09:44:02.672Z",
+    "updatedAt": "2026-09-05T09:44:02.672Z"
+  },
+  {
+    "topicId": "top_7424f3aa",
+    "title": "Detect a Cycle in a Linked List",
+    "slug": "detect-a-cycle-in-a-linked-list",
+    "bodyMd": "Return `true` if the linked list has a cycle, otherwise `false`.\n\nUse **Floyd's tortoise and hare** to do it in `O(1)` space.",
+    "answerMd": "```js\nfunction hasCycle(head) {\n  let slow = head, fast = head;\n  while (fast && fast.next) {\n    slow = slow.next;\n    fast = fast.next.next;\n    if (slow === fast) return true;\n  }\n  return false;\n}\n```",
+    "difficulty": "Medium",
+    "tags": [
+      "linked-list",
+      "two-pointers"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_b1b587b9",
+    "createdAt": "2026-09-05T09:44:02.674Z",
+    "updatedAt": "2026-09-05T09:44:02.674Z"
+  },
+  {
+    "topicId": "top_7424f3aa",
+    "title": "Merge k Sorted Lists",
+    "slug": "merge-k-sorted-lists",
+    "bodyMd": "Merge `k` sorted linked lists into one sorted list.\n\n| Approach | Time | Space |\n| -------- | ---- | ----- |\n| Min-heap | `O(N log k)` | `O(k)` |\n| Pairwise merge | `O(N log k)` | `O(1)` |",
+    "answerMd": "Pairwise merge halves the number of lists each round.\n\n```js\nfunction mergeTwo(a, b) {\n  const dummy = { next: null };\n  let tail = dummy;\n  while (a && b) {\n    if (a.val <= b.val) { tail.next = a; a = a.next; }\n    else { tail.next = b; b = b.next; }\n    tail = tail.next;\n  }\n  tail.next = a || b;\n  return dummy.next;\n}\n```",
+    "difficulty": "Hard",
+    "tags": [
+      "linked-list",
+      "heap",
+      "divide-and-conquer"
+    ],
+    "isPremium": true,
+    "status": "Published",
+    "views": 0,
+    "id": "q_ab7b2c99",
+    "createdAt": "2026-09-05T09:44:02.683Z",
+    "updatedAt": "2026-09-05T09:44:02.683Z"
+  },
+  {
+    "topicId": "top_518ad4f1",
+    "title": "Second Highest Salary",
+    "slug": "second-highest-salary",
+    "bodyMd": "Given an `Employee` table, write a query to find the **second highest** salary.\n\n| id | salary |\n| -- | ------ |\n| 1  | 100    |\n| 2  | 200    |\n| 3  | 300    |\n\nExpected output: `200`.",
+    "answerMd": "```sql\nSELECT MAX(salary) AS SecondHighestSalary\nFROM Employee\nWHERE salary < (SELECT MAX(salary) FROM Employee);\n```",
+    "difficulty": "Easy",
+    "tags": [
+      "sql",
+      "aggregation"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_de0fe79c",
+    "createdAt": "2026-09-05T09:44:02.690Z",
+    "updatedAt": "2026-09-05T09:44:02.690Z"
+  },
+  {
+    "topicId": "top_518ad4f1",
+    "title": "Rank Scores with Window Functions",
+    "slug": "rank-scores-with-window-functions",
+    "bodyMd": "Rank each score so that ties share a rank and there are **no gaps** between ranks.",
+    "answerMd": "Use `DENSE_RANK()`.\n\n```sql\nSELECT score,\n       DENSE_RANK() OVER (ORDER BY score DESC) AS rank\nFROM Scores;\n```",
+    "difficulty": "Medium",
+    "tags": [
+      "sql",
+      "window-functions"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_04839abf",
+    "createdAt": "2026-09-05T09:44:02.700Z",
+    "updatedAt": "2026-09-05T09:44:02.700Z"
+  },
+  {
+    "topicId": "top_518ad4f1",
+    "title": "Department Top Three Salaries",
+    "slug": "department-top-three-salaries",
+    "bodyMd": "For each department, report employees who are among the **top three** unique salaries.",
+    "answerMd": "```sql\nSELECT d.name AS department, e.name AS employee, e.salary\nFROM (\n  SELECT *,\n         DENSE_RANK() OVER (PARTITION BY departmentId ORDER BY salary DESC) AS rnk\n  FROM Employee\n) e\nJOIN Department d ON d.id = e.departmentId\nWHERE e.rnk <= 3;\n```",
+    "difficulty": "Hard",
+    "tags": [
+      "sql",
+      "window-functions",
+      "joins"
+    ],
+    "isPremium": true,
+    "status": "Published",
+    "views": 0,
+    "id": "q_ccd9c2d9",
+    "createdAt": "2026-09-05T09:44:02.704Z",
+    "updatedAt": "2026-09-05T09:44:02.704Z"
+  },
+  {
+    "topicId": "top_b1d56f3b",
+    "title": "What is a Database Index?",
+    "slug": "what-is-a-database-index",
+    "bodyMd": "Explain what an index is and the main trade-off it introduces.\n\n| Operation | Without index | With index |\n| --------- | ------------- | ---------- |\n| Read (lookup) | Slower (scan) | Faster |\n| Write (insert/update) | Faster | Slower (index upkeep) |",
+    "answerMd": "An index is an auxiliary data structure (often a **B-tree**) that speeds up lookups at the cost of extra storage and slower writes, because the index must be maintained.",
+    "difficulty": "Easy",
+    "tags": [
+      "indexing",
+      "performance"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_e11ee96d",
+    "createdAt": "2026-09-05T09:44:02.715Z",
+    "updatedAt": "2026-09-05T09:44:02.715Z"
+  },
+  {
+    "topicId": "top_b1d56f3b",
+    "title": "Clustered vs Non-Clustered Index",
+    "slug": "clustered-vs-non-clustered-index",
+    "bodyMd": "Compare clustered and non-clustered indexes.",
+    "answerMd": "| | Clustered | Non-clustered |\n| - | --------- | ------------- |\n| Row order | Table stored in index order | Separate structure |\n| Count | One per table | Many per table |\n| Leaf holds | Actual row | Pointer to row |",
+    "difficulty": "Medium",
+    "tags": [
+      "indexing",
+      "b-tree"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_27370dd7",
+    "createdAt": "2026-09-05T09:44:02.718Z",
+    "updatedAt": "2026-09-05T09:44:02.718Z"
+  },
+  {
+    "topicId": "top_b1d56f3b",
+    "title": "Design Indexes for a Slow Query",
+    "slug": "design-indexes-for-a-slow-query",
+    "bodyMd": "Given a slow query filtering on `status` and sorting by `created_at`, propose an index.\n\n```sql\nSELECT * FROM orders\nWHERE status = 'PAID'\nORDER BY created_at DESC\nLIMIT 20;\n```",
+    "answerMd": "A **composite index** matching the filter then the sort works best.\n\n```sql\nCREATE INDEX idx_orders_status_created\n  ON orders (status, created_at DESC);\n```",
+    "difficulty": "Hard",
+    "tags": [
+      "indexing",
+      "query-optimization"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_7033702d",
+    "createdAt": "2026-09-05T09:44:02.722Z",
+    "updatedAt": "2026-09-05T09:44:02.722Z"
+  },
+  {
+    "topicId": "top_d3a98c52",
+    "title": "What is a Closure?",
+    "slug": "what-is-a-closure",
+    "bodyMd": "Explain closures with a small example.",
+    "answerMd": "A closure is a function that remembers variables from the scope where it was created.\n\n```js\nfunction counter() {\n  let count = 0;\n  return () => ++count;\n}\nconst next = counter();\nnext(); // 1\nnext(); // 2\n```",
+    "difficulty": "Easy",
+    "tags": [
+      "closures",
+      "scope"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_10ec6f46",
+    "createdAt": "2026-09-05T09:44:02.737Z",
+    "updatedAt": "2026-09-05T09:44:02.737Z"
+  },
+  {
+    "topicId": "top_d3a98c52",
+    "title": "Fix the Loop Variable Capture Bug",
+    "slug": "fix-the-loop-variable-capture-bug",
+    "bodyMd": "Why does this log `3, 3, 3` and how do you fix it?\n\n```js\nfor (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0);\n}\n```",
+    "answerMd": "`var` is function-scoped, so all callbacks share one `i`. Use `let` (block-scoped) instead.\n\n```js\nfor (let i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0); // 0, 1, 2\n}\n```",
+    "difficulty": "Medium",
+    "tags": [
+      "closures",
+      "var-let"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_9b411b2b",
+    "createdAt": "2026-09-05T09:44:02.743Z",
+    "updatedAt": "2026-09-05T09:44:02.743Z"
+  },
+  {
+    "topicId": "top_d3a98c52",
+    "title": "Implement a Memoize Function",
+    "slug": "implement-a-memoize-function",
+    "bodyMd": "Write a `memoize(fn)` that caches results by arguments.",
+    "answerMd": "```js\nfunction memoize(fn) {\n  const cache = new Map();\n  return function (...args) {\n    const key = JSON.stringify(args);\n    if (cache.has(key)) return cache.get(key);\n    const result = fn.apply(this, args);\n    cache.set(key, result);\n    return result;\n  };\n}\n```",
+    "difficulty": "Hard",
+    "tags": [
+      "closures",
+      "higher-order-functions"
+    ],
+    "isPremium": true,
+    "status": "Published",
+    "views": 0,
+    "id": "q_d47f2703",
+    "createdAt": "2026-09-05T09:44:02.748Z",
+    "updatedAt": "2026-09-05T09:44:02.748Z"
+  },
+  {
+    "topicId": "top_d55c596d",
+    "title": "Promise vs Callback",
+    "slug": "promise-vs-callback",
+    "bodyMd": "Summarize why Promises are preferred over nested callbacks.",
+    "answerMd": "Promises flatten nesting (no *callback hell*), standardize error handling via `.catch`, and compose with `async/await`.\n\n```js\nconst data = await fetch(url).then((r) => r.json());\n```",
+    "difficulty": "Easy",
+    "tags": [
+      "promises",
+      "async"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_4a2f6f61",
+    "createdAt": "2026-09-05T09:44:02.757Z",
+    "updatedAt": "2026-09-05T09:44:02.757Z"
+  },
+  {
+    "topicId": "top_d55c596d",
+    "title": "Run Promises in Parallel vs Series",
+    "slug": "run-promises-in-parallel-vs-series",
+    "bodyMd": "Show the difference between running async tasks in series and in parallel.\n\n| Strategy | Total time (3 x 1s tasks) |\n| -------- | ------------------------- |\n| Series (`await` each) | ~3s |\n| Parallel (`Promise.all`) | ~1s |",
+    "answerMd": "```js\n// Parallel: kick off all, then await together\nconst [a, b, c] = await Promise.all([taskA(), taskB(), taskC()]);\n```",
+    "difficulty": "Medium",
+    "tags": [
+      "promises",
+      "concurrency"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_714d45f9",
+    "createdAt": "2026-09-05T09:44:02.762Z",
+    "updatedAt": "2026-09-05T09:44:02.762Z"
+  },
+  {
+    "topicId": "top_d55c596d",
+    "title": "Implement Promise.all from Scratch",
+    "slug": "implement-promise-all-from-scratch",
+    "bodyMd": "Implement your own `promiseAll(promises)` that resolves with an array of results or rejects on the first error.",
+    "answerMd": "```js\nfunction promiseAll(promises) {\n  return new Promise((resolve, reject) => {\n    const results = [];\n    let remaining = promises.length;\n    if (remaining === 0) return resolve(results);\n    promises.forEach((p, i) => {\n      Promise.resolve(p).then((val) => {\n        results[i] = val;\n        if (--remaining === 0) resolve(results);\n      }, reject);\n    });\n  });\n}\n```",
+    "difficulty": "Hard",
+    "tags": [
+      "promises",
+      "internals"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_4c740b4b",
+    "createdAt": "2026-09-05T09:44:02.766Z",
+    "updatedAt": "2026-09-05T09:44:02.766Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is a DBMS?",
+    "slug": "what-is-a-dbms",
+    "bodyMd": "**What is a DBMS?**",
+    "answerMd": "**Spoken answer:** \"A DBMS — Database Management System — is software that lets you store, organize, retrieve, and secure data without worrying about the low-level file handling. Instead of me reading and writing raw files, the DBMS gives me a clean way to query and manage data, plus features like backups, security, and multi-user access. Examples: SQL Server, MySQL, Oracle, MongoDB.\"\n\n**Why it matters:** the one-liner is \"software that manages data storage + retrieval + security + concurrency so I don't do it by hand.\"\n\n**Follow-up: \"DBMS vs file system?\"**\n> \"A file system just stores bytes — no relationships, no querying, no concurrency control, and you handle everything manually. A DBMS adds structure, relationships, a query language, transactions, and multi-user safety on top. So a DBMS solves the redundancy, integrity, and concurrency problems that plain files can't.\"\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "sql",
+      "dbms",
+      "transaction"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_5fa9f568",
+    "createdAt": "2026-09-05T10:20:02.091Z",
+    "updatedAt": "2026-09-05T10:20:02.091Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is an RDBMS?",
+    "slug": "what-is-an-rdbms",
+    "bodyMd": "**What is an RDBMS?**",
+    "answerMd": "**Spoken answer:** \"An RDBMS is a DBMS built on the **relational model** — data lives in tables (rows and columns), and tables relate to each other through keys. It follows rules like primary/foreign keys and supports SQL. SQL Server, MySQL, PostgreSQL, and Oracle are all RDBMSs.\"\n\n**Why it matters:** the key phrase is \"data in tables + relationships via keys + SQL.\"\n\n**Follow-up: \"RDBMS vs NoSQL — when would you pick each?\"**\n> \"RDBMS when I need strong consistency, structured data, and transactions — like banking, orders, inventory. NoSQL when I have huge scale, flexible/changing schemas, or document-style data — like logs, catalogs, or user activity. For most business apps with money and relationships, I default to an RDBMS.\"\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "sql",
+      "dbms",
+      "transaction",
+      "key"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_44a0d173",
+    "createdAt": "2026-09-05T10:20:02.094Z",
+    "updatedAt": "2026-09-05T10:20:02.094Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is SQL?",
+    "slug": "what-is-sql",
+    "bodyMd": "**What is SQL?**",
+    "answerMd": "**Spoken answer:** \"SQL — Structured Query Language — is the standard language for talking to relational databases. I use it to create tables, insert/read/update/delete data, control access, and manage transactions. It's declarative — I say *what* data I want, and the database figures out *how* to get it.\"\n\n```sql\nSELECT Name, Salary FROM Employees WHERE DeptId = 3 ORDER BY Salary DESC;\n```\n\n**Why it matters:** \"declarative — I describe the result, the engine plans the execution\" is a nice point.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "sql",
+      "dbms",
+      "transaction"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_6507e199",
+    "createdAt": "2026-09-05T10:20:02.096Z",
+    "updatedAt": "2026-09-05T10:20:02.096Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is a Primary Key?",
+    "slug": "what-is-a-primary-key",
+    "bodyMd": "**What is a Primary Key?**",
+    "answerMd": "**Spoken answer:** \"A primary key is a column (or set of columns) that **uniquely identifies each row** in a table. It can't be NULL and can't repeat. Every table should have one — it's how you reliably point to a single row.\"\n\n```sql\nCREATE TABLE Employees (\n    EmpId INT PRIMARY KEY,      -- unique + not null, one per row\n    Name  VARCHAR(100)\n);\n```\n\n**Why it matters:** \"unique + not null + one per table\" — say all three.\n\n**Follow-up: \"Primary key vs unique key?\"**\n> \"Both enforce uniqueness. But a primary key can't be NULL and there's only one per table; a unique key *can* allow one NULL and you can have several per table. So primary key = the main identifier, unique key = additional 'this must be unique too' constraints, like an email column.\"\n\n**Follow-up: \"What's a composite key?\"**\n> \"A primary key made of more than one column, used when no single column is unique on its own — like `(StudentId, CourseId)` in an enrollment table.\"\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "sql",
+      "dbms",
+      "constraint",
+      "key",
+      "null"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_5cf0e040",
+    "createdAt": "2026-09-05T10:20:02.099Z",
+    "updatedAt": "2026-09-05T10:20:02.099Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is a Foreign Key?",
+    "slug": "what-is-a-foreign-key",
+    "bodyMd": "**What is a Foreign Key?**",
+    "answerMd": "**Spoken answer:** \"A foreign key is a column in one table that points to the primary key of another table. It enforces **referential integrity** — you can't insert a row that references a parent that doesn't exist, and it can stop you deleting a parent that still has children.\"\n\n```sql\nCREATE TABLE Employees (\n    EmpId  INT PRIMARY KEY,\n    DeptId INT FOREIGN KEY REFERENCES Departments(DeptId)  -- must exist in Departments\n);\n```\n\n**Why it matters:** \"referential integrity — no orphan rows\" is the phrase.\n\n**Follow-up: \"What happens on delete of a referenced parent?\"**\n> \"Depends on the rule you set: `ON DELETE NO ACTION` blocks it (default), `ON DELETE CASCADE` deletes the children too, `ON DELETE SET NULL` nulls the FK. You pick based on the business rule — usually you block accidental deletes of a parent that has children.\"\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "sql",
+      "dbms",
+      "key",
+      "null"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_2be36d23",
+    "createdAt": "2026-09-05T10:20:02.103Z",
+    "updatedAt": "2026-09-05T10:20:02.103Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is a NULL value?",
+    "slug": "what-is-a-null-value",
+    "bodyMd": "**What is a NULL value?**",
+    "answerMd": "**Spoken answer:** \"NULL means 'no value' — unknown, missing, or not applicable. It's **not** zero and **not** an empty string; it's the absence of any value. Because it's 'unknown', comparisons with it are also unknown, so you check it with `IS NULL` / `IS NOT NULL`, never `= NULL`.\"\n\n```sql\nSELECT * FROM Employees WHERE ManagerId IS NULL;   -- employees with no manager\n-- WHERE ManagerId = NULL  -> returns nothing! never use =\n```\n\n**Why it matters:** the \"NULL isn't 0 or '', and `= NULL` never works\" point is a classic gotcha.\n\n**Follow-up: \"What does `NULL = NULL` return?\"**\n> \"Not true — it returns **unknown** (treated as false in a WHERE). Two unknowns aren't 'equal'. That's why aggregate functions like `COUNT(column)` skip NULLs, and why you need `IS NULL`.\"\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "sql",
+      "dbms",
+      "null",
+      "aggregate"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_10a2da55",
+    "createdAt": "2026-09-05T10:20:02.106Z",
+    "updatedAt": "2026-09-05T10:20:02.106Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "Difference between DELETE, TRUNCATE, and DROP?",
+    "slug": "difference-between-delete-truncate-and-drop",
+    "bodyMd": "**Difference between DELETE, TRUNCATE, and DROP?**",
+    "answerMd": "**Spoken answer:** \"**DELETE** removes specific rows (with a WHERE), is logged row-by-row, and **can be rolled back** — it fires triggers. **TRUNCATE** wipes *all* rows fast (it deallocates pages, minimal logging), resets identity, and doesn't fire row triggers. **DROP** removes the whole table — structure and all.\"\n\n| | DELETE | TRUNCATE | DROP |\n|---|---|---|---|\n| Removes | Specific rows (WHERE) | All rows | Entire table |\n| Rollback | Yes | Limited (within a transaction in SQL Server) | Structure gone |\n| Speed | Slower (per row) | Fast | Fast |\n| Triggers | Fires | No | No |\n| Identity reset | No | Yes | N/A |\n| Type | DML | DDL | DDL |\n\n**Why it matters:** the interviewer wants \"DELETE = rows + rollback + triggers; TRUNCATE = all rows fast, resets identity; DROP = kills the table.\"\n\n**Follow-up: \"Can you TRUNCATE a table with a foreign key referencing it?\"**\n> \"No — SQL Server won't let you TRUNCATE a table that's referenced by a foreign key. You'd have to DELETE, or drop the constraint first. That's actually a subtle difference people miss.\"\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "sql",
+      "dbms",
+      "transaction",
+      "trigger",
+      "view",
+      "constraint"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_473f7f84",
+    "createdAt": "2026-09-05T10:20:02.108Z",
+    "updatedAt": "2026-09-05T10:20:02.108Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What are the subsets (categories) of SQL commands?",
+    "slug": "what-are-the-subsets-categories-of-sql-commands",
+    "bodyMd": "**What are the subsets (categories) of SQL commands?**",
+    "answerMd": "**Spoken answer:** \"SQL commands fall into a few groups:\n- **DDL** (Data Definition) — defines structure: `CREATE`, `ALTER`, `DROP`, `TRUNCATE`.\n- **DML** (Data Manipulation) — works with data: `INSERT`, `UPDATE`, `DELETE`, `SELECT`.\n- **DCL** (Data Control) — permissions: `GRANT`, `REVOKE`.\n- **TCL** (Transaction Control) — transactions: `COMMIT`, `ROLLBACK`, `SAVEPOINT`.\n(Some people put `SELECT` in its own **DQL** group.)\"\n\n**Why it matters:** knowing which category a command is in explains its behavior — e.g. DDL like TRUNCATE auto-commits, DML like DELETE is transactional.\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "sql",
+      "dbms",
+      "transaction",
+      "truncate"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_f8deb7f0",
+    "createdAt": "2026-09-05T10:20:02.110Z",
+    "updatedAt": "2026-09-05T10:20:02.110Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is the difference between CHAR and VARCHAR?",
+    "slug": "what-is-the-difference-between-char-and-varchar",
+    "bodyMd": "**What is the difference between CHAR and VARCHAR?**",
+    "answerMd": "**Spoken answer:** \"`CHAR(n)` is fixed-length — it always uses n characters and pads with spaces. `VARCHAR(n)` is variable-length — it only uses what it needs, up to n. Use CHAR for truly fixed data (like a country code 'IN'), VARCHAR for anything variable (names, emails) to save space.\"\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "sql",
+      "dbms",
+      "cte"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_caaa05d2",
+    "createdAt": "2026-09-05T10:20:02.112Z",
+    "updatedAt": "2026-09-05T10:20:02.112Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is a constraint? Name the common ones.",
+    "slug": "what-is-a-constraint-name-the-common-ones",
+    "bodyMd": "**What is a constraint? Name the common ones.**",
+    "answerMd": "**Spoken answer:** \"Constraints are rules the database enforces on columns to keep data valid: **PRIMARY KEY** (unique + not null), **FOREIGN KEY** (referential integrity), **UNIQUE** (no duplicates), **NOT NULL** (must have a value), **CHECK** (value must satisfy a condition), and **DEFAULT** (fills a value if none given).\"\n\n```sql\nCREATE TABLE Products (\n    Id    INT PRIMARY KEY,\n    Price DECIMAL(10,2) CHECK (Price > 0),      -- can't be zero/negative\n    Stock INT DEFAULT 0                          -- defaults to 0\n);\n```\n**Why it matters:** \"constraints keep bad data out at the database level, so the rule holds no matter which app inserts.\"\n\n---",
+    "difficulty": "Easy",
+    "tags": [
+      "sql",
+      "dbms",
+      "constraint",
+      "key",
+      "null"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_da51c526",
+    "createdAt": "2026-09-05T10:20:02.115Z",
+    "updatedAt": "2026-09-05T10:20:02.115Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What are ACID properties?",
+    "slug": "what-are-acid-properties",
+    "bodyMd": "**What are ACID properties?**",
+    "answerMd": "**Spoken answer:** \"ACID is the set of guarantees that make transactions reliable:\n- **Atomicity** — all steps happen or none do (the classic money transfer: debit *and* credit, never just one).\n- **Consistency** — a transaction moves the DB from one valid state to another, respecting all rules/constraints.\n- **Isolation** — concurrent transactions don't step on each other; each behaves as if it ran alone.\n- **Durability** — once committed, it survives crashes (it's on disk).\"\n\n**Why it matters:** the money-transfer example nails Atomicity and is the one they remember.\n\n```sql\nBEGIN TRANSACTION;\n    UPDATE Accounts SET Balance = Balance - 100 WHERE Id = 1;\n    UPDATE Accounts SET Balance = Balance + 100 WHERE Id = 2;\nCOMMIT;   -- both succeed, or ROLLBACK undoes both (Atomicity)\n```\n\n**Follow-up: \"Give a real example of a broken Atomicity.\"**\n> \"If the debit succeeds but the server crashes before the credit, money vanishes. Atomicity + a transaction means the debit is rolled back on crash, so the account is never left short. That's exactly why banking uses transactions.\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "sql",
+      "dbms",
+      "transaction",
+      "constraint",
+      "isolation",
+      "acid"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_aa32e704",
+    "createdAt": "2026-09-05T10:20:02.121Z",
+    "updatedAt": "2026-09-05T10:20:02.121Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is Normalization?",
+    "slug": "what-is-normalization",
+    "bodyMd": "**What is Normalization?**",
+    "answerMd": "**Spoken answer:** \"Normalization is organizing tables to **remove redundancy** and avoid update/insert/delete anomalies. You split data into related tables so each fact is stored once. It goes in normal forms — 1NF (atomic columns, no repeating groups), 2NF (no partial dependency on part of a composite key), 3NF (no transitive dependency — non-key columns depend only on the key).\"\n\n**Simple example:** \"Instead of storing the department name in every employee row (repeated everywhere, painful to rename), I store `DeptId` in Employees and the name once in a Departments table.\"\n\n**Why it matters:** \"store each fact once → no anomalies\" is the goal. Naming 1NF/2NF/3NF shows depth.\n\n**Follow-up: \"What's denormalization and when would you use it?\"**\n> \"Denormalization is deliberately adding redundancy back — like duplicating a column or precomputing a total — to make reads faster and avoid heavy joins. I'd use it for read-heavy reporting/analytics where query speed matters more than perfectly clean data. It's a trade-off: faster reads, but you now maintain the duplicate on writes.\"\n\n**Follow-up: \"What's an update anomaly?\"**\n> \"If a fact is stored in many rows and you update only some, the data becomes inconsistent — e.g. renaming a department in 90 of 100 employee rows. Normalization prevents that by storing the department name once.\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "sql",
+      "dbms",
+      "join",
+      "normalization",
+      "key"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_a224f78f",
+    "createdAt": "2026-09-05T10:20:02.123Z",
+    "updatedAt": "2026-09-05T10:20:02.123Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "Difference between WHERE and HAVING?",
+    "slug": "difference-between-where-and-having",
+    "bodyMd": "**Difference between WHERE and HAVING?**",
+    "answerMd": "**Spoken answer:** \"**WHERE** filters individual rows *before* grouping. **HAVING** filters *groups* after a `GROUP BY` and aggregation. So you use WHERE on raw columns, and HAVING on aggregate results like `COUNT()` or `SUM()`.\"\n\n```sql\nSELECT DeptId, COUNT(*) AS cnt\nFROM Employees\nWHERE Salary > 30000        -- filter rows first (before grouping)\nGROUP BY DeptId\nHAVING COUNT(*) > 5;         -- filter groups after (needs aggregate)\n```\n\n**Why it matters:** \"WHERE = before grouping on rows, HAVING = after grouping on aggregates\" — the exact phrasing they want.\n\n**Follow-up: \"Can you use an aggregate in WHERE?\"**\n> \"No — WHERE runs before aggregation, so `WHERE COUNT(*) > 5` fails. That condition has to go in HAVING.\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "sql",
+      "dbms",
+      "aggregate"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_08656b29",
+    "createdAt": "2026-09-05T10:20:02.125Z",
+    "updatedAt": "2026-09-05T10:20:02.125Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is a Database Join? Types?",
+    "slug": "what-is-a-database-join-types",
+    "bodyMd": "**What is a Database Join? Types?**",
+    "answerMd": "**Spoken answer:** \"A join combines rows from two or more tables based on a related column. Types:\n- **INNER JOIN** — only matching rows in both tables.\n- **LEFT JOIN** — all rows from the left table + matches from the right (NULLs where no match).\n- **RIGHT JOIN** — all from the right + matches from the left.\n- **FULL OUTER JOIN** — all rows from both, matched where possible.\n- **CROSS JOIN** — every combination (cartesian product).\"\n\n```sql\nSELECT e.Name, d.DeptName\nFROM Employees e\nINNER JOIN Departments d ON e.DeptId = d.DeptId;   -- only employees with a dept\n\nSELECT e.Name, d.DeptName\nFROM Employees e\nLEFT JOIN Departments d ON e.DeptId = d.DeptId;    -- all employees, dept null if none\n```\n\n**Why it matters:** the INNER vs LEFT distinction (LEFT keeps unmatched rows with NULLs) is the most-asked part.\n\n**Follow-up: \"How do you find employees with no department?\"**\n> \"LEFT JOIN Departments and then `WHERE d.DeptId IS NULL` — the LEFT JOIN keeps unmatched employees, and the NULL check isolates the ones with no matching department.\"\n\n**Follow-up: \"What's a self join?\"**\n> \"Joining a table to itself, usually with aliases — like finding each employee's manager where the manager is also a row in Employees (`e.ManagerId = m.EmpId`).\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "sql",
+      "dbms",
+      "join",
+      "null"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_e350c21c",
+    "createdAt": "2026-09-05T10:20:02.127Z",
+    "updatedAt": "2026-09-05T10:20:02.127Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "Difference between Clustered and Non-Clustered Indexes?",
+    "slug": "difference-between-clustered-and-non-clustered-indexes",
+    "bodyMd": "**Difference between Clustered and Non-Clustered Indexes?**",
+    "answerMd": "**Spoken answer:** \"A **clustered index** decides the **physical order** the rows are actually stored in — so there's only **one per table** (the data can only be sorted one way). It's usually the primary key. A **non-clustered index** is a separate structure that holds the indexed column(s) plus a pointer back to the row — you can have **many** per table. Clustered = the data itself sorted; non-clustered = a lookup that points to the data.\"\n\n| | Clustered | Non-Clustered |\n|---|---|---|\n| Stores | The actual rows, sorted | A separate structure + pointer |\n| Per table | Only 1 | Many |\n| Analogy | A phone book sorted by name | An index at the back pointing to pages |\n| Speed | Slightly faster (data is right there) | One extra hop to the row |\n\n**Why it matters:** \"clustered = physical order, one per table; non-clustered = separate pointer structure, many allowed\" is the money answer.\n\n**Follow-up: \"Why only one clustered index?\"**\n> \"Because the table can only be physically sorted one way — you can't store the same rows in two different orders at once. Non-clustered indexes are separate structures, so you can have several.\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "sql",
+      "dbms",
+      "index",
+      "key"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_6df30a42",
+    "createdAt": "2026-09-05T10:20:02.129Z",
+    "updatedAt": "2026-09-05T10:20:02.129Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is a Database Deadlock? How do you handle it?",
+    "slug": "what-is-a-database-deadlock-how-do-you-handle-it",
+    "bodyMd": "**What is a Database Deadlock? How do you handle it?**",
+    "answerMd": "**Spoken answer:** \"A deadlock is when two transactions each hold a lock the other needs, so both wait forever. Transaction A locks row 1 and wants row 2; Transaction B locks row 2 and wants row 1 — neither can proceed. SQL Server detects it and kills one as the 'victim', rolling it back, so the other can finish.\"\n\n**Why it matters:** the crossed-lock example is exactly what they want to hear.\n\n**Follow-up: \"How do you prevent deadlocks?\"**\n> \"A few practical things: access tables/rows in a **consistent order** everywhere (so two transactions can't lock in opposite order), keep transactions **short**, use the right isolation level, and add **retry logic** for the victim since a deadlock throws a specific error. Consistent lock ordering is the biggest one.\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "sql",
+      "dbms",
+      "transaction",
+      "deadlock",
+      "isolation"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_d55c4f4d",
+    "createdAt": "2026-09-05T10:20:02.133Z",
+    "updatedAt": "2026-09-05T10:20:02.133Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is a Database Trigger?",
+    "slug": "what-is-a-database-trigger",
+    "bodyMd": "**What is a Database Trigger?**",
+    "answerMd": "**Spoken answer:** \"A trigger is procedural code that fires **automatically** in response to an event on a table — like AFTER INSERT, UPDATE, or DELETE. You use them for things like audit logging, enforcing complex rules, or keeping a derived column in sync — without the app having to remember to do it.\"\n\n```sql\nCREATE TRIGGER trg_AuditSalary\nON Employees\nAFTER UPDATE\nAS\nBEGIN\n    INSERT INTO SalaryAudit (EmpId, OldSalary, NewSalary, ChangedAt)\n    SELECT d.EmpId, d.Salary, i.Salary, GETDATE()\n    FROM deleted d JOIN inserted i ON d.EmpId = i.EmpId;\nEND;\n```\n\n**Why it matters:** mention the special `inserted` and `deleted` pseudo-tables — that's the detail that shows you've actually written one.\n\n**Follow-up: \"Downside of triggers?\"**\n> \"They're 'hidden' logic — they run silently, so they can make behavior hard to debug and can hurt performance if they do heavy work. I use them sparingly, mostly for auditing, and prefer putting business logic in the application/service layer where it's visible and testable.\"\n\n**Follow-up: \"AFTER vs INSTEAD OF trigger?\"**\n> \"AFTER runs after the operation completes. INSTEAD OF replaces the operation — commonly used on views to make them updatable, or to intercept and reshape a DML action.\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "sql",
+      "dbms",
+      "join",
+      "trigger",
+      "view"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_8cff99bb",
+    "createdAt": "2026-09-05T10:20:02.138Z",
+    "updatedAt": "2026-09-05T10:20:02.138Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is a Stored Procedure? Why use it?",
+    "slug": "what-is-a-stored-procedure-why-use-it",
+    "bodyMd": "**What is a Stored Procedure? Why use it?**",
+    "answerMd": "**Spoken answer:** \"A stored procedure is a named block of SQL saved in the database that you call by name, optionally with parameters. Benefits: it's precompiled (fast), reusable, keeps logic in one place, is parameterized (so it resists SQL injection), and you can grant permission to the proc without exposing the tables.\"\n\n```sql\nCREATE PROCEDURE GetEmployeesByDept @DeptId INT\nAS\nBEGIN\n    SELECT Name, Salary FROM Employees WHERE DeptId = @DeptId;\nEND;\n-- call it:  EXEC GetEmployeesByDept @DeptId = 3;\n```\n\n**Follow-up: \"Stored procedure vs function?\"**\n> \"A function must return a value and is used *inside* queries (like `SELECT dbo.GetTax(amount)`), can't change data, and can't have side effects. A stored procedure can do anything — multiple result sets, INSERT/UPDATE/DELETE, output params — and is called on its own with EXEC. Functions for computed values in queries; procedures for actions.\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "sql",
+      "dbms",
+      "stored-procedure"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_95aba0cc",
+    "createdAt": "2026-09-05T10:20:02.141Z",
+    "updatedAt": "2026-09-05T10:20:02.141Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is a View?",
+    "slug": "what-is-a-view",
+    "bodyMd": "**What is a View?**",
+    "answerMd": "**Spoken answer:** \"A view is a saved SELECT query that behaves like a virtual table. It doesn't store data itself (unless it's an indexed/materialized view) — it just runs its query when you use it. Views are great for hiding complexity (wrap a big join), for security (expose only some columns), and for giving a stable interface even if the underlying tables change.\"\n\n```sql\nCREATE VIEW vw_EmployeeDept AS\nSELECT e.Name, d.DeptName\nFROM Employees e JOIN Departments d ON e.DeptId = d.DeptId;\n-- use it like a table:  SELECT * FROM vw_EmployeeDept;\n```\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "sql",
+      "dbms",
+      "index",
+      "join",
+      "view"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_9366094e",
+    "createdAt": "2026-09-05T10:20:02.144Z",
+    "updatedAt": "2026-09-05T10:20:02.144Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What are aggregate functions and GROUP BY?",
+    "slug": "what-are-aggregate-functions-and-group-by",
+    "bodyMd": "**What are aggregate functions and GROUP BY?**",
+    "answerMd": "**Spoken answer:** \"Aggregate functions compute a single value over a set of rows — `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`. `GROUP BY` splits rows into groups so the aggregate runs *per group* instead of over the whole table.\"\n\n```sql\nSELECT DeptId, AVG(Salary) AS avg_salary, COUNT(*) AS headcount\nFROM Employees\nGROUP BY DeptId;    -- one row per department\n```\n\n**Follow-up: \"COUNT(*) vs COUNT(column)?\"**\n> \"`COUNT(*)` counts all rows including NULLs. `COUNT(column)` counts only rows where that column is non-NULL. So they differ when the column has NULLs.\"\n\n---",
+    "difficulty": "Medium",
+    "tags": [
+      "sql",
+      "dbms",
+      "null",
+      "aggregate"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_0a178ac4",
+    "createdAt": "2026-09-05T10:20:02.146Z",
+    "updatedAt": "2026-09-05T10:20:02.146Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What are transaction isolation levels?",
+    "slug": "what-are-transaction-isolation-levels",
+    "bodyMd": "**What are transaction isolation levels?**",
+    "answerMd": "**Spoken answer:** \"Isolation levels control how much one transaction sees of others' uncommitted work — trading consistency for concurrency. From loosest to strictest:\n- **Read Uncommitted** — can read others' uncommitted changes (dirty reads). Fastest, least safe.\n- **Read Committed** — only reads committed data (SQL Server default). Prevents dirty reads.\n- **Repeatable Read** — rows you read can't change during your transaction.\n- **Serializable** — full isolation, as if transactions ran one at a time. Safest, slowest.\"\n\n**The three read problems they prevent:**\n| Problem | Meaning | Stopped at |\n|---|---|---|\n| Dirty read | Reading uncommitted data | Read Committed |\n| Non-repeatable read | Same row changes between reads | Repeatable Read |\n| Phantom read | New rows appear between reads | Serializable |\n\n**Why it matters:** naming the three anomalies (dirty / non-repeatable / phantom) and which level stops each is a strong senior answer.\n\n---",
+    "difficulty": "Hard",
+    "tags": [
+      "sql",
+      "dbms",
+      "transaction",
+      "isolation",
+      "cte"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_11017ad9",
+    "createdAt": "2026-09-05T10:20:02.152Z",
+    "updatedAt": "2026-09-05T10:20:02.152Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "Optimistic vs Pessimistic locking?",
+    "slug": "optimistic-vs-pessimistic-locking",
+    "bodyMd": "**Optimistic vs Pessimistic locking?**",
+    "answerMd": "**Spoken answer:** \"**Pessimistic** locking assumes conflict — it locks the row while you work so nobody else can touch it. Safe under high contention but hurts throughput. **Optimistic** locking assumes conflict is rare — it doesn't lock; instead it checks at save time (with a version/timestamp column) whether the row changed since you read it, and if so, it fails and you retry. Optimistic for low-contention edits, pessimistic for hot rows everyone fights over.\"\n\n```sql\n-- optimistic: only update if the version hasn't changed since I read it\nUPDATE Employees SET Salary = 60000, Version = Version + 1\nWHERE EmpId = 5 AND Version = @versionIRead;\n-- if @@ROWCOUNT = 0, someone else changed it -> retry\n```\n\n---",
+    "difficulty": "Hard",
+    "tags": [
+      "sql",
+      "dbms",
+      "locking"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_f225ba67",
+    "createdAt": "2026-09-05T10:20:02.157Z",
+    "updatedAt": "2026-09-05T10:20:02.157Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "How do you find and fix a slow query?",
+    "slug": "how-do-you-find-and-fix-a-slow-query",
+    "bodyMd": "**How do you find and fix a slow query?**",
+    "answerMd": "**Spoken answer:** \"First I look at the **execution plan** to see what the database is actually doing — usually the villain is a **table scan** where an index seek should be, or a bad join. Common fixes: add or adjust an **index** on the filtered/joined columns, avoid `SELECT *`, avoid functions on indexed columns in the WHERE (they kill index usage), rewrite correlated subqueries as joins, and make sure statistics are up to date. Then I re-check the plan to confirm the fix.\"\n\n**Why it matters:** \"read the execution plan first, then index/rewrite\" is exactly the practical, experienced answer.\n\n**Follow-up: \"Why does `WHERE YEAR(OrderDate) = 2024` perform badly?\"**\n> \"Because wrapping the column in a function stops the index from being used — the database has to compute `YEAR()` for every row (a scan). I'd rewrite it as a range: `WHERE OrderDate >= '2024-01-01' AND OrderDate < '2025-01-01'`, which can use the index.\"\n\n---",
+    "difficulty": "Hard",
+    "tags": [
+      "sql",
+      "dbms",
+      "index",
+      "join"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_933a6086",
+    "createdAt": "2026-09-05T10:20:02.161Z",
+    "updatedAt": "2026-09-05T10:20:02.161Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is a CTE (Common Table Expression)?",
+    "slug": "what-is-a-cte-common-table-expression",
+    "bodyMd": "**What is a CTE (Common Table Expression)?**",
+    "answerMd": "**Spoken answer:** \"A CTE is a temporary named result set defined with `WITH` that you reference in the query right after it. It makes complex queries readable by breaking them into steps, and it supports **recursion** — great for hierarchical data like an org chart or category tree.\"\n\n```sql\nWITH DeptCounts AS (\n    SELECT DeptId, COUNT(*) AS cnt FROM Employees GROUP BY DeptId\n)\nSELECT d.DeptName, c.cnt\nFROM DeptCounts c JOIN Departments d ON c.DeptId = d.DeptId\nWHERE c.cnt > 5;\n```\n\n**Follow-up: \"CTE vs subquery vs temp table?\"**\n> \"A CTE and a subquery are both in-memory for one query; a CTE is just more readable and can recurse. A temp table actually materializes data and persists for the session — better when I reuse the same intermediate result many times or it's large.\"\n\n---",
+    "difficulty": "Hard",
+    "tags": [
+      "sql",
+      "dbms",
+      "join",
+      "cte"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_24fce8a2",
+    "createdAt": "2026-09-05T10:20:02.167Z",
+    "updatedAt": "2026-09-05T10:20:02.167Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What are window functions?",
+    "slug": "what-are-window-functions",
+    "bodyMd": "**What are window functions?**",
+    "answerMd": "**Spoken answer:** \"Window functions do calculations across a set of rows *related to the current row*, without collapsing them into one row like GROUP BY does. So I keep every row but add things like a running total, a rank, or 'row number within each group'. Examples: `ROW_NUMBER()`, `RANK()`, `SUM() OVER(...)`.\"\n\n```sql\n-- rank employees by salary within each department, keeping all rows\nSELECT Name, DeptId, Salary,\n       RANK() OVER (PARTITION BY DeptId ORDER BY Salary DESC) AS rnk\nFROM Employees;\n```\n\n**Why it matters:** \"GROUP BY collapses rows, window functions keep them\" is the distinction they're checking. Great for \"top N per group\" and running totals.\n\n**Follow-up: \"How would you get the 2nd highest salary per department?\"**\n> \"Use `ROW_NUMBER() OVER (PARTITION BY DeptId ORDER BY Salary DESC)` in a CTE, then filter `WHERE rownum = 2`. Window functions make 'per-group ranking' clean — much simpler than correlated subqueries.\"\n\n---",
+    "difficulty": "Hard",
+    "tags": [
+      "sql",
+      "dbms",
+      "window-function",
+      "cte"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_2f6c4dea",
+    "createdAt": "2026-09-05T10:20:02.172Z",
+    "updatedAt": "2026-09-05T10:20:02.172Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "How do you find the Nth highest salary?",
+    "slug": "how-do-you-find-the-nth-highest-salary",
+    "bodyMd": "**How do you find the Nth highest salary?**",
+    "answerMd": "**Spoken answer:** \"A few ways. The cleanest modern one is a window function:\"\n```sql\n-- 2nd highest salary overall\nWITH Ranked AS (\n    SELECT Salary, DENSE_RANK() OVER (ORDER BY Salary DESC) AS rnk\n    FROM Employees\n)\nSELECT DISTINCT Salary FROM Ranked WHERE rnk = 2;\n```\n**Follow-up: \"RANK vs DENSE_RANK vs ROW_NUMBER?\"**\n> \"`ROW_NUMBER` gives a unique number even for ties. `RANK` gives ties the same number but then skips (1,2,2,4). `DENSE_RANK` gives ties the same number with no gaps (1,2,2,3). For 'Nth highest distinct salary' I use DENSE_RANK so ties don't mess up the count.\"\n\n---",
+    "difficulty": "Hard",
+    "tags": [
+      "sql",
+      "dbms",
+      "window-function"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_757b23e9",
+    "createdAt": "2026-09-05T10:20:02.177Z",
+    "updatedAt": "2026-09-05T10:20:02.177Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "UNION vs UNION ALL?",
+    "slug": "union-vs-union-all",
+    "bodyMd": "**UNION vs UNION ALL?**",
+    "answerMd": "**Spoken answer:** \"Both stack two result sets on top of each other (same columns). **UNION** removes duplicates (which costs a sort/compare), **UNION ALL** keeps everything including duplicates and is faster. If I know there are no duplicates, or I want them, I use UNION ALL for performance.\"\n\n---",
+    "difficulty": "Hard",
+    "tags": [
+      "sql",
+      "dbms",
+      "union"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_fda6ef47",
+    "createdAt": "2026-09-05T10:20:02.184Z",
+    "updatedAt": "2026-09-05T10:20:02.184Z"
+  },
+  {
+    "topicId": "top_6f447e14",
+    "title": "What is a transaction, and what are COMMIT / ROLLBACK / SAVEPOINT?",
+    "slug": "what-is-a-transaction-and-what-are-commit-rollback-savepoint",
+    "bodyMd": "**What is a transaction, and what are COMMIT / ROLLBACK / SAVEPOINT?**",
+    "answerMd": "**Spoken answer:** \"A transaction groups several statements so they succeed or fail as one unit (that's Atomicity). `COMMIT` makes the changes permanent; `ROLLBACK` undoes everything since the transaction began; `SAVEPOINT` sets a marker so you can roll back *partially* to that point instead of the whole thing.\"\n\n```sql\nBEGIN TRANSACTION;\n    UPDATE Accounts SET Balance = Balance - 100 WHERE Id = 1;\n    SAVE TRANSACTION AfterDebit;         -- savepoint\n    UPDATE Accounts SET Balance = Balance + 100 WHERE Id = 2;\n    -- if the credit fails: ROLLBACK TRANSACTION AfterDebit;\nCOMMIT;\n```\n\n---",
+    "difficulty": "Hard",
+    "tags": [
+      "sql",
+      "dbms",
+      "transaction"
+    ],
+    "isPremium": false,
+    "status": "Published",
+    "views": 0,
+    "id": "q_44089d1a",
+    "createdAt": "2026-09-05T10:20:02.193Z",
+    "updatedAt": "2026-09-05T10:20:02.193Z"
+  }
+]
