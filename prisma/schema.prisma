@@ -1,32 +1,258 @@
-// Prisma schema for HikeReady
+// Prisma schema for HikeReady (PostgreSQL / Supabase)
 // Docs: https://pris.ly/d/prisma-schema
 //
-// NOTE: The Prisma npm packages are NOT installed yet (we skipped that on Day 1).
-// When you're ready, install them (Prisma v6 is recommended for a lighter, stable setup):
+// This mirrors lib/schema.js (the current JSON data layer) and adds the fields
+// needed for auth, roles, and premium gating.
+//
+// When you're ready to move off JSON:
 //   npm install --save-dev prisma@6
 //   npm install @prisma/client@6
-// Then generate the client and create your first migration:
-//   npx prisma generate
-//   npx prisma migrate dev --name init
+//   npx prisma migrate dev --name init      # creates the tables in Supabase
+//   node scripts/migrate-json-to-db.mjs      # (later) imports data/*.json rows
+//
+// ACCESS MODEL (enforced server-side, never trust the client):
+//   Admin   -> full access + CRUD
+//   Pro     -> everything Learners get + Hard/premium questions (while an active
+//              Subscription exists: endDate in the future)
+//   Learner -> free content only (Easy + Medium, non-premium)
+//   A question is "locked" unless: (!isPremium && difficulty != Hard) OR user isPro/Admin.
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
-  // DATABASE_URL is read from your .env file (see .env.example).
-  // With Supabase, use the pooled connection string here.
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  // App runtime uses the pooled connection (Supabase port 6543, pgbouncer).
+  url       = env("DATABASE_URL")
+  // Prisma Migrate uses the direct connection (Supabase port 5432).
+  directUrl = env("DIRECT_URL")
 }
 
 // ---------------------------------------------------------------------------
-// Example model to confirm the connection works. Feel free to change/remove.
+// Enums
+// ---------------------------------------------------------------------------
+enum Difficulty {
+  Easy
+  Medium
+  Hard
+}
+
+enum QuestionStatus {
+  Draft
+  Published
+  Archived
+}
+
+enum UserRole {
+  Learner
+  Pro
+  Admin
+}
+
+enum ProgressState {
+  Solved
+  Attempted
+  ToReview
+}
+
+enum SubscriptionStatus {
+  Active
+  Cancelled
+  Expired
+  Pending
+}
+
+enum PaymentStatus {
+  Created
+  Paid
+  Failed
+  Refunded
+}
+
+// ---------------------------------------------------------------------------
+// Content: Category -> Topic -> Question
+// ---------------------------------------------------------------------------
+model Category {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  slug        String   @unique
+  description String?
+  createdAt   DateTime @default(now())
+
+  topics Topic[]
+
+  @@index([slug])
+}
+
+model Topic {
+  id         String   @id @default(cuid())
+  name       String
+  slug       String   @unique
+  createdAt  DateTime @default(now())
+
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  questions Question[]
+
+  @@index([categoryId])
+  @@index([slug])
+}
+
+model Question {
+  id         String         @id @default(cuid())
+  title      String
+  slug       String         @unique
+  bodyMd     String         @default("")
+  answerMd   String         @default("")
+  difficulty Difficulty     @default(Easy)
+  tags       String[]       @default([])
+  isPremium  Boolean        @default(false)
+  status     QuestionStatus @default(Draft)
+  views      Int            @default(0)
+  createdAt  DateTime       @default(now())
+  updatedAt  DateTime       @updatedAt
+
+  topicId String
+  topic   Topic  @relation(fields: [topicId], references: [id], onDelete: Cascade)
+
+  bookmarks Bookmark[]
+  progress  Progress[]
+  comments  Comment[]
+
+  @@index([topicId])
+  @@index([slug])
+  @@index([status])
+  @@index([difficulty])
+  // Common gating filter: published + premium/difficulty.
+  @@index([status, isPremium])
+}
+
+// ---------------------------------------------------------------------------
+// Users & auth
 // ---------------------------------------------------------------------------
 model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  name      String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id         String   @id @default(cuid())
+  // Links to the Supabase Auth user (auth.users.id). Set on first login.
+  supabaseId String?  @unique
+  name       String
+  email      String   @unique
+  role       UserRole @default(Learner)
+  avatarUrl  String?
+  createdAt  DateTime @default(now())
+  lastLoginAt DateTime?
+
+  bookmarks     Bookmark[]
+  progress      Progress[]
+  comments      Comment[]
+  subscriptions Subscription[]
+  payments      Payment[]
+
+  @@index([email])
+  @@index([role])
+  @@index([supabaseId])
+}
+
+// ---------------------------------------------------------------------------
+// User activity
+// ---------------------------------------------------------------------------
+model Bookmark {
+  id         String   @id @default(cuid())
+  createdAt  DateTime @default(now())
+
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  // A user can bookmark a question only once.
+  @@unique([userId, questionId])
+  @@index([userId])
+  @@index([questionId])
+}
+
+model Progress {
+  id         String        @id @default(cuid())
+  state      ProgressState
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+
+  userId     String
+  user       User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId String
+  question   Question      @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  // One progress row per user+question.
+  @@unique([userId, questionId])
+  @@index([userId])
+  @@index([questionId])
+  @@index([state])
+}
+
+model Comment {
+  id         String   @id @default(cuid())
+  body       String
+  createdAt  DateTime @default(now())
+
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([questionId])
+}
+
+// ---------------------------------------------------------------------------
+// Billing: Plan -> Subscription -> Payment
+// ---------------------------------------------------------------------------
+model Plan {
+  id           String   @id @default(cuid())
+  name         String   @unique
+  price        Int // stored in paise/cents (integer)
+  durationDays Int
+  features     String[] @default([])
+  createdAt    DateTime @default(now())
+
+  subscriptions Subscription[]
+
+  @@index([name])
+}
+
+model Subscription {
+  id        String             @id @default(cuid())
+  status    SubscriptionStatus @default(Pending)
+  startDate DateTime           @default(now())
+  endDate   DateTime?
+  createdAt DateTime           @default(now())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  planId String
+  plan   Plan   @relation(fields: [planId], references: [id])
+
+  @@index([userId])
+  @@index([planId])
+  @@index([status])
+  // Fast "is this user currently Pro?" lookups.
+  @@index([userId, status, endDate])
+}
+
+model Payment {
+  id        String        @id @default(cuid())
+  orderId   String        @unique // Razorpay order id
+  paymentId String        @default("") // Razorpay payment id
+  amount    Int // in paise/cents
+  currency  String        @default("INR")
+  status    PaymentStatus @default(Created)
+  createdAt DateTime      @default(now())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([orderId])
+  @@index([paymentId])
+  @@index([status])
 }

@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "name": "Pro Monthly",
+    "price": 49900,
+    "durationDays": 30,
+    "features": [
+      "Access to all Hard questions",
+      "All premium questions unlocked",
+      "Priority AI assistant"
+    ],
+    "id": "pl_d66d358b",
+    "createdAt": "2026-09-06T03:43:12.550Z"
+  }
+]

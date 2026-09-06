@@ -3,6 +3,7 @@ import "./globals.css";
 import { AppShell } from "@/components/AppShell";
 import { Footer } from "@/components/Footer";
 import { getNavTree } from "@/lib/queries";
+import { getDataSourceStatus } from "@/lib/db";
 import { SITE, getSiteUrl } from "@/lib/site";
 
 const geistSans = Geist({
@@ -50,7 +51,10 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  const nav = await getNavTree();
+  const [nav, dataSource] = await Promise.all([
+    getNavTree(),
+    getDataSourceStatus(),
+  ]);
 
   return (
     <html
@@ -58,7 +62,7 @@ export default async function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-zinc-50 text-zinc-900 dark:bg-black dark:text-zinc-100">
-        <AppShell nav={nav}>
+        <AppShell nav={nav} dataSource={dataSource}>
           {children}
           <Footer />
         </AppShell>

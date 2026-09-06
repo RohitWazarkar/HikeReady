@@ -69,7 +69,7 @@ function CategoryGroup({ category, pathname, onNavigate }) {
   );
 }
 
-export function SidebarContent({ nav, onNavigate }) {
+export function SidebarContent({ nav, dataSource, onNavigate }) {
   const pathname = usePathname();
 
   return (
@@ -92,6 +92,32 @@ export function SidebarContent({ nav, onNavigate }) {
           No categories yet. Run <code>npm run seed</code>.
         </p>
       )}
+
+      {/* Data source status, pinned to the bottom. */}
+      {dataSource && <SidebarStatus source={dataSource} />}
     </nav>
+  );
+}
+
+// Tiny status flag showing whether the site is on the live DB or JSON fallback.
+function SidebarStatus({ source }) {
+  const onDb = source === "db";
+  return (
+    <div
+      title={
+        onDb
+          ? "Serving from the live database (Supabase)."
+          : "Database unavailable — serving from local JSON (offline mode)."
+      }
+      className="mt-auto flex items-center gap-1.5 border-t border-zinc-200 px-3 pt-3 text-[10px] font-medium text-zinc-400 dark:border-zinc-800"
+    >
+      <span
+        className={`h-1.5 w-1.5 shrink-0 rounded-full ${
+          onDb ? "bg-emerald-500" : "bg-amber-500"
+        }`}
+        aria-hidden="true"
+      />
+      <span>{onDb ? "Live database" : "Offline (JSON)"}</span>
+    </div>
   );
 }

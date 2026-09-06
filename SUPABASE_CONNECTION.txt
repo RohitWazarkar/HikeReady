@@ -1,0 +1,70 @@
+================================================================================
+ HikeReady — Supabase Connection Notes
+================================================================================
+
+This file documents the Supabase database connection details for reference.
+
+IMPORTANT — SECURITY
+--------------------------------------------------------------------------------
+* Do NOT put the real database password in this file.
+* The real password + full connection strings live ONLY in `.env`
+  (which is gitignored and never committed).
+* This file uses YOUR-PASSWORD as a placeholder.
+* If this file ever holds real secrets, add it to .gitignore before committing.
+
+
+PROJECT
+--------------------------------------------------------------------------------
+Project ref : dfmgjdeuguzkrjfktoiy
+Region      : ap-southeast-1 (Singapore)
+
+
+CONNECTION PARAMETERS (from Supabase -> Settings -> Database)
+--------------------------------------------------------------------------------
+host      = aws-0-ap-southeast-1.pooler.supabase.com
+port      = 6543            (pooled / PgBouncer — use for the app at runtime)
+port      = 5432            (direct — use for Prisma Migrate / schema changes)
+database  = postgres
+user      = postgres.dfmgjdeuguzkrjfktoiy
+password  = <set in .env only>
+
+
+CONNECTION STRINGS
+--------------------------------------------------------------------------------
+Pooled (app runtime) -> goes in .env as DATABASE_URL
+  postgresql://postgres.dfmgjdeuguzkrjfktoiy:YOUR-PASSWORD@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?pgbouncer=true&connection_limit=1
+
+Direct (migrations)  -> goes in .env as DIRECT_URL
+  postgresql://postgres.dfmgjdeuguzkrjfktoiy:YOUR-PASSWORD@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres
+
+
+HOW IT'S USED
+--------------------------------------------------------------------------------
+* prisma/schema.prisma reads:
+    datasource db {
+      url       = env("DATABASE_URL")   // pooled 6543
+      directUrl = env("DIRECT_URL")     // direct  5432
+    }
+* App runtime queries -> pooled URL (6543).
+* Prisma Migrate / introspection -> direct URL (5432).
+
+
+NEXT STEPS TO GO LIVE ON THE DB
+--------------------------------------------------------------------------------
+1. Put your real password into DATABASE_URL and DIRECT_URL in `.env`.
+2. Install Prisma (v6 recommended):
+     npm install --save-dev prisma@6
+     npm install @prisma/client@6
+3. Create the tables from prisma/schema.prisma:
+     npx prisma migrate dev --name init
+4. Import existing JSON data into the DB:
+     node scripts/migrate-json-to-db.mjs      (to be created)
+5. Switch lib/db.js internals to Prisma (public API stays the same).
+
+
+ALSO NEEDED LATER (Supabase -> Settings -> API), add to .env:
+--------------------------------------------------------------------------------
+NEXT_PUBLIC_SUPABASE_URL       = https://dfmgjdeuguzkrjfktoiy.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY  = <anon public key>
+SUPABASE_SERVICE_ROLE_KEY      = <service role secret — server only>
+================================================================================

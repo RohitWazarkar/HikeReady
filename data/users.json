@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "name": "HikeReady Admin",
+    "email": "admin@hikeready.dev",
+    "role": "Admin",
+    "avatarUrl": "",
+    "id": "u_0d2d2975",
+    "createdAt": "2026-09-06T03:43:12.470Z"
+  },
+  {
+    "name": "Sample Learner",
+    "email": "learner@hikeready.dev",
+    "role": "Learner",
+    "avatarUrl": "",
+    "id": "u_eb0cc20b",
+    "createdAt": "2026-09-06T03:43:12.516Z"
+  },
+  {
+    "name": "Sample Pro",
+    "email": "pro@hikeready.dev",
+    "role": "Pro",
+    "avatarUrl": "",
+    "id": "u_fc9bf87b",
+    "createdAt": "2026-09-06T03:43:12.539Z"
+  }
+]
