@@ -2,6 +2,28 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCategoryBySlug } from "@/lib/queries";
 import { LinkCard } from "@/components/Card";
+import { SITE } from "@/lib/site";
+
+// Per-page SEO: each category gets its own title/description/canonical.
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const category = await getCategoryBySlug(slug);
+  if (!category) return { title: "Category not found" };
+
+  const title = `${category.name} Interview Questions`;
+  const description =
+    category.description ||
+    `${category.name} interview questions and answers on ${SITE.name}.`;
+  const url = `/category/${category.slug}`;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title: `${title} — ${SITE.name}`, description, url },
+    twitter: { title: `${title} — ${SITE.name}`, description },
+  };
+}
 
 // In this version of Next.js, `params` is a Promise and must be awaited.
 export default async function CategoryPage({ params }) {

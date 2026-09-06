@@ -1,14 +1,29 @@
 import Link from "next/link";
 import { getCategoriesWithCounts } from "@/lib/queries";
 import { LinkCard } from "@/components/Card";
+import { SITE, getSiteUrl } from "@/lib/site";
 
 // Server component: data is fetched on the server before the page is sent.
 export default async function Home() {
   const categories = await getCategoriesWithCounts();
   const totalTopics = categories.reduce((sum, c) => sum + c.topicCount, 0);
 
+  // JSON-LD: describes the site to search engines (can enable a sitelinks
+  // search box + richer listing in Google).
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE.name,
+    description: SITE.description,
+    url: getSiteUrl(),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-zinc-200 bg-gradient-to-br from-emerald-50 via-white to-teal-50 px-6 py-20 dark:border-zinc-800 dark:from-emerald-950/40 dark:via-zinc-950 dark:to-teal-950/30">
         {/* Floating decorative blobs */}

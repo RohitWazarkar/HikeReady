@@ -3,6 +3,7 @@ import "./globals.css";
 import { AppShell } from "@/components/AppShell";
 import { Footer } from "@/components/Footer";
 import { getNavTree } from "@/lib/queries";
+import { SITE, getSiteUrl } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,9 +15,38 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Rich SEO metadata. Next.js turns this into <title>, <meta>, Open Graph, and
+// Twitter tags automatically. metadataBase makes relative URLs absolute.
 export const metadata = {
-  title: "HikeReady",
-  description: "HikeReady - interview prep to level up your career.",
+  metadataBase: new URL(getSiteUrl()),
+  title: {
+    default: `${SITE.name} — ${SITE.tagline}`,
+    // Child pages set just their name; this appends the brand.
+    template: `%s — ${SITE.name}`,
+  },
+  description: SITE.description,
+  keywords: SITE.keywords,
+  applicationName: SITE.name,
+  authors: [{ name: SITE.name }],
+  category: "education",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: SITE.name,
+    title: `${SITE.name} — ${SITE.tagline}`,
+    description: SITE.description,
+    url: getSiteUrl(),
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE.name} — ${SITE.tagline}`,
+    description: SITE.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
 };
 
 export default async function RootLayout({ children }) {
