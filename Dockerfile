@@ -29,6 +29,8 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Prisma client (also runs via postinstall, but ensure it's fresh) + build.
+# BUILD_STANDALONE=1 turns on Next.js standalone output (needed for this image).
+ENV BUILD_STANDALONE=1
 RUN npx prisma generate
 RUN npm run build
 
