@@ -50,6 +50,11 @@ export const metadata = {
   },
 };
 
+// Render at request time, never at build time. This app reads the database and
+// a cookie (data-source mode), so it must not be statically prerendered — that
+// would make `next build` try to connect to the DB and fail.
+export const dynamic = "force-dynamic";
+
 export default async function RootLayout({ children }) {
   const [nav, dataSource] = await Promise.all([
     getNavTree(),
