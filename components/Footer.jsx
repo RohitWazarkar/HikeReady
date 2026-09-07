@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MountainIcon } from "./icons";
+import { MountainIcon, SettingsIcon } from "./icons";
 import { getDataSourceStatus } from "@/lib/db";
 
 // Server component: probes the data source so it can show whether the site is
@@ -34,6 +34,16 @@ export async function Footer() {
             </Link>
             <Link href="/category/javascript" className="text-zinc-500 hover:text-emerald-600 dark:text-zinc-400">
               JavaScript
+            </Link>
+          </div>
+          <div className="flex flex-col gap-2">
+            <span className="font-semibold text-zinc-900 dark:text-zinc-200">More</span>
+            <Link
+              href="/settings"
+              className="inline-flex items-center gap-1.5 text-zinc-500 hover:text-emerald-600 dark:text-zinc-400"
+            >
+              <SettingsIcon className="h-3.5 w-3.5" />
+              Settings
             </Link>
           </div>
         </nav>

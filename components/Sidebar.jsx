@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronIcon, BookIcon } from "./icons";
+import { ChevronIcon, BookIcon, SettingsIcon } from "./icons";
 
 // A single collapsible category group with its topics nested underneath.
 function CategoryGroup({ category, pathname, onNavigate }) {
@@ -93,8 +93,22 @@ export function SidebarContent({ nav, dataSource, onNavigate }) {
         </p>
       )}
 
-      {/* Data source status, pinned to the bottom. */}
-      {dataSource && <SidebarStatus source={dataSource} />}
+      {/* Bottom section: Settings link + data source status. */}
+      <div className="mt-auto pt-3">
+        <Link
+          href="/settings"
+          onClick={onNavigate}
+          className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+            pathname === "/settings"
+              ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300"
+              : "text-zinc-700 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-800"
+          }`}
+        >
+          <SettingsIcon className="h-4 w-4 shrink-0 opacity-70" />
+          <span>Settings</span>
+        </Link>
+        {dataSource && <SidebarStatus source={dataSource} />}
+      </div>
     </nav>
   );
 }
@@ -109,7 +123,7 @@ function SidebarStatus({ source }) {
           ? "Serving from the live database (Supabase)."
           : "Database unavailable — serving from local JSON (offline mode)."
       }
-      className="mt-auto flex items-center gap-1.5 border-t border-zinc-200 px-3 pt-3 text-[10px] font-medium text-zinc-400 dark:border-zinc-800"
+      className="mt-2 flex items-center gap-1.5 border-t border-zinc-200 px-3 pt-3 text-[11px] font-medium text-zinc-400 dark:border-zinc-800"
     >
       <span
         className={`h-1.5 w-1.5 shrink-0 rounded-full ${
