@@ -1,0 +1,31 @@
+# Dependencies & build output (rebuilt inside the image)
+node_modules
+.next
+out
+build
+
+# Secrets & local env (pass env at runtime, never bake into the image)
+.env
+.env.*
+!.env.example
+
+# Version control & IDE
+.git
+.gitignore
+.vscode
+.idea
+
+# Logs & temp
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docs / notes not needed at runtime
+README.md
+SUPABASE_CONNECTION.txt
+
+# Prisma local dev artifacts (schema is copied explicitly in the Dockerfile)
+prisma/dev.db
