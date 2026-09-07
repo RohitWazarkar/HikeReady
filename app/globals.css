@@ -359,3 +359,52 @@ body {
     animation: none;
   }
 }
+
+/* --- Toast notifications ---------------------------------------------------- */
+@keyframes hr-toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes hr-toast-out {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(24px) scale(0.96);
+  }
+}
+.toast-in {
+  animation: hr-toast-in 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.toast-out {
+  animation: hr-toast-out 0.22s ease forwards;
+}
+/* The auto-dismiss progress bar shrinks from full width to zero. */
+@keyframes hr-toast-progress {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+.toast-progress {
+  transform-origin: left;
+  animation: hr-toast-progress linear forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toast-in,
+  .toast-out,
+  .toast-progress {
+    animation: none;
+  }
+}

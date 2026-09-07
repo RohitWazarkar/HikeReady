@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AppShell } from "@/components/AppShell";
 import { Footer } from "@/components/Footer";
+import { ToastProvider } from "@/components/Toast";
 import { getNavTree } from "@/lib/queries";
 import { SITE, getSiteUrl } from "@/lib/site";
 
@@ -63,10 +64,12 @@ export default async function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-zinc-50 text-zinc-900 dark:bg-black dark:text-zinc-100">
-        <AppShell nav={nav}>
-          {children}
-          <Footer />
-        </AppShell>
+        <ToastProvider>
+          <AppShell nav={nav}>
+            {children}
+            <Footer />
+          </AppShell>
+        </ToastProvider>
       </body>
     </html>
   );
