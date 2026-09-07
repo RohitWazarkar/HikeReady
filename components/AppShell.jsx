@@ -13,7 +13,7 @@ const SIDEBAR_KEY = "hikeready:sidebar-open";
 // The interactive app shell: sticky header, a collapsible desktop sidebar, a
 // slide-in mobile drawer, and the page content area. Receives the nav tree from
 // the server layout so all data access stays on the server.
-export function AppShell({ nav, dataSource, children }) {
+export function AppShell({ nav, children }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   // Desktop sidebar open/closed. Defaults to open; remembers the user's choice.
   const [desktopOpen, setDesktopOpen] = useState(true);
@@ -115,7 +115,7 @@ export function AppShell({ nav, dataSource, children }) {
         >
           {/* Fixed-width inner keeps content from reflowing while collapsing. */}
           <div className="h-full w-64 overflow-y-auto p-4">
-            <SidebarContent nav={nav} dataSource={dataSource} />
+            <SidebarContent nav={nav} />
           </div>
         </aside>
 
@@ -151,7 +151,7 @@ export function AppShell({ nav, dataSource, children }) {
               </button>
             </div>
             <div className="flex-1 overflow-y-auto">
-              <SidebarContent nav={nav} dataSource={dataSource} onNavigate={closeMobile} />
+              <SidebarContent nav={nav} onNavigate={closeMobile} />
             </div>
           </div>
         </div>

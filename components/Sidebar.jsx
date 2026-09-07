@@ -69,7 +69,7 @@ function CategoryGroup({ category, pathname, onNavigate }) {
   );
 }
 
-export function SidebarContent({ nav, dataSource, onNavigate }) {
+export function SidebarContent({ nav, onNavigate }) {
   const pathname = usePathname();
 
   return (
@@ -93,7 +93,7 @@ export function SidebarContent({ nav, dataSource, onNavigate }) {
         </p>
       )}
 
-      {/* Bottom section: Settings link + data source status. */}
+      {/* Bottom section: Settings link. */}
       <div className="mt-auto pt-3">
         <Link
           href="/settings"
@@ -107,31 +107,7 @@ export function SidebarContent({ nav, dataSource, onNavigate }) {
           <SettingsIcon className="h-4 w-4 shrink-0 opacity-70" />
           <span>Settings</span>
         </Link>
-        {dataSource && <SidebarStatus source={dataSource} />}
       </div>
     </nav>
-  );
-}
-
-// Tiny status flag showing whether the site is on the live DB or JSON fallback.
-function SidebarStatus({ source }) {
-  const onDb = source === "db";
-  return (
-    <div
-      title={
-        onDb
-          ? "Serving from the live database (Supabase)."
-          : "Database unavailable — serving from local JSON (offline mode)."
-      }
-      className="mt-2 flex items-center gap-1.5 border-t border-zinc-200 px-3 pt-3 text-[11px] font-medium text-zinc-400 dark:border-zinc-800"
-    >
-      <span
-        className={`h-1.5 w-1.5 shrink-0 rounded-full ${
-          onDb ? "bg-emerald-500" : "bg-amber-500"
-        }`}
-        aria-hidden="true"
-      />
-      <span>{onDb ? "Live database" : "Offline (JSON)"}</span>
-    </div>
   );
 }
