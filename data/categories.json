@@ -3,6 +3,8 @@
     "name": "DSA",
     "slug": "dsa",
     "description": "Data Structures & Algorithms",
+    "sectionId": "sec_interview",
+    "domainId": "dom_it",
     "id": "cat_3589b5f6",
     "createdAt": "2026-09-05T09:44:02.640Z"
   },
@@ -10,6 +12,8 @@
     "name": "DBMS",
     "slug": "dbms",
     "description": "Database Management Systems",
+    "sectionId": "sec_interview",
+    "domainId": "dom_it",
     "id": "cat_deda995b",
     "createdAt": "2026-09-05T09:44:02.686Z"
   },
@@ -17,6 +21,8 @@
     "name": "JavaScript",
     "slug": "javascript",
     "description": "JavaScript language & runtime",
+    "sectionId": "sec_interview",
+    "domainId": "dom_it",
     "id": "cat_03fa72cf",
     "createdAt": "2026-09-05T09:44:02.729Z"
   },
@@ -24,7 +30,18 @@
     "name": ".NET",
     "slug": "dotnet",
     "description": ".NET & C# interview questions",
+    "sectionId": "sec_interview",
+    "domainId": "dom_it",
     "id": "cat_266e3527",
     "createdAt": "2026-09-05T11:35:11.699Z"
+  },
+  {
+    "id": "cmtqusm5u0000lkagpwvw44pv",
+    "name": "React & Node",
+    "slug": "react-node",
+    "description": "React and Node.js interview questions",
+    "sectionId": "sec_interview",
+    "domainId": "dom_it",
+    "createdAt": "2026-09-07T06:22:22.002Z"
   }
 ]

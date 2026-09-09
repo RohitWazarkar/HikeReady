@@ -3,7 +3,7 @@ import "./globals.css";
 import { AppShell } from "@/components/AppShell";
 import { Footer } from "@/components/Footer";
 import { ToastProvider } from "@/components/Toast";
-import { getNavTree } from "@/lib/queries";
+import { getNavTree, getDomainsForSection, INTERVIEW_SECTION_ID } from "@/lib/queries";
 import { SITE, getSiteUrl } from "@/lib/site";
 
 const geistSans = Geist({
@@ -56,7 +56,10 @@ export const metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function RootLayout({ children }) {
-  const nav = await getNavTree();
+  const [nav, domains] = await Promise.all([
+    getNavTree(),
+    getDomainsForSection(INTERVIEW_SECTION_ID),
+  ]);
 
   return (
     <html
@@ -65,7 +68,7 @@ export default async function RootLayout({ children }) {
     >
       <body className="min-h-full bg-zinc-50 text-zinc-900 dark:bg-black dark:text-zinc-100">
         <ToastProvider>
-          <AppShell nav={nav}>
+          <AppShell nav={nav} domains={domains}>
             {children}
             <Footer />
           </AppShell>

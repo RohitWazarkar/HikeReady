@@ -124,5 +124,33 @@
     "slug": "dotnet-api-types-rest-others",
     "id": "top_812cda78",
     "createdAt": "2026-09-05T11:35:12.802Z"
+  },
+  {
+    "id": "cmtqusmul0002lkagpbkia05q",
+    "categoryId": "cmtqusm5u0000lkagpwvw44pv",
+    "name": "React fundamentals",
+    "slug": "rn-react-fundamentals",
+    "createdAt": "2026-09-07T06:22:22.894Z"
+  },
+  {
+    "id": "cmtquss1q000qlkag65ffnvjd",
+    "categoryId": "cmtqusm5u0000lkagpwvw44pv",
+    "name": "Hooks, performance, and patterns",
+    "slug": "rn-hooks-performance-and-patterns",
+    "createdAt": "2026-09-07T06:22:29.630Z"
+  },
+  {
+    "id": "cmtquszfy001olkagg5gat5dr",
+    "categoryId": "cmtqusm5u0000lkagpwvw44pv",
+    "name": "Node fundamentals",
+    "slug": "rn-node-fundamentals",
+    "createdAt": "2026-09-07T06:22:39.214Z"
+  },
+  {
+    "id": "cmtqut4o3002clkagsr4j9m63",
+    "categoryId": "cmtqusm5u0000lkagpwvw44pv",
+    "name": "Event loop, async, Express, errors",
+    "slug": "rn-event-loop-async-express-errors",
+    "createdAt": "2026-09-07T06:22:45.987Z"
   }
 ]

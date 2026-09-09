@@ -21,17 +21,8 @@ const FEATURES = [
     icon: FileTextIcon,
     tone: "emerald",
     image: "/interview_Questionsimage_for_card_option_in_website.jpg",
-    href: "/practice",
+    href: "/interview",
     ready: true,
-  },
-  {
-    key: "resume",
-    title: "AI Resume Builder",
-    description: "Generate a polished, ATS-friendly resume with AI assistance.",
-    icon: FileTextIcon,
-    tone: "sky",
-    image: "/Resume_Builder_By_AI.jpg",
-    ready: false,
   },
   {
     key: "mcq",
@@ -40,7 +31,20 @@ const FEATURES = [
     icon: CheckSquareIcon,
     tone: "violet",
     image: "/mcq_mock_test_card_image_for_website.jpg",
-    ready: false,
+    href: "/section/mcq",
+    ready: true,
+    soon: true,
+  },
+  {
+    key: "resume",
+    title: "AI Resume Builder",
+    description: "Generate a polished, ATS-friendly resume with AI assistance.",
+    icon: FileTextIcon,
+    tone: "sky",
+    image: "/Resume_Builder_By_AI.jpg",
+    href: "/section/resume",
+    ready: true,
+    soon: true,
   },
   {
     key: "score",
@@ -58,7 +62,9 @@ const FEATURES = [
     icon: PlayCircleIcon,
     tone: "rose",
     image: "/tutorials_from_the_scratch_learning.jpg",
-    ready: false,
+    href: "/section/tutorials",
+    ready: true,
+    soon: true,
   },
 ];
 
@@ -98,8 +104,8 @@ export function FeatureGrid() {
             style={{ animationDelay: `${i * 70}ms` }}
             className="animate-in group relative flex flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white text-left shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-500/10 active:scale-[0.98] dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-emerald-700"
           >
-            {/* "Soon" ribbon for not-yet-ready features */}
-            {!f.ready && (
+            {/* "Soon" ribbon for features whose content is still in progress */}
+            {(f.soon || !f.ready) && (
               <span className="absolute right-3 top-3 z-10 rounded-full bg-white/90 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-zinc-600 shadow-sm backdrop-blur dark:bg-zinc-900/80 dark:text-zinc-300">
                 Soon
               </span>
@@ -134,7 +140,7 @@ export function FeatureGrid() {
               </p>
 
               <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-600 dark:text-emerald-400">
-                {f.ready ? "Get started" : "Coming soon"}
+                {!f.ready ? "Coming soon" : f.soon ? "Preview" : "Get started"}
                 <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </span>
             </div>

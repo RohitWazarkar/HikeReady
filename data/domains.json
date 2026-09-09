@@ -1,0 +1,20 @@
+[
+  {
+    "id": "dom_it",
+    "sectionId": "sec_interview",
+    "name": "IT",
+    "slug": "it",
+    "description": "Software & IT interview subjects — DSA, DBMS, .NET, JavaScript, and more.",
+    "order": 1,
+    "createdAt": "2026-09-07T00:00:00.000Z"
+  },
+  {
+    "id": "dom_medical_coding",
+    "sectionId": "sec_interview",
+    "name": "Medical Coding",
+    "slug": "medical-coding",
+    "description": "Medical coding interview preparation (content coming soon).",
+    "order": 2,
+    "createdAt": "2026-09-07T00:00:00.000Z"
+  }
+]

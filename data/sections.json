@@ -1,0 +1,38 @@
+[
+  {
+    "id": "sec_interview",
+    "name": "Interview Questions",
+    "slug": "interview",
+    "description": "Curated interview questions with detailed answers across subjects.",
+    "kind": "questions",
+    "order": 1,
+    "createdAt": "2026-09-07T00:00:00.000Z"
+  },
+  {
+    "id": "sec_mcq",
+    "name": "MCQ Mock Tests",
+    "slug": "mcq",
+    "description": "Timed multiple-choice tests to check your readiness.",
+    "kind": "mcq",
+    "order": 2,
+    "createdAt": "2026-09-07T00:00:00.000Z"
+  },
+  {
+    "id": "sec_resume",
+    "name": "Resume Builder",
+    "slug": "resume",
+    "description": "Build a polished, ATS-friendly resume.",
+    "kind": "resume",
+    "order": 3,
+    "createdAt": "2026-09-07T00:00:00.000Z"
+  },
+  {
+    "id": "sec_tutorials",
+    "name": "From-Scratch Tutorials",
+    "slug": "tutorials",
+    "description": "Step-by-step tutorials to learn concepts from the ground up.",
+    "kind": "tutorials",
+    "order": 4,
+    "createdAt": "2026-09-07T00:00:00.000Z"
+  }
+]
